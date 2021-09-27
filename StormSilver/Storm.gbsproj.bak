@@ -718,8 +718,8 @@
                                         "command": "EVENT_SWITCH_SCENE",
                                         "args": {
                                             "sceneId": "11f1684a-7e49-4b9a-8ef4-1ffa941b4a39",
-                                            "x": 3,
-                                            "y": 7,
+                                            "x": 1,
+                                            "y": 3,
                                             "direction": "",
                                             "fadeSpeed": "2"
                                         }
@@ -1501,23 +1501,43 @@
             "tileColors": [],
             "script": [
                 {
-                    "id": "83aff83a-a68c-4c5e-8b34-0cf899fea5f1",
-                    "command": "EVENT_TEXT",
+                    "id": "0f6780bd-be2b-461b-a8d0-e2078c31bede",
+                    "command": "EVENT_IF_TRUE",
                     "args": {
-                        "text": [
-                            "...?"
+                        "variable": "L0",
+                        "__collapseElse": false
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "id": "07295815-3488-4ed2-b0fe-58c70713aeb0",
+                                "command": "EVENT_END"
+                            }
                         ],
-                        "avatarId": ""
-                    }
-                },
-                {
-                    "id": "929dca4a-fa7e-432d-b2ac-e8da2849d99a",
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
-                            "I hear yelling to\nthe east, I should\nsee what's up"
-                        ],
-                        "avatarId": ""
+                        "false": [
+                            {
+                                "id": "83aff83a-a68c-4c5e-8b34-0cf899fea5f1",
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "...?",
+                                        "I hear yelling to\nthe east, I should\nsee what's up"
+                                    ],
+                                    "avatarId": ""
+                                }
+                            },
+                            {
+                                "id": "fb197142-a4f0-436b-aa8c-7aef2868ef3a",
+                                "command": "EVENT_SET_TRUE",
+                                "args": {
+                                    "variable": "L0"
+                                }
+                            },
+                            {
+                                "id": "34b6665e-0500-462e-a71f-be819cb191da",
+                                "command": "EVENT_END"
+                            }
+                        ]
                     }
                 },
                 {
@@ -1662,14 +1682,6 @@
                     "command": "EVENT_ACTOR_HIDE",
                     "args": {
                         "actorId": "$self$"
-                    }
-                },
-                {
-                    "id": "2fa7b6c5-c783-45f9-9f22-2a44426b8c18",
-                    "command": "EVENT_MUSIC_PLAY",
-                    "args": {
-                        "musicId": "f50428ab-a084-4591-9bba-2ba10fe7b1c6",
-                        "loop": true
                     }
                 },
                 {
@@ -2764,11 +2776,37 @@
                     "animSpeed": "3",
                     "script": [
                         {
+                            "id": "27ff829f-92f0-4e8d-b93e-9113bdb7befc",
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Don'tdistractme\ngottarundon'tcare\naboutyourightnowww"
+                                ],
+                                "avatarId": ""
+                            }
+                        },
+                        {
                             "id": "0f09226d-d318-420c-9686-bd4c20b356f9",
                             "command": "EVENT_END"
                         }
                     ],
-                    "startScript": [],
+                    "startScript": [
+                        {
+                            "id": "f6df1995-2b84-4393-877f-0fbafd54eaa9",
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "How am I so late I\nneed to get going\nwhere is my...",
+                                    "Nevermindcan'tstop\ngottagoIdon'tcare\nifyou'reinhere"
+                                ],
+                                "avatarId": ""
+                            }
+                        },
+                        {
+                            "id": "59432d7a-7f13-4a5d-8ddc-6ac85d8744af",
+                            "command": "EVENT_END"
+                        }
+                    ],
                     "updateScript": [
                         {
                             "id": "2b041928-56ff-4bf7-b735-6003ba810e62",
@@ -2816,6 +2854,101 @@
                     "x": 12,
                     "y": 5,
                     "isPinned": true
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "29faf994-c5e0-4c51-927f-9f0001e48053",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": "1",
+                    "animSpeed": "3",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "248f968b-82c4-4b5d-96b4-3bc5c38f81a0",
+                    "x": 3,
+                    "y": 2
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "07ef910a-4c68-4abd-974c-d44b253f3cf3",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": "1",
+                    "animSpeed": "3",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "42c97600-de1b-4521-8ed5-634b2785eb39",
+                    "x": 3,
+                    "y": 5
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "07ef910a-4c68-4abd-974c-d44b253f3cf3",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": "1",
+                    "animSpeed": "3",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "88031dac-e07c-4642-ab5b-83b69b766c7a",
+                    "x": 3,
+                    "y": 7
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "9d1ffa93-9cb2-4c83-88d1-05695147a8b5",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": "1",
+                    "animSpeed": "3",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "c0887857-0e89-4562-870b-2726309f15e3",
+                    "x": 10,
+                    "y": 2
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "07ef910a-4c68-4abd-974c-d44b253f3cf3",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": "1",
+                    "animSpeed": "3",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "0a89032c-debd-4b6b-9d27-f5eb5073a469",
+                    "x": 3,
+                    "y": 9
                 }
             ],
             "triggers": [
@@ -3215,14 +3348,329 @@
                 0
             ],
             "tileColors": [],
-            "script": [],
+            "script": [
+                {
+                    "id": "26f5c71d-6236-476b-ac03-f88641d10557",
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "...I don't think\nthis guy knows how\ndesigning works"
+                        ],
+                        "avatarId": ""
+                    }
+                },
+                {
+                    "id": "2bca8e75-3491-4f9e-9ec9-d2a2fab3ae31",
+                    "command": "EVENT_END"
+                }
+            ],
             "playerHit1Script": [],
             "playerHit2Script": [],
             "playerHit3Script": [],
             "id": "484ecbec-1d86-43f2-965c-ad97f1633fda",
             "x": 436,
             "y": 285,
-            "actors": [],
+            "actors": [
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "29faf994-c5e0-4c51-927f-9f0001e48053",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": "1",
+                    "animSpeed": "3",
+                    "script": [
+                        {
+                            "id": "fbf29248-fa03-45f6-9639-dcfdcf5ba31c",
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "It's a bed"
+                                ],
+                                "avatarId": ""
+                            }
+                        },
+                        {
+                            "id": "e2faa402-8836-4c68-a351-e501d93bfbbc",
+                            "command": "EVENT_END"
+                        }
+                    ],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "a0612d07-3904-4fc5-a949-ae63692c065f",
+                    "x": 3,
+                    "y": 2
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "29faf994-c5e0-4c51-927f-9f0001e48053",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": "1",
+                    "animSpeed": "3",
+                    "script": [
+                        {
+                            "id": "0ae5432e-3214-4aaf-9c91-7719618ba7ec",
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "It's a bed"
+                                ],
+                                "avatarId": ""
+                            }
+                        },
+                        {
+                            "id": "518547f8-cf74-4cc0-8ab8-da3db8a56def",
+                            "command": "EVENT_END"
+                        }
+                    ],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "11d4abcb-78df-46d5-8487-d15d1471a7c2",
+                    "x": 12,
+                    "y": 4
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "29faf994-c5e0-4c51-927f-9f0001e48053",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": "1",
+                    "animSpeed": "3",
+                    "script": [
+                        {
+                            "id": "39c0d294-14f6-45a2-a3a1-909fa06966ed",
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "It's a bed",
+                                    "...wait there's\nsomething inside?",
+                                    "A note?",
+                                    "\"If you're reading\nthis stop snooping\nthrough people's",
+                                    "stuff that's\ncreepy.\"",
+                                    "...",
+                                    "...wait why am I\neven in this\ndude's house he's",
+                                    "sleeping?!"
+                                ],
+                                "avatarId": ""
+                            }
+                        },
+                        {
+                            "id": "127d584c-4300-4a81-a31a-5c5b82ec2bad",
+                            "command": "EVENT_END"
+                        }
+                    ],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "080ef723-0998-4e9d-9450-02ccea98d7da",
+                    "x": 7,
+                    "y": 9
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "29faf994-c5e0-4c51-927f-9f0001e48053",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": "1",
+                    "animSpeed": "3",
+                    "script": [
+                        {
+                            "id": "312110db-9feb-41b9-81c0-f5e6afc4d137",
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "It's a bed"
+                                ],
+                                "avatarId": ""
+                            }
+                        },
+                        {
+                            "id": "fb218e65-8d5c-4a47-b294-fd24f716f911",
+                            "command": "EVENT_END"
+                        }
+                    ],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "dbfada84-f396-4deb-b92f-8af2ff488360",
+                    "x": 13,
+                    "y": 13
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "29faf994-c5e0-4c51-927f-9f0001e48053",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": "1",
+                    "animSpeed": "3",
+                    "script": [
+                        {
+                            "id": "a546275d-881b-4b3e-b0a9-139deded35f9",
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "It's a bed"
+                                ],
+                                "avatarId": ""
+                            }
+                        },
+                        {
+                            "id": "1a6c2329-3627-4192-a7e0-4dd7f52c692d",
+                            "command": "EVENT_END"
+                        }
+                    ],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "8ac1363f-3466-4706-81dc-167e39be4b9c",
+                    "x": 5,
+                    "y": 14
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "29faf994-c5e0-4c51-927f-9f0001e48053",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": "1",
+                    "animSpeed": "3",
+                    "script": [
+                        {
+                            "id": "8766da55-63fd-4b17-af7c-c3d2b9349570",
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "It's a bed"
+                                ],
+                                "avatarId": ""
+                            }
+                        },
+                        {
+                            "id": "0ffb91db-7b5c-431d-87b6-df5d9a0f31b6",
+                            "command": "EVENT_END"
+                        }
+                    ],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "a641fa81-a8ad-4c66-aaae-8e39357aa95b",
+                    "x": 6,
+                    "y": 5
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "dd805fa0-8c3e-44f3-ad08-e6e90b99b903",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": "1",
+                    "animSpeed": "3",
+                    "script": [
+                        {
+                            "id": "41bf6824-0c90-4129-bb46-54b9e1009b04",
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "L0",
+                                "__collapseElse": false
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "id": "a13f071f-4080-4980-b739-539f79647729",
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "(He's talking in\nhis sleep)",
+                                                "ZZZZ... Why do\npeople say ZZZZ\nwhen they're ",
+                                                "asleep... ZZZZZZ"
+                                            ],
+                                            "avatarId": ""
+                                        }
+                                    },
+                                    {
+                                        "id": "0ee77782-dd4a-4892-86aa-307df241ab59",
+                                        "command": "EVENT_SET_FALSE",
+                                        "args": {
+                                            "variable": "L0"
+                                        }
+                                    },
+                                    {
+                                        "id": "e47aacb8-afe2-49f4-994e-55c32fcfc337",
+                                        "command": "EVENT_END"
+                                    }
+                                ],
+                                "false": [
+                                    {
+                                        "id": "c6a29209-8d9f-4852-b998-fc53997f0f64",
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "I only just\nnoticed that he\ndoesn't sleep",
+                                                "on any of the beds\nhere... The folks\nhere are nuts."
+                                            ],
+                                            "avatarId": ""
+                                        }
+                                    },
+                                    {
+                                        "id": "6c8c0cdf-fd45-42bc-b662-20a9f526a3a9",
+                                        "command": "EVENT_END"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "04382f26-c5c5-40ac-a43c-cdf46a31de91",
+                            "command": "EVENT_END"
+                        }
+                    ],
+                    "startScript": [
+                        {
+                            "id": "5329983b-f73e-4dc2-8b42-3daa36c235df",
+                            "command": "EVENT_SET_TRUE",
+                            "args": {
+                                "variable": "L0"
+                            }
+                        },
+                        {
+                            "id": "63741c70-61dc-4676-a86f-6c278d5f3e7d",
+                            "command": "EVENT_END"
+                        }
+                    ],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "fa4e2098-fcf0-4024-b6ac-55dd6a0cc9e1",
+                    "x": 12,
+                    "y": 8
+                }
+            ],
             "triggers": [
                 {
                     "name": "Transition to Town (SMH)",
@@ -3627,7 +4075,27 @@
             "id": "a542890c-f7c6-49eb-8462-d35c53ae7c84",
             "x": 606,
             "y": 287,
-            "actors": [],
+            "actors": [
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "68fc93b0-70a8-4000-9be8-7dd1b3e52803",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": "1",
+                    "animSpeed": "3",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "eca9e030-0b42-4d5b-a110-6de716f13ef5",
+                    "x": 12,
+                    "y": 9
+                }
+            ],
             "triggers": [
                 {
                     "name": "Transition to Town (PMH)",
@@ -3668,7 +4136,7 @@
             "imageHeight": 144,
             "filename": "Ken's Room.png",
             "inode": "396361824",
-            "_v": 1632776796810
+            "_v": 1632778193935
         },
         {
             "id": "f5f7ae31-e9dc-41e8-ba82-74b2452de845",
@@ -3679,7 +4147,7 @@
             "imageHeight": 200,
             "filename": "Test (200x200 px).png",
             "inode": "396362048",
-            "_v": 1632776796810
+            "_v": 1632778193933
         },
         {
             "id": "07c269bf-6322-4d40-a315-d3f54073c93d",
@@ -3690,7 +4158,7 @@
             "imageHeight": 144,
             "filename": "Title Screen.png",
             "inode": "396361920",
-            "_v": 1632776796810
+            "_v": 1632778193935
         },
         {
             "id": "33801a63-c518-486e-95ba-e03a38606181",
@@ -3701,7 +4169,7 @@
             "imageHeight": 216,
             "filename": "Town.png",
             "inode": "396362176",
-            "_v": 1632776796810
+            "_v": 1632778193935
         },
         {
             "id": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
@@ -3712,7 +4180,7 @@
             "imageHeight": 144,
             "filename": "placeholder.png",
             "inode": "396361728",
-            "_v": 1632776796810
+            "_v": 1632778193934
         }
     ],
     "spriteSheets": [
@@ -3723,7 +4191,7 @@
             "type": "static",
             "filename": "Clean Desk.png",
             "inode": "400557600",
-            "_v": 1632776796810
+            "_v": 1632778193935
         },
         {
             "id": "29faf994-c5e0-4c51-927f-9f0001e48053",
@@ -3732,7 +4200,7 @@
             "type": "static",
             "filename": "GBed (16px).png",
             "inode": "400557024",
-            "_v": 1632776796810
+            "_v": 1632778193935
         },
         {
             "id": "0b56d0ec-4d80-4bb0-bd4d-c72e0f9d27f6",
@@ -3741,7 +4209,7 @@
             "type": "static",
             "filename": "GPixel Police (Front).png",
             "inode": "400557248",
-            "_v": 1632776796810
+            "_v": 1632778193936
         },
         {
             "id": "b6e02866-327e-4431-a37b-d3216e64ca3e",
@@ -3750,7 +4218,7 @@
             "type": "static",
             "filename": "GPixel Police (Left Side).png",
             "inode": "400557376",
-            "_v": 1632776796810
+            "_v": 1632778193936
         },
         {
             "id": "d118914e-86a3-48ed-a0ca-cfe55d086734",
@@ -3759,7 +4227,7 @@
             "type": "static",
             "filename": "GPixel Police (Right Side).png",
             "inode": "400557120",
-            "_v": 1632776796810
+            "_v": 1632778193936
         },
         {
             "id": "1a4aa8af-1877-4e58-bb41-05422ec9be52",
@@ -3768,7 +4236,7 @@
             "type": "actor_animated",
             "filename": "Ken_animated.png",
             "inode": "400557888",
-            "_v": 1632776796810
+            "_v": 1632778193936
         },
         {
             "id": "07ef910a-4c68-4abd-974c-d44b253f3cf3",
@@ -3777,7 +4245,7 @@
             "type": "static",
             "filename": "Messy Desk.png",
             "inode": "400557504",
-            "_v": 1632776796810
+            "_v": 1632778193936
         },
         {
             "id": "619b9f21-7923-4cfa-81ae-4b1631aabc74",
@@ -3786,7 +4254,16 @@
             "type": "static",
             "filename": "RWardrobe.png",
             "inode": "400557792",
-            "_v": 1632776796810
+            "_v": 1632778193936
+        },
+        {
+            "id": "dd805fa0-8c3e-44f3-ad08-e6e90b99b903",
+            "name": "Sleepy Boi",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "Sleepy Boi.png",
+            "inode": "400559200",
+            "_v": 1632782573267
         },
         {
             "id": "68fc93b0-70a8-4000-9be8-7dd1b3e52803",
@@ -3794,8 +4271,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "StdNPC.png",
-            "inode": "400558112",
-            "_v": 1632776796810
+            "inode": "400558688",
+            "_v": 1632778193936
         },
         {
             "id": "7993f9e5-7cd3-4e44-a2ab-6a61315371c3",
@@ -3803,8 +4280,8 @@
             "numFrames": 6,
             "type": "actor_animated",
             "filename": "StdNPC_animated.png",
-            "inode": "400558336",
-            "_v": 1632776923544
+            "inode": "400558880",
+            "_v": 1632778498213
         },
         {
             "id": "9d1ffa93-9cb2-4c83-88d1-05695147a8b5",
@@ -3813,7 +4290,7 @@
             "type": "static",
             "filename": "Wardrobe.png",
             "inode": "400557696",
-            "_v": 1632776796810
+            "_v": 1632778193939
         },
         {
             "id": "11b5452b-187c-43a3-afb1-a1f4f74ffda2",
@@ -3822,7 +4299,7 @@
             "type": "actor",
             "filename": "actor.png",
             "inode": "400556032",
-            "_v": 1632776796810
+            "_v": 1632778193935
         },
         {
             "id": "581d34d0-9591-4e6e-a609-1d94f203b0cd",
@@ -3831,7 +4308,7 @@
             "type": "actor_animated",
             "filename": "actor_animated.png",
             "inode": "400556128",
-            "_v": 1632776796810
+            "_v": 1632778193935
         },
         {
             "id": "daf95270-e30d-423b-9ee7-990ae29f57f6",
@@ -3840,7 +4317,7 @@
             "type": "static",
             "filename": "static.png",
             "inode": "400556256",
-            "_v": 1632776796810
+            "_v": 1632778193936
         }
     ],
     "palettes": [
@@ -3989,7 +4466,7 @@
             "filename": "Menu.mod",
             "settings": {},
             "inode": "398459072",
-            "_v": 1632776796803
+            "_v": 1632778193924
         },
         {
             "id": "e2c170a5-7001-4220-b287-5da7aa5980cc",
@@ -3997,7 +4474,7 @@
             "filename": "MenuSong.mod",
             "settings": {},
             "inode": "398459168",
-            "_v": 1632776796803
+            "_v": 1632778193924
         },
         {
             "id": "f50428ab-a084-4591-9bba-2ba10fe7b1c6",
@@ -4005,7 +4482,7 @@
             "filename": "template.mod",
             "settings": {},
             "inode": "398458880",
-            "_v": 1632776796803
+            "_v": 1632778193924
         },
         {
             "id": "913c560b-7dae-4dc4-ad6f-f4d9cf56c68c",
@@ -4013,7 +4490,7 @@
             "filename": "test.mod",
             "settings": {},
             "inode": "398458976",
-            "_v": 1632776796803
+            "_v": 1632778193924
         }
     ],
     "variables": [
@@ -4036,12 +4513,20 @@
         {
             "id": "11889634-6153-41c8-ad1d-4e56439523bb__L0",
             "name": "Dressed"
+        },
+        {
+            "id": "11f1684a-7e49-4b9a-8ef4-1ffa941b4a39__L0",
+            "name": "Not First Time Outside"
+        },
+        {
+            "id": "fa4e2098-fcf0-4024-b6ac-55dd6a0cc9e1__L0",
+            "name": "First Time Sleepy"
         }
     ],
     "settings": {
-        "startSceneId": "3599fcc4-b54d-4904-83a7-8b5e30379d2d",
-        "startX": 5,
-        "startY": 5,
+        "startSceneId": "484ecbec-1d86-43f2-965c-ad97f1633fda",
+        "startX": 9,
+        "startY": 16,
         "showCollisions": true,
         "showConnections": true,
         "worldScrollX": 0,
