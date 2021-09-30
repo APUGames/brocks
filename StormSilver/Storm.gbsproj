@@ -439,8 +439,9 @@
                                 "command": "EVENT_TEXT",
                                 "args": {
                                     "text": [
-                                        "Ugh why did I\ndecide to take\nthe",
-                                        "No time to brush\nor anything,\njust",
+                                        "Ugh why did I\ndecide to take\nthe 8am class?",
+                                        "No time to brush\nor anything,\njust gotta get",
+                                        "dressed and\nhurry.",
                                         "I hope my closet\nhas decent\nclothes"
                                     ],
                                     "avatarId": "4299c214-773b-457c-bbaf-9f5f733c55a3"
@@ -554,7 +555,7 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "Ryder's bed...\nhow\ncan he wake up"
+                                    "Ryder's bed...\nhow can he wake\nup so early?"
                                 ],
                                 "avatarId": "4299c214-773b-457c-bbaf-9f5f733c55a3"
                             }
@@ -622,7 +623,7 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "That's my\nroommate\nfor you, always"
+                                    "That's my\nroommate for\nyou, always tidy"
                                 ],
                                 "avatarId": "4299c214-773b-457c-bbaf-9f5f733c55a3"
                             }
@@ -4554,7 +4555,7 @@
         },
         {
             "name": "City",
-            "backgroundId": "b8b61d05-847b-4e9d-94c3-c0c77d5c0442",
+            "backgroundId": "ddaa382e-fa84-414a-b4cb-d499de3ac2b3",
             "width": 32,
             "height": 20,
             "collisions": [
@@ -5276,14 +5277,48 @@
                     "animSpeed": "3",
                     "script": [
                         {
-                            "id": "5ab38f0a-aa52-4a7b-8794-bc8318be3002",
-                            "command": "EVENT_TEXT",
+                            "id": "652cdeea-a3e0-4ebb-ac4c-14dc0ac38de7",
+                            "command": "EVENT_IF_TRUE",
                             "args": {
-                                "text": [
-                                    "StormSilver?!\nQuick, you're the\nonly one who can",
-                                    "help that poor\nsoul!"
+                                "variable": "2",
+                                "__collapseElse": false
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "id": "5ab38f0a-aa52-4a7b-8794-bc8318be3002",
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "StormSilver?!\nQuick, you're the\nonly one who can",
+                                                "help that poor\nsoul!"
+                                            ],
+                                            "avatarId": ""
+                                        }
+                                    },
+                                    {
+                                        "id": "0304a2a2-6da3-4451-a8e9-1b4b5ecdea4f",
+                                        "command": "EVENT_END"
+                                    }
                                 ],
-                                "avatarId": ""
+                                "false": [
+                                    {
+                                        "id": "a70d7b01-f3b9-4eb0-aa58-1d6fb2b772df",
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "No civilians\nallowed beyond\nthis point!",
+                                                "I'm sure\nStormSilver will\ncome to his rescue",
+                                                "soon enough!"
+                                            ],
+                                            "avatarId": ""
+                                        }
+                                    },
+                                    {
+                                        "id": "f7833ae0-67cb-48d8-ae8c-e55c57bc1f1b",
+                                        "command": "EVENT_END"
+                                    }
+                                ]
                             }
                         },
                         {
@@ -5311,14 +5346,48 @@
                     "animSpeed": "3",
                     "script": [
                         {
-                            "id": "c23556a0-42e4-4788-9be8-418ff2e56cef",
-                            "command": "EVENT_TEXT",
+                            "id": "dbd63897-a5d4-4185-9f62-75e10477e7c2",
+                            "command": "EVENT_IF_TRUE",
                             "args": {
-                                "text": [
-                                    "Oh thank God\nyou're here...",
-                                    "(now I don't have\nto actually\nintervene)"
+                                "variable": "2",
+                                "__collapseElse": false
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "id": "c23556a0-42e4-4788-9be8-418ff2e56cef",
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Oh thank God\nyou're here...",
+                                                "(now I don't have\nto actually\nintervene)"
+                                            ],
+                                            "avatarId": ""
+                                        }
+                                    },
+                                    {
+                                        "id": "8478f177-2690-41a3-9130-58590c52f4ad",
+                                        "command": "EVENT_END"
+                                    }
                                 ],
-                                "avatarId": ""
+                                "false": [
+                                    {
+                                        "id": "b89b0ded-2f6e-412c-affc-3a2548e6a09f",
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "No civilians\nallowed beyond\nthis point!",
+                                                "I'm sure\nStormSilver will\ncome to his rescue",
+                                                "soon enough!"
+                                            ],
+                                            "avatarId": ""
+                                        }
+                                    },
+                                    {
+                                        "id": "cc022b9a-77d4-4652-be9b-70c42ffa58e6",
+                                        "command": "EVENT_END"
+                                    }
+                                ]
                             }
                         },
                         {
@@ -5413,6 +5482,18 @@
                                     }
                                 ],
                                 "false": [
+                                    {
+                                        "id": "39923843-62a2-4baf-9e62-b9141adc29cd",
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "No civilians\nallowed beyond\nthis point!",
+                                                "I'm sure\nStormSilver will\ncome to his rescue",
+                                                "soon enough!"
+                                            ],
+                                            "avatarId": ""
+                                        }
+                                    },
                                     {
                                         "id": "5e64affe-a415-49b8-a8ca-986e7111960c",
                                         "command": "EVENT_END"
@@ -6968,7 +7049,18 @@
             "imageHeight": 160,
             "filename": "City(WIP).png",
             "inode": "396362368",
-            "_v": 1632851130730
+            "_v": 1632888521009
+        },
+        {
+            "id": "ddaa382e-fa84-414a-b4cb-d499de3ac2b3",
+            "name": "City",
+            "width": 32,
+            "height": 20,
+            "imageWidth": 256,
+            "imageHeight": 160,
+            "filename": "City.png",
+            "inode": "396363232",
+            "_v": 1632888521009
         },
         {
             "id": "93ab0c43-8360-4d66-92ca-bcf634c7df6d",
@@ -6979,7 +7071,40 @@
             "imageHeight": 144,
             "filename": "Ken's Room.png",
             "inode": "396361824",
-            "_v": 1632851130730
+            "_v": 1632888521009
+        },
+        {
+            "id": "d6dd545b-7d14-4736-be5a-ff9c9b753932",
+            "name": "Tall Building1",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "Tall Building1.png",
+            "inode": "396362560",
+            "_v": 1632888521009
+        },
+        {
+            "id": "2de6e52a-fa98-4a75-81b7-51027c9c7911",
+            "name": "Tall Building2",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "Tall Building2.png",
+            "inode": "396363008",
+            "_v": 1632888521009
+        },
+        {
+            "id": "4429038e-b094-48b6-9a59-b932fc4fbba9",
+            "name": "Tall Building3",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "Tall Building3.png",
+            "inode": "396362784",
+            "_v": 1632888521009
         },
         {
             "id": "f5f7ae31-e9dc-41e8-ba82-74b2452de845",
@@ -6990,7 +7115,7 @@
             "imageHeight": 200,
             "filename": "Test (200x200 px).png",
             "inode": "396362048",
-            "_v": 1632851130730
+            "_v": 1632888521009
         },
         {
             "id": "07c269bf-6322-4d40-a315-d3f54073c93d",
@@ -7001,7 +7126,7 @@
             "imageHeight": 144,
             "filename": "Title Screen.png",
             "inode": "396361920",
-            "_v": 1632851130730
+            "_v": 1632888521009
         },
         {
             "id": "33801a63-c518-486e-95ba-e03a38606181",
@@ -7012,7 +7137,7 @@
             "imageHeight": 216,
             "filename": "Town.png",
             "inode": "396362176",
-            "_v": 1632851130730
+            "_v": 1632888521009
         },
         {
             "id": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
@@ -7023,7 +7148,7 @@
             "imageHeight": 144,
             "filename": "placeholder.png",
             "inode": "396361728",
-            "_v": 1632851130730
+            "_v": 1632888521009
         }
     ],
     "spriteSheets": [
@@ -7034,7 +7159,7 @@
             "type": "static",
             "filename": "Clean Desk.png",
             "inode": "400557600",
-            "_v": 1632851130730
+            "_v": 1632888521009
         },
         {
             "id": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b",
@@ -7043,7 +7168,7 @@
             "type": "static",
             "filename": "Flarasite Face.png",
             "inode": "400560480",
-            "_v": 1632851130730
+            "_v": 1632888521009
         },
         {
             "id": "200c1589-389c-46a1-8cee-3ad914c4f332",
@@ -7052,7 +7177,7 @@
             "type": "actor_animated",
             "filename": "Flarasite_animated.png",
             "inode": "400559776",
-            "_v": 1632851130730
+            "_v": 1632888521009
         },
         {
             "id": "0b41bc8e-672d-496d-b979-58f59de35875",
@@ -7061,7 +7186,7 @@
             "type": "animated",
             "filename": "Flarasite_idle_animated.png",
             "inode": "400559520",
-            "_v": 1632851130730
+            "_v": 1632888521009
         },
         {
             "id": "29faf994-c5e0-4c51-927f-9f0001e48053",
@@ -7070,7 +7195,7 @@
             "type": "static",
             "filename": "GBed (16px).png",
             "inode": "400557024",
-            "_v": 1632851130730
+            "_v": 1632888521009
         },
         {
             "id": "0b56d0ec-4d80-4bb0-bd4d-c72e0f9d27f6",
@@ -7079,7 +7204,7 @@
             "type": "static",
             "filename": "GPixel Police (Front).png",
             "inode": "400557248",
-            "_v": 1632851130730
+            "_v": 1632888521009
         },
         {
             "id": "b6e02866-327e-4431-a37b-d3216e64ca3e",
@@ -7088,7 +7213,7 @@
             "type": "static",
             "filename": "GPixel Police (Left Side).png",
             "inode": "400557376",
-            "_v": 1632851130730
+            "_v": 1632888521009
         },
         {
             "id": "d118914e-86a3-48ed-a0ca-cfe55d086734",
@@ -7097,7 +7222,7 @@
             "type": "static",
             "filename": "GPixel Police (Right Side).png",
             "inode": "400557120",
-            "_v": 1632851130730
+            "_v": 1632888521009
         },
         {
             "id": "4299c214-773b-457c-bbaf-9f5f733c55a3",
@@ -7106,7 +7231,7 @@
             "type": "static",
             "filename": "Ken Face.png",
             "inode": "400560256",
-            "_v": 1632851130730
+            "_v": 1632888521009
         },
         {
             "id": "1a4aa8af-1877-4e58-bb41-05422ec9be52",
@@ -7115,7 +7240,7 @@
             "type": "actor_animated",
             "filename": "Ken_animated.png",
             "inode": "400557888",
-            "_v": 1632851130730
+            "_v": 1632888521009
         },
         {
             "id": "07ef910a-4c68-4abd-974c-d44b253f3cf3",
@@ -7124,7 +7249,7 @@
             "type": "static",
             "filename": "Messy Desk.png",
             "inode": "400557504",
-            "_v": 1632851130730
+            "_v": 1632888521009
         },
         {
             "id": "619b9f21-7923-4cfa-81ae-4b1631aabc74",
@@ -7133,7 +7258,7 @@
             "type": "static",
             "filename": "RWardrobe.png",
             "inode": "400557792",
-            "_v": 1632851130730
+            "_v": 1632888521009
         },
         {
             "id": "dd805fa0-8c3e-44f3-ad08-e6e90b99b903",
@@ -7142,7 +7267,7 @@
             "type": "static",
             "filename": "Sleepy Boi.png",
             "inode": "400559200",
-            "_v": 1632851130730
+            "_v": 1632888521009
         },
         {
             "id": "68fc93b0-70a8-4000-9be8-7dd1b3e52803",
@@ -7151,7 +7276,7 @@
             "type": "static",
             "filename": "StdNPC.png",
             "inode": "400559296",
-            "_v": 1632851130730
+            "_v": 1632888521009
         },
         {
             "id": "7993f9e5-7cd3-4e44-a2ab-6a61315371c3",
@@ -7160,7 +7285,7 @@
             "type": "actor_animated",
             "filename": "StdNPC_animated.png",
             "inode": "400558880",
-            "_v": 1632851130730
+            "_v": 1632888521009
         },
         {
             "id": "df257f63-3645-4412-ac49-51bdb544ac39",
@@ -7169,7 +7294,7 @@
             "type": "static",
             "filename": "StormSilver Face.png",
             "inode": "400560736",
-            "_v": 1632853727069
+            "_v": 1632888521009
         },
         {
             "id": "0998bbe3-d46f-46ba-aa0f-86a3d495c749",
@@ -7178,7 +7303,7 @@
             "type": "actor_animated",
             "filename": "StormSilver_animated.png",
             "inode": "400560032",
-            "_v": 1632851130730
+            "_v": 1632888521010
         },
         {
             "id": "9d1ffa93-9cb2-4c83-88d1-05695147a8b5",
@@ -7187,7 +7312,7 @@
             "type": "static",
             "filename": "Wardrobe.png",
             "inode": "400557696",
-            "_v": 1632851130730
+            "_v": 1632888521009
         },
         {
             "id": "11b5452b-187c-43a3-afb1-a1f4f74ffda2",
@@ -7196,7 +7321,7 @@
             "type": "actor",
             "filename": "actor.png",
             "inode": "400556032",
-            "_v": 1632851130730
+            "_v": 1632888521009
         },
         {
             "id": "581d34d0-9591-4e6e-a609-1d94f203b0cd",
@@ -7205,7 +7330,7 @@
             "type": "actor_animated",
             "filename": "actor_animated.png",
             "inode": "400556128",
-            "_v": 1632851130730
+            "_v": 1632888521009
         },
         {
             "id": "daf95270-e30d-423b-9ee7-990ae29f57f6",
@@ -7214,7 +7339,7 @@
             "type": "static",
             "filename": "static.png",
             "inode": "400556256",
-            "_v": 1632851130730
+            "_v": 1632888521009
         }
     ],
     "palettes": [
@@ -7360,12 +7485,7 @@
             "id": "735d15c6-9718-484f-b43f-8fa0697b9b91",
             "name": "StormSilver Shooting",
             "description": "Projectile shooting for StormSilver to beat Flarasite.",
-            "variables": {
-                "0": {
-                    "id": "0",
-                    "name": "Suited Up"
-                }
-            },
+            "variables": {},
             "actors": {},
             "script": [
                 {
@@ -7375,63 +7495,35 @@
                     "children": {
                         "true": [
                             {
-                                "id": "8d8142f8-4d2c-4017-b823-b37d1b2bcaac",
-                                "command": "EVENT_IF_TRUE",
+                                "id": "e0a75381-48cd-4233-a936-0d46412e081e",
+                                "command": "EVENT_IF_INPUT",
                                 "args": {
-                                    "variable": "0",
+                                    "input": [
+                                        "b"
+                                    ],
                                     "__collapseElse": false
                                 },
                                 "children": {
                                     "true": [
                                         {
-                                            "id": "b4945471-c5fa-44b0-a537-bcaa61baf6d2",
-                                            "command": "EVENT_IF_INPUT",
+                                            "id": "ab228b8f-fda2-4d89-afcd-6273d3240845",
+                                            "command": "EVENT_SOUND_PLAY_EFFECT",
                                             "args": {
-                                                "input": [
-                                                    "b"
-                                                ],
-                                                "__collapseElse": false
-                                            },
-                                            "children": {
-                                                "true": [
-                                                    {
-                                                        "id": "dc877b12-2b0d-4406-9a24-4298d7d8aa70",
-                                                        "command": "EVENT_LAUNCH_PROJECTILE",
-                                                        "args": {
-                                                            "spriteSheetId": "11b5452b-187c-43a3-afb1-a1f4f74ffda2",
-                                                            "actorId": "player",
-                                                            "direction": {
-                                                                "type": "direction",
-                                                                "value": "right"
-                                                            },
-                                                            "speed": "2",
-                                                            "collisionGroup": "3",
-                                                            "collisionMask": [
-                                                                "1"
-                                                            ]
-                                                        }
-                                                    },
-                                                    {
-                                                        "id": "a3789e8c-c03e-4539-b8ca-9671beec790f",
-                                                        "command": "EVENT_END"
-                                                    }
-                                                ],
-                                                "false": [
-                                                    {
-                                                        "id": "6886049f-923c-4b57-a396-6482cb7af27a",
-                                                        "command": "EVENT_END"
-                                                    }
-                                                ]
+                                                "type": "beep",
+                                                "pitch": 4,
+                                                "frequency": 200,
+                                                "duration": 1,
+                                                "wait": true
                                             }
                                         },
                                         {
-                                            "id": "19c922e7-141e-46ba-baae-c4b0b431bc1c",
+                                            "id": "2938b564-f8a3-45df-aeee-9fb444565d77",
                                             "command": "EVENT_END"
                                         }
                                     ],
                                     "false": [
                                         {
-                                            "id": "e6b1dfa4-62df-409d-974c-66053546fe94",
+                                            "id": "16d54933-9ee2-4335-9b6a-7e4719228879",
                                             "command": "EVENT_END"
                                         }
                                     ]
@@ -7458,7 +7550,7 @@
             "filename": "Menu.mod",
             "settings": {},
             "inode": "398459072",
-            "_v": 1632851130728
+            "_v": 1632888521005
         },
         {
             "id": "e2c170a5-7001-4220-b287-5da7aa5980cc",
@@ -7466,23 +7558,35 @@
             "filename": "MenuSong.mod",
             "settings": {},
             "inode": "398459168",
-            "_v": 1632851130728
+            "_v": 1632888521005
+        },
+        {
+            "id": "d6c4ce03-ef01-4764-99b7-4ab148f49e1d",
+            "name": "Untitled",
+            "filename": "Untitled.mod",
+            "settings": {},
+            "inode": "398459360",
+            "_v": 1632888521006
         },
         {
             "id": "f50428ab-a084-4591-9bba-2ba10fe7b1c6",
             "name": "template",
             "filename": "template.mod",
-            "settings": {},
+            "settings": {
+                "disableSpeedConversion": false
+            },
             "inode": "398458880",
-            "_v": 1632851130728
+            "_v": 1632888521006
         },
         {
             "id": "913c560b-7dae-4dc4-ad6f-f4d9cf56c68c",
             "name": "test",
             "filename": "test.mod",
-            "settings": {},
+            "settings": {
+                "disableSpeedConversion": false
+            },
             "inode": "398458976",
-            "_v": 1632851130729
+            "_v": 1632888521006
         }
     ],
     "variables": [
@@ -7493,6 +7597,10 @@
         {
             "id": "1",
             "name": "HasSuit"
+        },
+        {
+            "id": "2",
+            "name": "Suited"
         },
         {
             "id": "66c91a14-b43e-488d-bfbc-532a9340a283__L0",
@@ -7533,10 +7641,6 @@
         {
             "id": "9f8a42ac-a0d9-4d72-b08b-9a92a6674a24__L1",
             "name": "Suited Up"
-        },
-        {
-            "id": "2",
-            "name": "Suited"
         }
     ],
     "settings": {

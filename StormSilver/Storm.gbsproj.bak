@@ -439,8 +439,9 @@
                                 "command": "EVENT_TEXT",
                                 "args": {
                                     "text": [
-                                        "Ugh why did I\ndecide to take\nthe",
-                                        "No time to brush\nor anything,\njust",
+                                        "Ugh why did I\ndecide to take\nthe 8am class?",
+                                        "No time to brush\nor anything,\njust gotta get",
+                                        "dressed and\nhurry.",
                                         "I hope my closet\nhas decent\nclothes"
                                     ],
                                     "avatarId": "4299c214-773b-457c-bbaf-9f5f733c55a3"
@@ -554,7 +555,7 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "Ryder's bed...\nhow\ncan he wake up"
+                                    "Ryder's bed...\nhow can he wake\nup so early?"
                                 ],
                                 "avatarId": "4299c214-773b-457c-bbaf-9f5f733c55a3"
                             }
@@ -622,7 +623,7 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "That's my\nroommate\nfor you, always"
+                                    "That's my\nroommate for\nyou, always tidy"
                                 ],
                                 "avatarId": "4299c214-773b-457c-bbaf-9f5f733c55a3"
                             }
@@ -4327,8 +4328,8 @@
                     "name": "Philosophical Man",
                     "frame": 0,
                     "animate": false,
-                    "spriteSheetId": "68fc93b0-70a8-4000-9be8-7dd1b3e52803",
-                    "spriteType": "static",
+                    "spriteSheetId": "7993f9e5-7cd3-4e44-a2ab-6a61315371c3",
+                    "spriteType": "actor",
                     "direction": "down",
                     "moveSpeed": "1",
                     "animSpeed": "3",
@@ -4465,7 +4466,54 @@
                     "direction": "down",
                     "moveSpeed": "1",
                     "animSpeed": "3",
-                    "script": [],
+                    "script": [
+                        {
+                            "id": "71f59374-bfdd-4788-970b-5fe7ef02514e",
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "A single bed in\nthis empty room...\nIs he okay?"
+                                ],
+                                "avatarId": ""
+                            }
+                        },
+                        {
+                            "id": "d2fba2b8-7739-4aed-aafa-592ded51b78f",
+                            "command": "EVENT_ACTOR_SET_DIRECTION",
+                            "args": {
+                                "actorId": "eca9e030-0b42-4d5b-a110-6de716f13ef5",
+                                "direction": {
+                                    "type": "direction",
+                                    "value": "up"
+                                }
+                            }
+                        },
+                        {
+                            "id": "db6c47f3-2dce-4ad0-95f4-fd7ebbe3861a",
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "...I'm just poor."
+                                ],
+                                "avatarId": ""
+                            }
+                        },
+                        {
+                            "id": "826e4d77-c4c1-4780-af56-0ddeaa14cdde",
+                            "command": "EVENT_ACTOR_SET_DIRECTION",
+                            "args": {
+                                "actorId": "eca9e030-0b42-4d5b-a110-6de716f13ef5",
+                                "direction": {
+                                    "type": "direction",
+                                    "value": "down"
+                                }
+                            }
+                        },
+                        {
+                            "id": "bdcda5d5-52d4-4dae-98f7-7ca78c2c7cce",
+                            "command": "EVENT_END"
+                        }
+                    ],
                     "startScript": [],
                     "updateScript": [],
                     "hit1Script": [],
@@ -5251,7 +5299,7 @@
                     "hit3Script": [],
                     "id": "1e7bed91-af4a-4cec-8e1a-5ca12ed7713a",
                     "x": 11,
-                    "y": 9
+                    "y": 8
                 },
                 {
                     "name": "",
@@ -5286,7 +5334,7 @@
                     "hit3Script": [],
                     "id": "5e83dfbf-1972-4a5f-8dbf-43f421b22290",
                     "x": 11,
-                    "y": 11
+                    "y": 12
                 },
                 {
                     "name": "Flarasite",
@@ -5307,6 +5355,85 @@
                     "x": 26,
                     "y": 9,
                     "isPinned": false
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "b6e02866-327e-4431-a37b-d3216e64ca3e",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": "1",
+                    "animSpeed": "3",
+                    "script": [
+                        {
+                            "id": "06e8e75c-e3a2-41a0-9a90-b2968be5b2d1",
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "2",
+                                "__collapseElse": false
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "id": "f8f7d2f5-b1e5-4e11-8a56-a9216c705ad6",
+                                        "command": "EVENT_ACTOR_SET_SPRITE",
+                                        "args": {
+                                            "actorId": "$self$",
+                                            "spriteSheetId": "d118914e-86a3-48ed-a0ca-cfe55d086734"
+                                        }
+                                    },
+                                    {
+                                        "id": "43e66933-ff76-4bee-97ab-3501436c26fd",
+                                        "command": "EVENT_ACTOR_MOVE_TO",
+                                        "args": {
+                                            "actorId": "$self$",
+                                            "x": {
+                                                "type": "number",
+                                                "value": 14
+                                            },
+                                            "y": {
+                                                "type": "number",
+                                                "value": 8
+                                            },
+                                            "moveType": "horizontal",
+                                            "useCollisions": true
+                                        }
+                                    },
+                                    {
+                                        "id": "2cd5ed27-0d16-4170-937b-1b5095d0d1c5",
+                                        "command": "EVENT_ACTOR_SET_SPRITE",
+                                        "args": {
+                                            "actorId": "$self$",
+                                            "spriteSheetId": "0b56d0ec-4d80-4bb0-bd4d-c72e0f9d27f6"
+                                        }
+                                    },
+                                    {
+                                        "id": "a98fddb1-cdcf-4811-be04-4aa12854f8e6",
+                                        "command": "EVENT_END"
+                                    }
+                                ],
+                                "false": [
+                                    {
+                                        "id": "5e64affe-a415-49b8-a8ca-986e7111960c",
+                                        "command": "EVENT_END"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "c31ee4d9-db29-45d5-9580-b1958cdf1a40",
+                            "command": "EVENT_END"
+                        }
+                    ],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "9ece25cf-c801-4613-b061-a8dfdaa87b50",
+                    "x": 11,
+                    "y": 10
                 }
             ],
             "triggers": [
@@ -6591,7 +6718,50 @@
                 0
             ],
             "tileColors": [],
-            "script": [],
+            "script": [
+                {
+                    "id": "588b891b-1440-4d51-9440-5cb81c2c7495",
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "This place\nshould be safe\nto change...",
+                            "...or at least\nit better be."
+                        ],
+                        "avatarId": "4299c214-773b-457c-bbaf-9f5f733c55a3"
+                    }
+                },
+                {
+                    "id": "43deefaf-d13c-4888-a591-156b5b48b911",
+                    "command": "EVENT_ACTOR_SET_SPRITE",
+                    "args": {
+                        "actorId": "player",
+                        "spriteSheetId": "0998bbe3-d46f-46ba-aa0f-86a3d495c749"
+                    }
+                },
+                {
+                    "id": "346a8324-3e51-4478-9696-850b71ecd809",
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "Hoo, it's been a\nbit since I've\nworn this",
+                            "Who knew two\ndays could pass\nso slowly?",
+                            "Time to teach\nFlarasite\nanother lesson."
+                        ],
+                        "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
+                    }
+                },
+                {
+                    "id": "848c675a-98a4-41d1-a5ce-08848f16ba6a",
+                    "command": "EVENT_SET_TRUE",
+                    "args": {
+                        "variable": "2"
+                    }
+                },
+                {
+                    "id": "36ddfde8-ed7f-46c1-b1ea-598b87dcb943",
+                    "command": "EVENT_END"
+                }
+            ],
             "playerHit1Script": [],
             "playerHit2Script": [],
             "playerHit3Script": [],
@@ -6712,38 +6882,6 @@
                     "id": "86176046-9eec-499d-b55b-97e64cc3404b",
                     "x": 13,
                     "y": 15
-                },
-                {
-                    "name": "Delete",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "11b5452b-187c-43a3-afb1-a1f4f74ffda2",
-                    "spriteType": "actor",
-                    "direction": "down",
-                    "moveSpeed": "1",
-                    "animSpeed": "3",
-                    "script": [
-                        {
-                            "id": "76d47abe-805d-4370-9c3f-2c09bf0661a0",
-                            "command": "EVENT_ACTOR_SET_SPRITE",
-                            "args": {
-                                "actorId": "player",
-                                "spriteSheetId": "0998bbe3-d46f-46ba-aa0f-86a3d495c749"
-                            }
-                        },
-                        {
-                            "id": "a6f26a46-c1f0-497d-bfc9-ecf9296d1e3f",
-                            "command": "EVENT_END"
-                        }
-                    ],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "b109e580-7556-476e-bd8f-10a78f0fe2c7",
-                    "x": 9,
-                    "y": 12
                 }
             ],
             "triggers": [
@@ -6755,7 +6893,7 @@
                             "id": "6c63de3c-5a50-4a1e-bd0b-29895c3b2f5d",
                             "command": "EVENT_IF_TRUE",
                             "args": {
-                                "variable": "L1",
+                                "variable": "2",
                                 "__collapseElse": false
                             },
                             "children": {
@@ -6831,7 +6969,7 @@
             "imageHeight": 160,
             "filename": "City(WIP).png",
             "inode": "396362368",
-            "_v": 1632851130730
+            "_v": 1632860482910
         },
         {
             "id": "93ab0c43-8360-4d66-92ca-bcf634c7df6d",
@@ -6842,7 +6980,7 @@
             "imageHeight": 144,
             "filename": "Ken's Room.png",
             "inode": "396361824",
-            "_v": 1632851130730
+            "_v": 1632860482911
         },
         {
             "id": "f5f7ae31-e9dc-41e8-ba82-74b2452de845",
@@ -6853,7 +6991,7 @@
             "imageHeight": 200,
             "filename": "Test (200x200 px).png",
             "inode": "396362048",
-            "_v": 1632851130730
+            "_v": 1632860482911
         },
         {
             "id": "07c269bf-6322-4d40-a315-d3f54073c93d",
@@ -6864,7 +7002,7 @@
             "imageHeight": 144,
             "filename": "Title Screen.png",
             "inode": "396361920",
-            "_v": 1632851130730
+            "_v": 1632860482911
         },
         {
             "id": "33801a63-c518-486e-95ba-e03a38606181",
@@ -6875,7 +7013,7 @@
             "imageHeight": 216,
             "filename": "Town.png",
             "inode": "396362176",
-            "_v": 1632851130730
+            "_v": 1632860482911
         },
         {
             "id": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
@@ -6886,7 +7024,7 @@
             "imageHeight": 144,
             "filename": "placeholder.png",
             "inode": "396361728",
-            "_v": 1632851130730
+            "_v": 1632860482911
         }
     ],
     "spriteSheets": [
@@ -6897,7 +7035,7 @@
             "type": "static",
             "filename": "Clean Desk.png",
             "inode": "400557600",
-            "_v": 1632851130730
+            "_v": 1632860482911
         },
         {
             "id": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b",
@@ -6906,7 +7044,7 @@
             "type": "static",
             "filename": "Flarasite Face.png",
             "inode": "400560480",
-            "_v": 1632851130730
+            "_v": 1632860482911
         },
         {
             "id": "200c1589-389c-46a1-8cee-3ad914c4f332",
@@ -6915,7 +7053,7 @@
             "type": "actor_animated",
             "filename": "Flarasite_animated.png",
             "inode": "400559776",
-            "_v": 1632851130730
+            "_v": 1632860482911
         },
         {
             "id": "0b41bc8e-672d-496d-b979-58f59de35875",
@@ -6924,7 +7062,7 @@
             "type": "animated",
             "filename": "Flarasite_idle_animated.png",
             "inode": "400559520",
-            "_v": 1632851130730
+            "_v": 1632860482911
         },
         {
             "id": "29faf994-c5e0-4c51-927f-9f0001e48053",
@@ -6933,7 +7071,7 @@
             "type": "static",
             "filename": "GBed (16px).png",
             "inode": "400557024",
-            "_v": 1632851130730
+            "_v": 1632860482911
         },
         {
             "id": "0b56d0ec-4d80-4bb0-bd4d-c72e0f9d27f6",
@@ -6942,7 +7080,7 @@
             "type": "static",
             "filename": "GPixel Police (Front).png",
             "inode": "400557248",
-            "_v": 1632851130730
+            "_v": 1632860482911
         },
         {
             "id": "b6e02866-327e-4431-a37b-d3216e64ca3e",
@@ -6951,7 +7089,7 @@
             "type": "static",
             "filename": "GPixel Police (Left Side).png",
             "inode": "400557376",
-            "_v": 1632851130730
+            "_v": 1632860482911
         },
         {
             "id": "d118914e-86a3-48ed-a0ca-cfe55d086734",
@@ -6960,7 +7098,7 @@
             "type": "static",
             "filename": "GPixel Police (Right Side).png",
             "inode": "400557120",
-            "_v": 1632851130730
+            "_v": 1632860482911
         },
         {
             "id": "4299c214-773b-457c-bbaf-9f5f733c55a3",
@@ -6969,7 +7107,7 @@
             "type": "static",
             "filename": "Ken Face.png",
             "inode": "400560256",
-            "_v": 1632851130730
+            "_v": 1632860482911
         },
         {
             "id": "1a4aa8af-1877-4e58-bb41-05422ec9be52",
@@ -6978,7 +7116,7 @@
             "type": "actor_animated",
             "filename": "Ken_animated.png",
             "inode": "400557888",
-            "_v": 1632851130730
+            "_v": 1632860482911
         },
         {
             "id": "07ef910a-4c68-4abd-974c-d44b253f3cf3",
@@ -6987,7 +7125,7 @@
             "type": "static",
             "filename": "Messy Desk.png",
             "inode": "400557504",
-            "_v": 1632851130730
+            "_v": 1632860482911
         },
         {
             "id": "619b9f21-7923-4cfa-81ae-4b1631aabc74",
@@ -6996,7 +7134,7 @@
             "type": "static",
             "filename": "RWardrobe.png",
             "inode": "400557792",
-            "_v": 1632851130730
+            "_v": 1632860482911
         },
         {
             "id": "dd805fa0-8c3e-44f3-ad08-e6e90b99b903",
@@ -7005,7 +7143,7 @@
             "type": "static",
             "filename": "Sleepy Boi.png",
             "inode": "400559200",
-            "_v": 1632851130730
+            "_v": 1632860482911
         },
         {
             "id": "68fc93b0-70a8-4000-9be8-7dd1b3e52803",
@@ -7014,7 +7152,7 @@
             "type": "static",
             "filename": "StdNPC.png",
             "inode": "400559296",
-            "_v": 1632851130730
+            "_v": 1632860482911
         },
         {
             "id": "7993f9e5-7cd3-4e44-a2ab-6a61315371c3",
@@ -7023,7 +7161,16 @@
             "type": "actor_animated",
             "filename": "StdNPC_animated.png",
             "inode": "400558880",
-            "_v": 1632851130730
+            "_v": 1632860482911
+        },
+        {
+            "id": "df257f63-3645-4412-ac49-51bdb544ac39",
+            "name": "StormSilver Face",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "StormSilver Face.png",
+            "inode": "400560736",
+            "_v": 1632860482911
         },
         {
             "id": "0998bbe3-d46f-46ba-aa0f-86a3d495c749",
@@ -7032,7 +7179,7 @@
             "type": "actor_animated",
             "filename": "StormSilver_animated.png",
             "inode": "400560032",
-            "_v": 1632851130730
+            "_v": 1632860482911
         },
         {
             "id": "9d1ffa93-9cb2-4c83-88d1-05695147a8b5",
@@ -7041,7 +7188,7 @@
             "type": "static",
             "filename": "Wardrobe.png",
             "inode": "400557696",
-            "_v": 1632851130730
+            "_v": 1632860482911
         },
         {
             "id": "11b5452b-187c-43a3-afb1-a1f4f74ffda2",
@@ -7050,7 +7197,7 @@
             "type": "actor",
             "filename": "actor.png",
             "inode": "400556032",
-            "_v": 1632851130730
+            "_v": 1632860482911
         },
         {
             "id": "581d34d0-9591-4e6e-a609-1d94f203b0cd",
@@ -7059,7 +7206,7 @@
             "type": "actor_animated",
             "filename": "actor_animated.png",
             "inode": "400556128",
-            "_v": 1632851130730
+            "_v": 1632860482911
         },
         {
             "id": "daf95270-e30d-423b-9ee7-990ae29f57f6",
@@ -7068,7 +7215,7 @@
             "type": "static",
             "filename": "static.png",
             "inode": "400556256",
-            "_v": 1632851130730
+            "_v": 1632860482911
         }
     ],
     "palettes": [
@@ -7209,7 +7356,69 @@
             ]
         }
     ],
-    "customEvents": [],
+    "customEvents": [
+        {
+            "id": "735d15c6-9718-484f-b43f-8fa0697b9b91",
+            "name": "StormSilver Shooting",
+            "description": "Projectile shooting for StormSilver to beat Flarasite.",
+            "variables": {},
+            "actors": {},
+            "script": [
+                {
+                    "id": "7639d0c6-d57f-4409-b699-94391c32d918",
+                    "command": "EVENT_LOOP",
+                    "args": {},
+                    "children": {
+                        "true": [
+                            {
+                                "id": "e0a75381-48cd-4233-a936-0d46412e081e",
+                                "command": "EVENT_IF_INPUT",
+                                "args": {
+                                    "input": [
+                                        "b"
+                                    ],
+                                    "__collapseElse": false
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "id": "ab228b8f-fda2-4d89-afcd-6273d3240845",
+                                            "command": "EVENT_SOUND_PLAY_EFFECT",
+                                            "args": {
+                                                "type": "beep",
+                                                "pitch": 4,
+                                                "frequency": 200,
+                                                "duration": 1,
+                                                "wait": true
+                                            }
+                                        },
+                                        {
+                                            "id": "2938b564-f8a3-45df-aeee-9fb444565d77",
+                                            "command": "EVENT_END"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "id": "16d54933-9ee2-4335-9b6a-7e4719228879",
+                                            "command": "EVENT_END"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "id": "a9c8cad7-8c86-4472-9453-13a13af8c3d1",
+                                "command": "EVENT_END"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "573aa381-222f-481b-b68c-093ef479571f",
+                    "command": "EVENT_END"
+                }
+            ]
+        }
+    ],
     "music": [
         {
             "id": "a3931dfe-0404-426a-957a-c53e57794f18",
@@ -7217,7 +7426,7 @@
             "filename": "Menu.mod",
             "settings": {},
             "inode": "398459072",
-            "_v": 1632851130728
+            "_v": 1632860482909
         },
         {
             "id": "e2c170a5-7001-4220-b287-5da7aa5980cc",
@@ -7225,23 +7434,35 @@
             "filename": "MenuSong.mod",
             "settings": {},
             "inode": "398459168",
-            "_v": 1632851130728
+            "_v": 1632860482909
+        },
+        {
+            "id": "d6c4ce03-ef01-4764-99b7-4ab148f49e1d",
+            "name": "Untitled",
+            "filename": "Untitled.mod",
+            "settings": {},
+            "inode": "398459360",
+            "_v": 1632860482909
         },
         {
             "id": "f50428ab-a084-4591-9bba-2ba10fe7b1c6",
             "name": "template",
             "filename": "template.mod",
-            "settings": {},
+            "settings": {
+                "disableSpeedConversion": false
+            },
             "inode": "398458880",
-            "_v": 1632851130728
+            "_v": 1632860482909
         },
         {
             "id": "913c560b-7dae-4dc4-ad6f-f4d9cf56c68c",
             "name": "test",
             "filename": "test.mod",
-            "settings": {},
+            "settings": {
+                "disableSpeedConversion": false
+            },
             "inode": "398458976",
-            "_v": 1632851130729
+            "_v": 1632860482909
         }
     ],
     "variables": [
@@ -7252,6 +7473,10 @@
         {
             "id": "1",
             "name": "HasSuit"
+        },
+        {
+            "id": "2",
+            "name": "Suited"
         },
         {
             "id": "66c91a14-b43e-488d-bfbc-532a9340a283__L0",
@@ -7283,6 +7508,14 @@
         },
         {
             "id": "11889634-6153-41c8-ad1d-4e56439523bb__L1",
+            "name": "Suited Up"
+        },
+        {
+            "id": "ba2fd556-3b2d-46e8-85cd-4d6958428343__L0",
+            "name": "Seen Flarasite"
+        },
+        {
+            "id": "9f8a42ac-a0d9-4d72-b08b-9a92a6674a24__L1",
             "name": "Suited Up"
         }
     ],
