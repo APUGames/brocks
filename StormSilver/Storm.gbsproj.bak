@@ -4479,7 +4479,7 @@
                                 "text": [
                                     "Dude. I just\nwalked in..."
                                 ],
-                                "avatarId": ""
+                                "avatarId": "4299c214-773b-457c-bbaf-9f5f733c55a3"
                             }
                         },
                         {
@@ -4765,7 +4765,7 @@
                 15,
                 15,
                 15,
-                0,
+                15,
                 15,
                 15,
                 15,
@@ -5618,7 +5618,7 @@
                     "y": 10
                 },
                 {
-                    "name": "",
+                    "name": "Hostage",
                     "frame": 0,
                     "animate": false,
                     "spriteSheetId": "7993f9e5-7cd3-4e44-a2ab-6a61315371c3",
@@ -5671,7 +5671,7 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "444f63bd-133a-4c73-aae9-5de0ae65387d",
-                    "x": 5,
+                    "x": 6,
                     "y": 10
                 },
                 {
@@ -5716,25 +5716,6 @@
                     "name": "",
                     "frame": 0,
                     "animate": false,
-                    "spriteSheetId": "766fe949-3b8f-4ae5-b9b8-97106d74838f",
-                    "spriteType": "static",
-                    "direction": "down",
-                    "moveSpeed": "1",
-                    "animSpeed": "3",
-                    "script": [],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "fd9f1885-0bd5-4930-b214-0a37074749a0",
-                    "x": 3,
-                    "y": 7
-                },
-                {
-                    "name": "",
-                    "frame": 0,
-                    "animate": false,
                     "spriteSheetId": "fa60a5e7-d12e-42d8-8430-428a97e54ee3",
                     "spriteType": "static",
                     "direction": "down",
@@ -5749,44 +5730,6 @@
                     "id": "65c44bbf-3fae-4a17-8712-404691a0ce0d",
                     "x": 4,
                     "y": 11
-                },
-                {
-                    "name": "",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "766fe949-3b8f-4ae5-b9b8-97106d74838f",
-                    "spriteType": "static",
-                    "direction": "down",
-                    "moveSpeed": "1",
-                    "animSpeed": "3",
-                    "script": [],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "008850e8-a09a-4b2f-95b2-d5bdf22722e5",
-                    "x": 6,
-                    "y": 7
-                },
-                {
-                    "name": "",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "924503e4-6a37-46e8-9f77-c88f0988c3d5",
-                    "spriteType": "static",
-                    "direction": "down",
-                    "moveSpeed": "1",
-                    "animSpeed": "3",
-                    "script": [],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "cadd19ac-2280-4a0d-9a23-1f7d3ee37fc5",
-                    "x": 7,
-                    "y": 12
                 }
             ],
             "triggers": [
@@ -8802,7 +8745,96 @@
                 0
             ],
             "tileColors": [],
-            "script": [],
+            "script": [
+                {
+                    "id": "99d600ae-fd22-4305-954f-3976c023879d",
+                    "command": "EVENT_CAMERA_MOVE_TO",
+                    "args": {
+                        "x": 11,
+                        "y": 1,
+                        "speed": "3"
+                    }
+                },
+                {
+                    "id": "6bd6b5b6-0536-4053-8ee7-dbf249726f56",
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "You may have won\ntoday but next\ntime I'll...",
+                            "Ah whatever you\nget the point,\nwe've done",
+                            "this so many\ntimes at this\npoint"
+                        ],
+                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
+                    }
+                },
+                {
+                    "id": "f67bb010-32ad-4d28-bcd4-bbdcab24cda8",
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "Then don't you\nthink it's time\nyou had",
+                            "a change of\nheart,\nFlarasite?"
+                        ],
+                        "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
+                    }
+                },
+                {
+                    "id": "4b0980f4-4cee-449e-9b22-11669d007a3a",
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "Try to convince\nme as much as\nyou want, Stormy",
+                            "but this is\nsomething I\nrefuse to back",
+                            "down on... and I\nhope you can\nunderstand that."
+                        ],
+                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
+                    }
+                },
+                {
+                    "id": "d01115fa-beab-4c14-921c-fc99be4431cb",
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "I still don't\nknow what you're\nso adamant about",
+                            "What about\nsociety is worth\nall this trouble"
+                        ],
+                        "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
+                    }
+                },
+                {
+                    "id": "35af3f44-ece3-480c-a683-a4eaf86f1db9",
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "Like I said, if\nyou don't get it\nnow...",
+                            "I don't expect\nyou to, just\nknow that",
+                            "I won't back\ndown on this no\nmatter what."
+                        ],
+                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
+                    }
+                },
+                {
+                    "id": "34a687ec-80d5-42c4-b3a2-ccdca57bbedd",
+                    "command": "EVENT_ACTOR_MOVE_TO",
+                    "args": {
+                        "actorId": "97e5f5b1-26ff-40b2-be2e-f161aae8c964",
+                        "x": {
+                            "type": "number",
+                            "value": 1
+                        },
+                        "y": {
+                            "type": "number",
+                            "value": 9
+                        },
+                        "moveType": "vertical",
+                        "useCollisions": true
+                    }
+                },
+                {
+                    "id": "77be9ddb-c6d7-4d36-9f06-2ed7a000d4cd",
+                    "command": "EVENT_END"
+                }
+            ],
             "playerHit1Script": [],
             "playerHit2Script": [],
             "playerHit3Script": [],
@@ -8811,7 +8843,7 @@
             "y": 266,
             "actors": [
                 {
-                    "name": "",
+                    "name": "Flarasite (Defeated)",
                     "frame": 0,
                     "animate": false,
                     "spriteSheetId": "200c1589-389c-46a1-8cee-3ad914c4f332",
