@@ -1,6 +1,6 @@
 {
     "name": "StormSilver",
-    "author": "Owner",
+    "author": "Seth Brock",
     "_version": "2.0.0",
     "_release": "3",
     "scenes": [
@@ -3800,20 +3800,67 @@
             "tileColors": [],
             "script": [
                 {
-                    "id": "26f5c71d-6236-476b-ac03-f88641d10557",
-                    "command": "EVENT_TEXT",
+                    "id": "1e2940b7-a90c-40a2-acba-69cf1fb5810e",
+                    "command": "EVENT_IF_TRUE",
                     "args": {
-                        "text": [
-                            "...I don't think\nthis guy knows\nhow to design..."
+                        "variable": "15",
+                        "__collapseElse": false
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "id": "f2f6c491-cd50-47ca-90eb-7181394f1304",
+                                "command": "EVENT_ACTOR_HIDE",
+                                "args": {
+                                    "actorId": "$self$"
+                                }
+                            },
+                            {
+                                "id": "54496617-f170-4c5e-8184-3c3cfc2b7312",
+                                "command": "EVENT_WAIT",
+                                "args": {
+                                    "time": 1
+                                }
+                            },
+                            {
+                                "id": "2b58bf09-cfbe-4622-9a7c-c345575033bb",
+                                "command": "EVENT_SWITCH_SCENE",
+                                "args": {
+                                    "sceneId": "a0d304f0-982c-4d4d-ab01-7587f31cbe08",
+                                    "x": 25,
+                                    "y": 6,
+                                    "direction": "",
+                                    "fadeSpeed": "2"
+                                }
+                            },
+                            {
+                                "id": "87493483-9f6d-452e-b71f-018fb95209e2",
+                                "command": "EVENT_END"
+                            }
                         ],
-                        "avatarId": "4299c214-773b-457c-bbaf-9f5f733c55a3"
-                    }
-                },
-                {
-                    "id": "5c65df62-35d2-4f65-9b47-1d0d35e52d8b",
-                    "command": "EVENT_SET_TRUE",
-                    "args": {
-                        "variable": "6"
+                        "false": [
+                            {
+                                "id": "26f5c71d-6236-476b-ac03-f88641d10557",
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "...I don't think\nthis guy knows\nhow to design..."
+                                    ],
+                                    "avatarId": "4299c214-773b-457c-bbaf-9f5f733c55a3"
+                                }
+                            },
+                            {
+                                "id": "5c65df62-35d2-4f65-9b47-1d0d35e52d8b",
+                                "command": "EVENT_SET_TRUE",
+                                "args": {
+                                    "variable": "6"
+                                }
+                            },
+                            {
+                                "id": "03a6e525-c8fe-4ef8-a300-1934f976759d",
+                                "command": "EVENT_END"
+                            }
+                        ]
                     }
                 },
                 {
@@ -4545,10 +4592,57 @@
             "tileColors": [],
             "script": [
                 {
-                    "id": "4f2f13d6-15bc-44f7-91b3-e087f8b6c68b",
-                    "command": "EVENT_SET_TRUE",
+                    "id": "a09c9d3d-f1a5-4ac3-9fbd-94cac74c4fac",
+                    "command": "EVENT_IF_TRUE",
                     "args": {
-                        "variable": "7"
+                        "variable": "16",
+                        "__collapseElse": false
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "id": "5916db4e-a669-4a81-be16-dbde9775d99d",
+                                "command": "EVENT_ACTOR_HIDE",
+                                "args": {
+                                    "actorId": "$self$"
+                                }
+                            },
+                            {
+                                "id": "351cea9b-ca09-4d8d-af14-4aa3b7c6affe",
+                                "command": "EVENT_WAIT",
+                                "args": {
+                                    "time": 1
+                                }
+                            },
+                            {
+                                "id": "f0cc847d-6c8e-4d9c-94b0-2f40851ec468",
+                                "command": "EVENT_SWITCH_SCENE",
+                                "args": {
+                                    "sceneId": "a0d304f0-982c-4d4d-ab01-7587f31cbe08",
+                                    "x": 25,
+                                    "y": 6,
+                                    "direction": "",
+                                    "fadeSpeed": "2"
+                                }
+                            },
+                            {
+                                "id": "7b257c7d-7b66-49cb-b1b6-8399bb47dc26",
+                                "command": "EVENT_END"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "id": "4f2f13d6-15bc-44f7-91b3-e087f8b6c68b",
+                                "command": "EVENT_SET_TRUE",
+                                "args": {
+                                    "variable": "7"
+                                }
+                            },
+                            {
+                                "id": "e78d21f2-0856-4045-8c3f-2042a27716b8",
+                                "command": "EVENT_END"
+                            }
+                        ]
                     }
                 },
                 {
@@ -4648,39 +4742,61 @@
                     ],
                     "startScript": [
                         {
-                            "id": "1b50065f-5c62-450f-a458-2b4ee4a31a09",
-                            "command": "EVENT_TEXT",
+                            "id": "41489c8d-139a-4eb6-a3a9-34ef0931ba01",
+                            "command": "EVENT_IF_TRUE",
                             "args": {
-                                "text": [
-                                    "God's will implies\nthat freedom is an\nillusion...",
-                                    "Knowing the\nanswers to the\nuniverse will",
-                                    "invalidate our\nreason for being\nalive...",
-                                    "We live in a\nsimulation where\nthe creator is",
-                                    "messing around\nwith us...",
-                                    "WE",
-                                    "HAVE",
-                                    "NO",
-                                    "FREE",
-                                    "WILL"
+                                "variable": "16",
+                                "__collapseElse": false
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "id": "9dd23111-61d9-44a9-91cb-a5d330363ac7",
+                                        "command": "EVENT_END"
+                                    }
                                 ],
-                                "avatarId": ""
-                            }
-                        },
-                        {
-                            "id": "dd2a7e45-d830-4c21-9856-9f9cbaa89129",
-                            "command": "EVENT_TEXT",
-                            "args": {
-                                "text": [
-                                    "Dude. I just\nwalked in..."
-                                ],
-                                "avatarId": "4299c214-773b-457c-bbaf-9f5f733c55a3"
-                            }
-                        },
-                        {
-                            "id": "0ef70f4f-dda4-48d4-8803-d135f21ce291",
-                            "command": "EVENT_SET_FALSE",
-                            "args": {
-                                "variable": "L0"
+                                "false": [
+                                    {
+                                        "id": "1b50065f-5c62-450f-a458-2b4ee4a31a09",
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "God's will implies\nthat freedom is an\nillusion...",
+                                                "Knowing the\nanswers to the\nuniverse will",
+                                                "invalidate our\nreason for being\nalive...",
+                                                "We live in a\nsimulation where\nthe creator is",
+                                                "messing around\nwith us...",
+                                                "WE",
+                                                "HAVE",
+                                                "NO",
+                                                "FREE",
+                                                "WILL"
+                                            ],
+                                            "avatarId": ""
+                                        }
+                                    },
+                                    {
+                                        "id": "dd2a7e45-d830-4c21-9856-9f9cbaa89129",
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Dude. I just\nwalked in..."
+                                            ],
+                                            "avatarId": "4299c214-773b-457c-bbaf-9f5f733c55a3"
+                                        }
+                                    },
+                                    {
+                                        "id": "0ef70f4f-dda4-48d4-8803-d135f21ce291",
+                                        "command": "EVENT_SET_FALSE",
+                                        "args": {
+                                            "variable": "L0"
+                                        }
+                                    },
+                                    {
+                                        "id": "518bd728-363a-427b-bd07-c12cbf45ebc2",
+                                        "command": "EVENT_END"
+                                    }
+                                ]
                             }
                         },
                         {
@@ -16273,10 +16389,57 @@
             "tileColors": [],
             "script": [
                 {
-                    "id": "23f91d68-bed8-450a-8e81-fa36c2b68579",
-                    "command": "EVENT_SET_TRUE",
+                    "id": "cc8f9a5c-6c07-484a-9760-bded3234cc58",
+                    "command": "EVENT_IF_TRUE",
                     "args": {
-                        "variable": "8"
+                        "variable": "17",
+                        "__collapseElse": false
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "id": "bd84f41d-10ca-437d-8819-99dee46dee6e",
+                                "command": "EVENT_ACTOR_HIDE",
+                                "args": {
+                                    "actorId": "$self$"
+                                }
+                            },
+                            {
+                                "id": "b0b2eadd-70a8-4e78-adba-cb1d389a0bdb",
+                                "command": "EVENT_WAIT",
+                                "args": {
+                                    "time": 1
+                                }
+                            },
+                            {
+                                "id": "bd9a7e46-7850-4500-ab02-9ee5e381a834",
+                                "command": "EVENT_SWITCH_SCENE",
+                                "args": {
+                                    "sceneId": "a0d304f0-982c-4d4d-ab01-7587f31cbe08",
+                                    "x": 25,
+                                    "y": 6,
+                                    "direction": "",
+                                    "fadeSpeed": "2"
+                                }
+                            },
+                            {
+                                "id": "0ce6cd98-b1d4-4251-97f0-9ff881150461",
+                                "command": "EVENT_END"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "id": "23f91d68-bed8-450a-8e81-fa36c2b68579",
+                                "command": "EVENT_SET_TRUE",
+                                "args": {
+                                    "variable": "8"
+                                }
+                            },
+                            {
+                                "id": "3245d109-bf05-4fe1-ad2f-d238103a40de",
+                                "command": "EVENT_END"
+                            }
+                        ]
                     }
                 },
                 {
@@ -16870,20 +17033,67 @@
             "tileColors": [],
             "script": [
                 {
-                    "id": "c8b6a289-6300-4d0d-b835-c34c071d1276",
-                    "command": "EVENT_TEXT",
+                    "id": "bdbc79a7-81c3-44be-b370-8dfc0788775a",
+                    "command": "EVENT_IF_TRUE",
                     "args": {
-                        "text": [
-                            "Hi, welcome!"
+                        "variable": "18",
+                        "__collapseElse": false
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "id": "14e0aaec-db1f-4384-8900-a77ebeb3cd61",
+                                "command": "EVENT_ACTOR_HIDE",
+                                "args": {
+                                    "actorId": "$self$"
+                                }
+                            },
+                            {
+                                "id": "31b80b18-7292-40cd-a0d7-ac4e5abd9652",
+                                "command": "EVENT_WAIT",
+                                "args": {
+                                    "time": 1
+                                }
+                            },
+                            {
+                                "id": "8ce59015-6807-4d58-a258-d2014349c3d5",
+                                "command": "EVENT_SWITCH_SCENE",
+                                "args": {
+                                    "sceneId": "a0d304f0-982c-4d4d-ab01-7587f31cbe08",
+                                    "x": 25,
+                                    "y": 6,
+                                    "direction": "",
+                                    "fadeSpeed": "2"
+                                }
+                            },
+                            {
+                                "id": "52c660cc-02aa-44e3-89c9-82333e0e9ddf",
+                                "command": "EVENT_END"
+                            }
                         ],
-                        "avatarId": ""
-                    }
-                },
-                {
-                    "id": "c3e7b246-3164-4177-bb56-3fbbef7efb9d",
-                    "command": "EVENT_SET_TRUE",
-                    "args": {
-                        "variable": "9"
+                        "false": [
+                            {
+                                "id": "c8b6a289-6300-4d0d-b835-c34c071d1276",
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Hi, welcome!"
+                                    ],
+                                    "avatarId": ""
+                                }
+                            },
+                            {
+                                "id": "c3e7b246-3164-4177-bb56-3fbbef7efb9d",
+                                "command": "EVENT_SET_TRUE",
+                                "args": {
+                                    "variable": "9"
+                                }
+                            },
+                            {
+                                "id": "7835a37b-837b-4001-a7a6-b609faaec89f",
+                                "command": "EVENT_END"
+                            }
+                        ]
                     }
                 },
                 {
@@ -26151,7 +26361,7 @@
                             "command": "EVENT_SWITCH_SCENE",
                             "args": {
                                 "sceneId": "75c92158-301a-4d0e-a9af-b0dcee05437b",
-                                "x": 30,
+                                "x": 29,
                                 "y": 10,
                                 "direction": "",
                                 "fadeSpeed": "2"
@@ -27878,6 +28088,44 @@
                     "y": 7,
                     "width": 1,
                     "height": 9
+                },
+                {
+                    "name": "",
+                    "trigger": "walk",
+                    "script": [
+                        {
+                            "id": "988c14d0-c450-41bf-936c-bb69975f79e6",
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "There's no going\nback now...",
+                                    "If he really\nfeels that I\nshould listen",
+                                    "to him, then\nmaybe this is\nvery important"
+                                ],
+                                "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
+                            }
+                        },
+                        {
+                            "id": "9c27696e-38d1-4440-8a42-2c96aed4c7f8",
+                            "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                            "args": {
+                                "actorId": "$self$",
+                                "x": -1,
+                                "y": 0,
+                                "moveType": "horizontal",
+                                "useCollisions": false
+                            }
+                        },
+                        {
+                            "id": "1ef20f98-e89c-4bdf-b206-d878b7f3730d",
+                            "command": "EVENT_END"
+                        }
+                    ],
+                    "id": "88226210-5d06-4e72-b0ab-474e61e36f4d",
+                    "x": 31,
+                    "y": 7,
+                    "width": 1,
+                    "height": 9
                 }
             ],
             "labelColor": "yellow"
@@ -27890,6 +28138,7 @@
             "collisions": [
                 0,
                 0,
+                15,
                 0,
                 0,
                 0,
@@ -27917,6 +28166,7 @@
                 0,
                 0,
                 0,
+                15,
                 0,
                 0,
                 0,
@@ -27940,15 +28190,37 @@
                 0,
                 0,
                 0,
+                15,
+                15,
+                15,
+                15,
                 0,
                 0,
+                15,
+                15,
+                15,
+                15,
+                15,
                 0,
                 0,
+                15,
+                15,
+                15,
+                15,
+                15,
                 0,
                 0,
                 0,
+                15,
+                15,
+                15,
+                15,
                 0,
                 0,
+                15,
+                15,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -28192,6 +28464,7 @@
                 0,
                 0,
                 0,
+                15,
                 0,
                 0,
                 0,
@@ -28218,6 +28491,7 @@
                 0,
                 0,
                 0,
+                15,
                 0,
                 0,
                 0,
@@ -28257,6 +28531,1335 @@
                 0,
                 0,
                 0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                15,
+                15,
+                15,
+                15,
+                15,
+                0,
+                0,
+                15,
+                15,
+                15,
+                15,
+                15,
+                0,
+                0,
+                15,
+                15,
+                15,
+                15,
+                15,
+                0,
+                0,
+                15,
+                15,
+                15,
+                15,
+                15,
+                0,
+                15,
+                15,
+                15,
+                15,
+                15,
+                0,
+                0,
+                15,
+                15,
+                15,
+                15,
+                15,
+                0,
+                0,
+                15,
+                15,
+                15,
+                15,
+                15,
+                0,
+                0,
+                15,
+                15,
+                15,
+                15,
+                15,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "tileColors": [],
+            "script": [
+                {
+                    "id": "df9c66d3-4cf1-437f-a550-d22ccbf83018",
+                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                    "args": {
+                        "customEventId": "c7bbcc1e-828f-48f7-8b32-f8d0c62b4462",
+                        "__name": "Delete After Building",
+                        "$variable[0]$": "5",
+                        "$variable[1]$": "6",
+                        "$variable[2]$": "7",
+                        "$variable[3]$": "8",
+                        "$variable[4]$": "9",
+                        "$variable[5]$": "10"
+                    },
+                    "children": {
+                        "script": [
+                            {
+                                "id": "9021a11b-13ad-4a39-80f6-d5e815ceaa2c",
+                                "command": "EVENT_SET_TRUE",
+                                "args": {
+                                    "variable": "0"
+                                }
+                            },
+                            {
+                                "id": "53df4f4d-98c1-4b37-84d4-2f53a37261f3",
+                                "command": "EVENT_SET_TRUE",
+                                "args": {
+                                    "variable": "1"
+                                }
+                            },
+                            {
+                                "id": "9a07d77d-9c87-48be-9417-1b6996585587",
+                                "command": "EVENT_SET_TRUE",
+                                "args": {
+                                    "variable": "2"
+                                }
+                            },
+                            {
+                                "id": "d3cc15af-8021-42bd-926f-784f8d4ee35e",
+                                "command": "EVENT_SET_TRUE",
+                                "args": {
+                                    "variable": "3"
+                                }
+                            },
+                            {
+                                "id": "6937e084-866f-4815-bc2b-f211964a2592",
+                                "command": "EVENT_SET_TRUE",
+                                "args": {
+                                    "variable": "4"
+                                }
+                            },
+                            {
+                                "id": "43d38a75-d9c6-4a43-823c-98974469bd41",
+                                "command": "EVENT_SET_TRUE",
+                                "args": {
+                                    "variable": "5"
+                                }
+                            },
+                            {
+                                "id": "020c4f15-9a1f-40f7-8a76-bff327cd1a40",
+                                "command": "EVENT_END"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "54b1c52c-77ec-451f-bd83-102f9372929b",
+                    "command": "EVENT_IF_FALSE",
+                    "args": {
+                        "variable": "20",
+                        "__collapseElse": false
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "id": "89b8f939-5beb-490a-a6a8-1362e34f56ae",
+                                "command": "EVENT_IF_TRUE",
+                                "args": {
+                                    "variable": "14",
+                                    "__collapseElse": false
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "id": "e09ab274-4ca6-474c-99ce-9efa8f7d5fe5",
+                                            "command": "EVENT_SET_TRUE",
+                                            "args": {
+                                                "variable": "20"
+                                            }
+                                        },
+                                        {
+                                            "id": "28d4441b-3434-43b7-8211-e5b65a3c99cf",
+                                            "command": "EVENT_CALL_CUSTOM_EVENT",
+                                            "args": {
+                                                "customEventId": "7ea5824a-b155-4e6b-8194-d4cf659879f5",
+                                                "__name": "F Sleepy",
+                                                "$variable[6]$": "6",
+                                                "$variable[0]$": "15"
+                                            },
+                                            "children": {
+                                                "script": [
+                                                    {
+                                                        "id": "0a28cb4c-2c06-430b-bb04-7e595127dbeb",
+                                                        "command": "EVENT_IF_TRUE",
+                                                        "args": {
+                                                            "variable": "6",
+                                                            "__collapseElse": false
+                                                        },
+                                                        "children": {
+                                                            "true": [
+                                                                {
+                                                                    "id": "7f759904-3fb7-4022-bbaf-93dd17223815",
+                                                                    "command": "EVENT_TEXT",
+                                                                    "args": {
+                                                                        "text": [
+                                                                            "You never talked\nto the sleepy\nman because",
+                                                                            "he DIED during\nyour attack..."
+                                                                        ],
+                                                                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "b2c95690-1b2f-4e45-b14b-88e70794da5f",
+                                                                    "command": "EVENT_SET_TRUE",
+                                                                    "args": {
+                                                                        "variable": "0"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "f896ec83-d01e-43b1-886c-4c39d2b766f5",
+                                                                    "command": "EVENT_SWITCH_SCENE",
+                                                                    "args": {
+                                                                        "sceneId": "484ecbec-1d86-43f2-965c-ad97f1633fda",
+                                                                        "x": 0,
+                                                                        "y": 0,
+                                                                        "direction": "",
+                                                                        "fadeSpeed": "2"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "ade42ed9-81fc-4a0e-855b-a152bdcfced3",
+                                                                    "command": "EVENT_END"
+                                                                }
+                                                            ],
+                                                            "false": [
+                                                                {
+                                                                    "id": "ce8c0652-3cf3-4d20-9003-7701c1797e52",
+                                                                    "command": "EVENT_END"
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "id": "e0c46590-c413-4b23-8d99-077a5bb4b065",
+                                                        "command": "EVENT_END"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "id": "5c2968f1-5bbc-4cf4-b8f1-fa55c19a5132",
+                                            "command": "EVENT_END"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "id": "5e273c27-ed09-4f0d-83d6-a907496e2f59",
+                                            "command": "EVENT_TEXT",
+                                            "args": {
+                                                "text": [
+                                                    "See, Ken? None\nof the things\nyou saw today...",
+                                                    "Hell...",
+                                                    "Nothing you've\nseen for the\npast couple of",
+                                                    "weeks are real!"
+                                                ],
+                                                "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
+                                            }
+                                        },
+                                        {
+                                            "id": "f6c9f28f-1f4d-4ea4-8109-0cb7f57ae5ed",
+                                            "command": "EVENT_CALL_CUSTOM_EVENT",
+                                            "args": {
+                                                "customEventId": "a5865214-2ad3-452d-b2f8-9a5fe3b34a45",
+                                                "__name": "F Late",
+                                                "$variable[5]$": "5",
+                                                "$variable[0]$": "14"
+                                            },
+                                            "children": {
+                                                "script": [
+                                                    {
+                                                        "id": "0ab9ed0d-c1b0-48ed-b7e9-9684c19499a0",
+                                                        "command": "EVENT_IF_TRUE",
+                                                        "args": {
+                                                            "variable": "5",
+                                                            "__collapseElse": false
+                                                        },
+                                                        "children": {
+                                                            "true": [
+                                                                {
+                                                                    "id": "95046df6-23ec-4b10-af80-5ee81d165d76",
+                                                                    "command": "EVENT_TEXT",
+                                                                    "args": {
+                                                                        "text": [
+                                                                            "You never saw\nthe guy who was\nrunning late",
+                                                                            "because he ran\naway after you\nwrecked the town"
+                                                                        ],
+                                                                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "72a94605-c6fc-4b58-9b74-aec7511366d0",
+                                                                    "command": "EVENT_CAMERA_MOVE_TO",
+                                                                    "args": {
+                                                                        "x": 1,
+                                                                        "y": 0,
+                                                                        "speed": "3"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "28f3b323-a77d-4a07-aad8-94f31e56a852",
+                                                                    "command": "EVENT_SET_TRUE",
+                                                                    "args": {
+                                                                        "variable": "0"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "adaa869b-a2e0-4b08-942a-14446246e1cc",
+                                                                    "command": "EVENT_SWITCH_SCENE",
+                                                                    "args": {
+                                                                        "sceneId": "3599fcc4-b54d-4904-83a7-8b5e30379d2d",
+                                                                        "x": 9,
+                                                                        "y": 16,
+                                                                        "direction": "",
+                                                                        "fadeSpeed": "2"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "2fdb7921-0981-475e-a56b-08addf0b2997",
+                                                                    "command": "EVENT_END"
+                                                                }
+                                                            ],
+                                                            "false": [
+                                                                {
+                                                                    "id": "482e683b-f4af-473e-afb9-d1f871b30c78",
+                                                                    "command": "EVENT_END"
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "id": "d5a9c19d-c2b2-4fbc-a2aa-d05d37596987",
+                                                        "command": "EVENT_END"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "id": "dffabf4a-7bd5-476c-a112-cac6ab2d40b4",
+                                            "command": "EVENT_END"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "id": "90168e44-7888-4536-a4be-a6bb6fd0d080",
+                                "command": "EVENT_END"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "id": "e49ca87d-86d1-4e8a-91d3-829897b8f871",
+                                "command": "EVENT_IF_FALSE",
+                                "args": {
+                                    "variable": "21",
+                                    "__collapseElse": false
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "id": "347f8d58-c268-4b6c-b817-12c7e6e2bf57",
+                                            "command": "EVENT_IF_TRUE",
+                                            "args": {
+                                                "variable": "16",
+                                                "__collapseElse": false
+                                            },
+                                            "children": {
+                                                "true": [
+                                                    {
+                                                        "id": "a05f7e57-ca2a-428b-9599-3d8fb98ce37c",
+                                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                                        "args": {
+                                                            "customEventId": "5518e7f8-4929-4a3d-b892-0c027b28e676",
+                                                            "__name": "F Samon",
+                                                            "$variable[0]$": "17",
+                                                            "$variable[8]$": "8",
+                                                            "__comment": true
+                                                        },
+                                                        "children": {
+                                                            "script": [
+                                                                {
+                                                                    "id": "f613233b-bd32-47fb-b0d2-b27858b145e5",
+                                                                    "command": "EVENT_IF_TRUE",
+                                                                    "args": {
+                                                                        "variable": "8",
+                                                                        "__collapseElse": false
+                                                                    },
+                                                                    "children": {
+                                                                        "true": [
+                                                                            {
+                                                                                "id": "0ace00df-fe9f-449b-8cf9-03b6bcc0bda8",
+                                                                                "command": "EVENT_TEXT",
+                                                                                "args": {
+                                                                                    "text": [
+                                                                                        "You never talked\nto your\nprofessor",
+                                                                                        "because the tall\nbuilding he\nlived in was",
+                                                                                        "destroyed by YOU\nin your\nattack..."
+                                                                                    ],
+                                                                                    "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "id": "12b7d813-6fd7-467c-965f-cecc9f9fbac4",
+                                                                                "command": "EVENT_SET_TRUE",
+                                                                                "args": {
+                                                                                    "variable": "0"
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "id": "059b6dae-efe4-4213-b981-79560754e73e",
+                                                                                "command": "EVENT_SWITCH_SCENE",
+                                                                                "args": {
+                                                                                    "sceneId": "e4e08327-d3ee-49d9-88c8-5f651cd43b17",
+                                                                                    "x": 0,
+                                                                                    "y": 0,
+                                                                                    "direction": "",
+                                                                                    "fadeSpeed": "2"
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "id": "d8e2656b-d3ac-44da-a65e-89879d18b2e1",
+                                                                                "command": "EVENT_END"
+                                                                            }
+                                                                        ],
+                                                                        "false": [
+                                                                            {
+                                                                                "id": "7a46dcb4-a314-4fd5-bc68-2a4f216d65eb",
+                                                                                "command": "EVENT_END"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "8e7d1ce2-45aa-413a-8c9f-930f61d2c62c",
+                                                                    "command": "EVENT_END"
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "id": "8defaeb5-ae09-4dd5-819b-bd2690e899a5",
+                                                        "command": "EVENT_END"
+                                                    }
+                                                ],
+                                                "false": [
+                                                    {
+                                                        "id": "f47f3ce4-327d-4255-846e-3fe312995efa",
+                                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                                        "args": {
+                                                            "customEventId": "b1cf01a0-cd9d-45dc-8e01-315c1bebec6c",
+                                                            "__name": "F Philosophy",
+                                                            "$variable[0]$": "16",
+                                                            "$variable[7]$": "7"
+                                                        },
+                                                        "children": {
+                                                            "script": [
+                                                                {
+                                                                    "id": "c1906de2-07f7-4697-b653-ac1a9a401fba",
+                                                                    "command": "EVENT_IF_TRUE",
+                                                                    "args": {
+                                                                        "variable": "7",
+                                                                        "__collapseElse": false
+                                                                    },
+                                                                    "children": {
+                                                                        "true": [
+                                                                            {
+                                                                                "id": "bca9b1f8-58d4-4d89-818c-ff22aa8c126c",
+                                                                                "command": "EVENT_TEXT",
+                                                                                "args": {
+                                                                                    "text": [
+                                                                                        "You never talked\nto the\nphilosophy man",
+                                                                                        "because if you\nactually\nLISTENED to him",
+                                                                                        "you would have\nprevented your\nmistakes...",
+                                                                                        "Instead you\nheard the\nthings",
+                                                                                        "you wanted to\nhear."
+                                                                                    ],
+                                                                                    "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "id": "a0ef845e-6069-4d73-bd8f-bc78098cb2b6",
+                                                                                "command": "EVENT_SET_TRUE",
+                                                                                "args": {
+                                                                                    "variable": "0"
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "id": "61e2e52e-2ca7-4e49-87db-8457fa009074",
+                                                                                "command": "EVENT_SWITCH_SCENE",
+                                                                                "args": {
+                                                                                    "sceneId": "a542890c-f7c6-49eb-8462-d35c53ae7c84",
+                                                                                    "x": 0,
+                                                                                    "y": 0,
+                                                                                    "direction": "",
+                                                                                    "fadeSpeed": "2"
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "id": "b74bd7af-48b3-4e2a-bfb5-8756aed661ab",
+                                                                                "command": "EVENT_END"
+                                                                            }
+                                                                        ],
+                                                                        "false": [
+                                                                            {
+                                                                                "id": "1e97fe83-9239-4174-8393-bdf353d605b8",
+                                                                                "command": "EVENT_END"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "77180ba9-13a5-436a-8303-f3377ecbfb78",
+                                                                    "command": "EVENT_END"
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "id": "2ebe0be3-4067-48b8-bccf-26d2c08a2f3d",
+                                                        "command": "EVENT_END"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "id": "88cf3c94-048c-4ea1-9e58-628c12d2a3e7",
+                                            "command": "EVENT_IF_TRUE",
+                                            "args": {
+                                                "variable": "17",
+                                                "__collapseElse": false
+                                            },
+                                            "children": {
+                                                "true": [
+                                                    {
+                                                        "id": "aa6035f7-cb9c-4207-924b-6b025bc9702d",
+                                                        "command": "EVENT_SET_TRUE",
+                                                        "args": {
+                                                            "variable": "21"
+                                                        }
+                                                    },
+                                                    {
+                                                        "id": "24c6675b-d553-4dde-852d-597c40e63043",
+                                                        "command": "EVENT_SET_TRUE",
+                                                        "args": {
+                                                            "variable": "18"
+                                                        }
+                                                    },
+                                                    {
+                                                        "id": "f95f92e2-e69f-4d65-b351-997c74c2cc17",
+                                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                                        "args": {
+                                                            "customEventId": "8f636104-c7e2-458a-a66f-7ec1e634dc7d",
+                                                            "__name": "F Food"
+                                                        },
+                                                        "children": {
+                                                            "script": [
+                                                                {
+                                                                    "id": "49f248ac-618d-44d3-af9e-d5adbef6b71c",
+                                                                    "command": "EVENT_TEXT",
+                                                                    "args": {
+                                                                        "text": [
+                                                                            "You didn't talk\nto the girl\nworking at the",
+                                                                            "restaurant, and\nby the looks of\nthings you ",
+                                                                            "didn't even care\nabout her\nsituation..."
+                                                                        ],
+                                                                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "4cad0770-c958-4ebd-b76d-0cbc477d6a51",
+                                                                    "command": "EVENT_SET_TRUE",
+                                                                    "args": {
+                                                                        "variable": "0"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "5afcc998-d524-4a57-8c21-4984d0a4af04",
+                                                                    "command": "EVENT_SWITCH_SCENE",
+                                                                    "args": {
+                                                                        "sceneId": "3b7acbcf-824b-436e-992f-3197326bb799",
+                                                                        "x": 0,
+                                                                        "y": 0,
+                                                                        "direction": "",
+                                                                        "fadeSpeed": "2"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "cb73b6cc-bd42-4a9e-ba2f-0bc753b6f919",
+                                                                    "command": "EVENT_END"
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "id": "4f50b018-ffa8-44b1-bf78-78086d1c6ef5",
+                                                        "command": "EVENT_END"
+                                                    }
+                                                ],
+                                                "false": [
+                                                    {
+                                                        "id": "7379b564-52a8-4e5a-a688-275efffc2d58",
+                                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                                        "args": {
+                                                            "customEventId": "5518e7f8-4929-4a3d-b892-0c027b28e676",
+                                                            "__name": "F Samon",
+                                                            "$variable[0]$": "17",
+                                                            "$variable[8]$": "8",
+                                                            "__comment": false
+                                                        },
+                                                        "children": {
+                                                            "script": [
+                                                                {
+                                                                    "id": "f613233b-bd32-47fb-b0d2-b27858b145e5",
+                                                                    "command": "EVENT_IF_TRUE",
+                                                                    "args": {
+                                                                        "variable": "8",
+                                                                        "__collapseElse": false
+                                                                    },
+                                                                    "children": {
+                                                                        "true": [
+                                                                            {
+                                                                                "id": "0ace00df-fe9f-449b-8cf9-03b6bcc0bda8",
+                                                                                "command": "EVENT_TEXT",
+                                                                                "args": {
+                                                                                    "text": [
+                                                                                        "You never talked\nto your\nprofessor",
+                                                                                        "because the tall\nbuilding he\nlived in was",
+                                                                                        "destroyed by YOU\nin your\nattack..."
+                                                                                    ],
+                                                                                    "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "id": "12b7d813-6fd7-467c-965f-cecc9f9fbac4",
+                                                                                "command": "EVENT_SET_TRUE",
+                                                                                "args": {
+                                                                                    "variable": "0"
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "id": "059b6dae-efe4-4213-b981-79560754e73e",
+                                                                                "command": "EVENT_SWITCH_SCENE",
+                                                                                "args": {
+                                                                                    "sceneId": "e4e08327-d3ee-49d9-88c8-5f651cd43b17",
+                                                                                    "x": 0,
+                                                                                    "y": 0,
+                                                                                    "direction": "",
+                                                                                    "fadeSpeed": "2"
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "id": "d8e2656b-d3ac-44da-a65e-89879d18b2e1",
+                                                                                "command": "EVENT_END"
+                                                                            }
+                                                                        ],
+                                                                        "false": [
+                                                                            {
+                                                                                "id": "7a46dcb4-a314-4fd5-bc68-2a4f216d65eb",
+                                                                                "command": "EVENT_END"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "8e7d1ce2-45aa-413a-8c9f-930f61d2c62c",
+                                                                    "command": "EVENT_END"
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "id": "0f3f080d-3062-4e0a-92db-5f3792aed7ac",
+                                                        "command": "EVENT_END"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "id": "90c46d7b-1c6b-4047-afd9-a3fe40d7d265",
+                                            "command": "EVENT_END"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "id": "4e5a653f-bc6b-40d5-81fe-8bacfa7c9b95",
+                                            "command": "EVENT_IF_TRUE",
+                                            "args": {
+                                                "variable": "18",
+                                                "__collapseElse": false
+                                            },
+                                            "children": {
+                                                "true": [
+                                                    {
+                                                        "id": "a0756a65-aff9-4e74-aa2f-6990c0b7e137",
+                                                        "command": "EVENT_IF_TRUE",
+                                                        "args": {
+                                                            "variable": "22",
+                                                            "__collapseElse": false
+                                                        },
+                                                        "children": {
+                                                            "true": [
+                                                                {
+                                                                    "id": "b29446c8-31e4-449f-91e4-c8899e8be376",
+                                                                    "command": "EVENT_TEXT",
+                                                                    "args": {
+                                                                        "text": [
+                                                                            "You've been\ntelling yourself\nthis lie",
+                                                                            "to make yourself\nforget that YOU\nWERE THE ONE",
+                                                                            "THAT CAUSED THIS\nNIGHTMARE."
+                                                                        ],
+                                                                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "2b39dba0-471c-4494-a14f-3beff6f807ff",
+                                                                    "command": "EVENT_TEXT",
+                                                                    "args": {
+                                                                        "text": [
+                                                                            "No... It can't\nbe me...",
+                                                                            "But you're the\nbad guy! You\ncaused this by",
+                                                                            "creating the\nneed for a Hero\nlike me in the",
+                                                                            "first place!"
+                                                                        ],
+                                                                        "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "902fc841-3ad6-4406-81dc-abd6fe4dbe8b",
+                                                                    "command": "EVENT_ACTOR_SET_DIRECTION",
+                                                                    "args": {
+                                                                        "actorId": "91c8d1ba-6a5e-485a-a392-2e1ee3984f2b",
+                                                                        "direction": {
+                                                                            "type": "direction",
+                                                                            "value": "right"
+                                                                        }
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "3ca6c9d6-6594-417f-b5cc-e9e7d6342a5f",
+                                                                    "command": "EVENT_TEXT",
+                                                                    "args": {
+                                                                        "text": [
+                                                                            "Ohoho you think\nI was the main\ncause of this??",
+                                                                            "I won't lie I've\ndone some\nmorally wrong",
+                                                                            "things while\nadorning this\nmask..."
+                                                                        ],
+                                                                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "59454b61-8369-45d9-a04a-1f44b71ac498",
+                                                                    "command": "EVENT_TEXT",
+                                                                    "args": {
+                                                                        "text": [
+                                                                            "Enlisting the\nhelp of my best\nfriend was",
+                                                                            "my biggest and\nlast mistake..."
+                                                                        ],
+                                                                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "41d85f0d-c475-461b-adcc-e94d13b7a523",
+                                                                    "command": "EVENT_TEXT",
+                                                                    "args": {
+                                                                        "text": [
+                                                                            "You locked him\nup in that\njail...",
+                                                                            "And you left him\nto rot in that\nabandoned cell",
+                                                                            "all for the\n\"ultimate crime\nof helping",
+                                                                            "his friend stop\nthe big bad\n'Hero'\""
+                                                                        ],
+                                                                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "45f545a0-a9c8-413d-a500-a422292d7f27",
+                                                                    "command": "EVENT_TEXT",
+                                                                    "args": {
+                                                                        "text": [
+                                                                            "So believe me...\nI'm not\ninnocent, myself",
+                                                                            "But you..."
+                                                                        ],
+                                                                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b",
+                                                                        "__collapse": false
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "1af88bc2-28ff-4b61-9626-8e0ef63fff93",
+                                                                    "command": "EVENT_CAMERA_SHAKE",
+                                                                    "args": {
+                                                                        "time": 0.5,
+                                                                        "shakeDirection": "vertical"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "9215f9ca-f82a-4e17-bf19-293fcf599607",
+                                                                    "command": "EVENT_TEXT",
+                                                                    "args": {
+                                                                        "text": [
+                                                                            "You're a monster"
+                                                                        ],
+                                                                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "330d5357-7b74-4092-a5fb-5c72b4e12a9a",
+                                                                    "command": "EVENT_TEXT",
+                                                                    "args": {
+                                                                        "text": [
+                                                                            "I..."
+                                                                        ],
+                                                                        "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "c32775e0-0c8d-4ab0-9b79-1f200cfe9c22",
+                                                                    "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                                                    "args": {
+                                                                        "actorId": "$self$",
+                                                                        "x": -1,
+                                                                        "y": 0,
+                                                                        "moveType": "horizontal",
+                                                                        "useCollisions": false
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "704dcb6d-7d7b-4681-adda-9f4737b7e02e",
+                                                                    "command": "EVENT_TEXT",
+                                                                    "args": {
+                                                                        "text": [
+                                                                            "Even still, if\nevil is afoot\nthen people need",
+                                                                            "a Hero like me\nto save them...",
+                                                                            "No matter what,\nyou will go\ndown."
+                                                                        ],
+                                                                        "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "67f3e689-fc88-45ab-8fa3-72d30c2290b2",
+                                                                    "command": "EVENT_TEXT",
+                                                                    "args": {
+                                                                        "text": [
+                                                                            "I thought you\nhad changed,\nKen... ",
+                                                                            "I hoped that\nyour little\nmemory wipe",
+                                                                            "would have\nhelped you\nrealize",
+                                                                            "just how insane\nyou are..."
+                                                                        ],
+                                                                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "a3dbe07c-cf04-4f73-b2f6-83497fc77976",
+                                                                    "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                                                    "args": {
+                                                                        "actorId": "91c8d1ba-6a5e-485a-a392-2e1ee3984f2b",
+                                                                        "x": 1,
+                                                                        "y": 0,
+                                                                        "moveType": "horizontal",
+                                                                        "useCollisions": false
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "74ec343c-62bb-42c0-a2ef-b83ad4d6e2fb",
+                                                                    "command": "EVENT_TEXT",
+                                                                    "args": {
+                                                                        "text": [
+                                                                            "But no..."
+                                                                        ],
+                                                                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "4dd5fdcf-b99a-402d-a8b6-ef54e390d180",
+                                                                    "command": "EVENT_TEXT",
+                                                                    "args": {
+                                                                        "text": [
+                                                                            "Looks like it's\ncome to this..."
+                                                                        ],
+                                                                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "65e16049-f9fe-4b3e-b21a-6d688b84662b",
+                                                                    "command": "EVENT_SWITCH_SCENE",
+                                                                    "args": {
+                                                                        "sceneId": "7ea9f1c6-0e31-43e7-8876-c3b5d66111fa",
+                                                                        "x": 0,
+                                                                        "y": 0,
+                                                                        "direction": "",
+                                                                        "fadeSpeed": "2"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "d9b6c784-ea6d-46b4-8f87-a7218c5fb52a",
+                                                                    "command": "EVENT_END"
+                                                                }
+                                                            ],
+                                                            "false": [
+                                                                {
+                                                                    "id": "8ed1455f-ca34-42fa-9435-eb09c3e1c7a0",
+                                                                    "command": "EVENT_SET_TRUE",
+                                                                    "args": {
+                                                                        "variable": "22"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "2c5689a9-2915-4791-a03e-7acebd85d9e8",
+                                                                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                                                                    "args": {
+                                                                        "customEventId": "00c698f4-8204-443f-94b8-6dc912c59a00",
+                                                                        "__name": "F Friend"
+                                                                    },
+                                                                    "children": {
+                                                                        "script": [
+                                                                            {
+                                                                                "id": "ad365a81-75b8-4d94-a5bc-ba5a493afca9",
+                                                                                "command": "EVENT_TEXT",
+                                                                                "args": {
+                                                                                    "text": [
+                                                                                        "You even had the\ngall to walk\ninto the",
+                                                                                        "abandoned police\nstation where\nyou left my",
+                                                                                        "best friend to\nrot because of\nmy mistake",
+                                                                                        "YOU DIDN'T EVEN\nCARE THAT YOU\nLET HIM DIE",
+                                                                                        "MUCH LESS THE\nFACT THAT YOU\nWENT ON AS IF",
+                                                                                        "TODAY WAS\nANOTHER TUESDAY\nFOR YOU"
+                                                                                    ],
+                                                                                    "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "id": "11771f93-2292-497f-a278-c354bac20cfb",
+                                                                                "command": "EVENT_SWITCH_SCENE",
+                                                                                "args": {
+                                                                                    "sceneId": "8166f38c-7301-4b2a-9c06-f59c5c1e3aec",
+                                                                                    "x": 0,
+                                                                                    "y": 0,
+                                                                                    "direction": "",
+                                                                                    "fadeSpeed": "2"
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "id": "7418e906-1b7a-437a-86e0-7b05a9fd2fbd",
+                                                                                "command": "EVENT_END"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "ca7551cd-0a83-4819-b616-b3d2eedf4b04",
+                                                                    "command": "EVENT_END"
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "id": "44b55614-2857-453a-92f5-7df3aa9186dc",
+                                                        "command": "EVENT_END"
+                                                    }
+                                                ],
+                                                "false": [
+                                                    {
+                                                        "id": "0dbf5833-70af-4fd1-bf46-25fb15e2f2dc",
+                                                        "command": "EVENT_SET_TRUE",
+                                                        "args": {
+                                                            "variable": "18"
+                                                        }
+                                                    },
+                                                    {
+                                                        "id": "06ce4888-d696-4936-ad4d-7ce71c309e18",
+                                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                                        "args": {
+                                                            "customEventId": "8f636104-c7e2-458a-a66f-7ec1e634dc7d",
+                                                            "__name": "F Food"
+                                                        },
+                                                        "children": {
+                                                            "script": [
+                                                                {
+                                                                    "id": "49f248ac-618d-44d3-af9e-d5adbef6b71c",
+                                                                    "command": "EVENT_TEXT",
+                                                                    "args": {
+                                                                        "text": [
+                                                                            "You didn't talk\nto the girl\nworking at the",
+                                                                            "restaurant, and\nby the looks of\nthings you ",
+                                                                            "didn't even care\nabout her\nsituation..."
+                                                                        ],
+                                                                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "4cad0770-c958-4ebd-b76d-0cbc477d6a51",
+                                                                    "command": "EVENT_SET_TRUE",
+                                                                    "args": {
+                                                                        "variable": "0"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "5afcc998-d524-4a57-8c21-4984d0a4af04",
+                                                                    "command": "EVENT_SWITCH_SCENE",
+                                                                    "args": {
+                                                                        "sceneId": "3b7acbcf-824b-436e-992f-3197326bb799",
+                                                                        "x": 0,
+                                                                        "y": 0,
+                                                                        "direction": "",
+                                                                        "fadeSpeed": "2"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "cb73b6cc-bd42-4a9e-ba2f-0bc753b6f919",
+                                                                    "command": "EVENT_END"
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "id": "98ba412b-7122-4b76-b7a6-b9b5d7af6025",
+                                                        "command": "EVENT_END"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "id": "08735763-bcd3-445c-b421-76312c6aa524",
+                                            "command": "EVENT_END"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "id": "3144c6cb-3372-4f70-b82b-0b95e8e800e5",
+                                "command": "EVENT_END"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "f7bb6e8c-4ab0-406a-a6f6-4df16a8239f1",
+                    "command": "EVENT_END"
+                }
+            ],
+            "playerHit1Script": [],
+            "playerHit2Script": [],
+            "playerHit3Script": [],
+            "id": "a0d304f0-982c-4d4d-ab01-7587f31cbe08",
+            "x": 930,
+            "y": 1330,
+            "actors": [
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": true,
+                    "spriteSheetId": "200c1589-389c-46a1-8cee-3ad914c4f332",
+                    "spriteType": "actor",
+                    "direction": "left",
+                    "moveSpeed": "1",
+                    "animSpeed": "3",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "91c8d1ba-6a5e-485a-a392-2e1ee3984f2b",
+                    "x": 17,
+                    "y": 6
+                }
+            ],
+            "triggers": [],
+            "labelColor": "yellow"
+        },
+        {
+            "name": "Jail (Reality)",
+            "backgroundId": "14e26ff5-0f36-42f3-947e-aeae795fe92f",
+            "width": 20,
+            "height": 18,
+            "collisions": [
                 0,
                 0,
                 0,
@@ -28621,743 +30224,42 @@
             "tileColors": [],
             "script": [
                 {
-                    "id": "89b8f939-5beb-490a-a6a8-1362e34f56ae",
-                    "command": "EVENT_IF_TRUE",
+                    "id": "20bdfb75-02d9-4ccc-ad01-a9465e0eefa2",
+                    "command": "EVENT_ACTOR_HIDE",
                     "args": {
-                        "variable": "14",
-                        "__collapseElse": false
-                    },
-                    "children": {
-                        "true": [
-                            {
-                                "id": "28d4441b-3434-43b7-8211-e5b65a3c99cf",
-                                "command": "EVENT_CALL_CUSTOM_EVENT",
-                                "args": {
-                                    "customEventId": "7ea5824a-b155-4e6b-8194-d4cf659879f5",
-                                    "__name": "F Sleepy",
-                                    "$variable[6]$": "6",
-                                    "$variable[0]$": "15"
-                                },
-                                "children": {
-                                    "script": [
-                                        {
-                                            "id": "0a28cb4c-2c06-430b-bb04-7e595127dbeb",
-                                            "command": "EVENT_IF_TRUE",
-                                            "args": {
-                                                "variable": "6",
-                                                "__collapseElse": false
-                                            },
-                                            "children": {
-                                                "true": [
-                                                    {
-                                                        "id": "7f759904-3fb7-4022-bbaf-93dd17223815",
-                                                        "command": "EVENT_TEXT",
-                                                        "args": {
-                                                            "text": [
-                                                                "You never talked\nto the sleepy\nman because",
-                                                                "he DIED during\nyour attack..."
-                                                            ],
-                                                            "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
-                                                        }
-                                                    },
-                                                    {
-                                                        "id": "b2c95690-1b2f-4e45-b14b-88e70794da5f",
-                                                        "command": "EVENT_SET_TRUE",
-                                                        "args": {
-                                                            "variable": "0"
-                                                        }
-                                                    },
-                                                    {
-                                                        "id": "f896ec83-d01e-43b1-886c-4c39d2b766f5",
-                                                        "command": "EVENT_SWITCH_SCENE",
-                                                        "args": {
-                                                            "sceneId": "484ecbec-1d86-43f2-965c-ad97f1633fda",
-                                                            "x": 0,
-                                                            "y": 0,
-                                                            "direction": "",
-                                                            "fadeSpeed": "2"
-                                                        }
-                                                    },
-                                                    {
-                                                        "id": "ade42ed9-81fc-4a0e-855b-a152bdcfced3",
-                                                        "command": "EVENT_END"
-                                                    }
-                                                ],
-                                                "false": [
-                                                    {
-                                                        "id": "ce8c0652-3cf3-4d20-9003-7701c1797e52",
-                                                        "command": "EVENT_END"
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "id": "e0c46590-c413-4b23-8d99-077a5bb4b065",
-                                            "command": "EVENT_END"
-                                        }
-                                    ]
-                                }
-                            },
-                            {
-                                "id": "5c2968f1-5bbc-4cf4-b8f1-fa55c19a5132",
-                                "command": "EVENT_END"
-                            }
-                        ],
-                        "false": [
-                            {
-                                "id": "5e273c27-ed09-4f0d-83d6-a907496e2f59",
-                                "command": "EVENT_TEXT",
-                                "args": {
-                                    "text": [
-                                        "See, Ken? None\nof the things\nyou saw today...",
-                                        "Nothing you've\nseen for the\npast couple of",
-                                        "weeks are real!"
-                                    ],
-                                    "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
-                                }
-                            },
-                            {
-                                "id": "f6c9f28f-1f4d-4ea4-8109-0cb7f57ae5ed",
-                                "command": "EVENT_CALL_CUSTOM_EVENT",
-                                "args": {
-                                    "customEventId": "a5865214-2ad3-452d-b2f8-9a5fe3b34a45",
-                                    "__name": "F Late",
-                                    "$variable[5]$": "5",
-                                    "$variable[0]$": "14"
-                                },
-                                "children": {
-                                    "script": [
-                                        {
-                                            "id": "0ab9ed0d-c1b0-48ed-b7e9-9684c19499a0",
-                                            "command": "EVENT_IF_TRUE",
-                                            "args": {
-                                                "variable": "5",
-                                                "__collapseElse": false
-                                            },
-                                            "children": {
-                                                "true": [
-                                                    {
-                                                        "id": "95046df6-23ec-4b10-af80-5ee81d165d76",
-                                                        "command": "EVENT_TEXT",
-                                                        "args": {
-                                                            "text": [
-                                                                "You never saw\nthe guy who was\nrunning late",
-                                                                "because he ran\naway after you\nwrecked the town"
-                                                            ],
-                                                            "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
-                                                        }
-                                                    },
-                                                    {
-                                                        "id": "72a94605-c6fc-4b58-9b74-aec7511366d0",
-                                                        "command": "EVENT_CAMERA_MOVE_TO",
-                                                        "args": {
-                                                            "x": 1,
-                                                            "y": 0,
-                                                            "speed": "3"
-                                                        }
-                                                    },
-                                                    {
-                                                        "id": "28f3b323-a77d-4a07-aad8-94f31e56a852",
-                                                        "command": "EVENT_SET_TRUE",
-                                                        "args": {
-                                                            "variable": "0"
-                                                        }
-                                                    },
-                                                    {
-                                                        "id": "adaa869b-a2e0-4b08-942a-14446246e1cc",
-                                                        "command": "EVENT_SWITCH_SCENE",
-                                                        "args": {
-                                                            "sceneId": "3599fcc4-b54d-4904-83a7-8b5e30379d2d",
-                                                            "x": 9,
-                                                            "y": 16,
-                                                            "direction": "",
-                                                            "fadeSpeed": "2"
-                                                        }
-                                                    },
-                                                    {
-                                                        "id": "2fdb7921-0981-475e-a56b-08addf0b2997",
-                                                        "command": "EVENT_END"
-                                                    }
-                                                ],
-                                                "false": [
-                                                    {
-                                                        "id": "482e683b-f4af-473e-afb9-d1f871b30c78",
-                                                        "command": "EVENT_END"
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "id": "d5a9c19d-c2b2-4fbc-a2aa-d05d37596987",
-                                            "command": "EVENT_END"
-                                        }
-                                    ]
-                                }
-                            },
-                            {
-                                "id": "dffabf4a-7bd5-476c-a112-cac6ab2d40b4",
-                                "command": "EVENT_END"
-                            }
-                        ]
+                        "actorId": "$self$"
                     }
                 },
                 {
-                    "id": "347f8d58-c268-4b6c-b817-12c7e6e2bf57",
-                    "command": "EVENT_IF_TRUE",
+                    "id": "0f24418a-3056-4a45-9301-53dc901ec57d",
+                    "command": "EVENT_WAIT",
                     "args": {
-                        "variable": "16",
-                        "__collapseElse": false
-                    },
-                    "children": {
-                        "true": [
-                            {
-                                "id": "8defaeb5-ae09-4dd5-819b-bd2690e899a5",
-                                "command": "EVENT_END"
-                            }
-                        ],
-                        "false": [
-                            {
-                                "id": "f47f3ce4-327d-4255-846e-3fe312995efa",
-                                "command": "EVENT_CALL_CUSTOM_EVENT",
-                                "args": {
-                                    "customEventId": "b1cf01a0-cd9d-45dc-8e01-315c1bebec6c",
-                                    "__name": "F Philosophy",
-                                    "$variable[0]$": "16",
-                                    "$variable[7]$": "7"
-                                },
-                                "children": {
-                                    "script": [
-                                        {
-                                            "id": "c1906de2-07f7-4697-b653-ac1a9a401fba",
-                                            "command": "EVENT_IF_TRUE",
-                                            "args": {
-                                                "variable": "7",
-                                                "__collapseElse": false
-                                            },
-                                            "children": {
-                                                "true": [
-                                                    {
-                                                        "id": "bca9b1f8-58d4-4d89-818c-ff22aa8c126c",
-                                                        "command": "EVENT_TEXT",
-                                                        "args": {
-                                                            "text": [
-                                                                "You never talked\nto the\nphilosophy man",
-                                                                "because if you\nactually\nLISTENED to him",
-                                                                "you would have\nprevented your\nmistakes...",
-                                                                "Instead you\nheard the\nthings",
-                                                                "you wanted to\nhear."
-                                                            ],
-                                                            "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
-                                                        }
-                                                    },
-                                                    {
-                                                        "id": "a0ef845e-6069-4d73-bd8f-bc78098cb2b6",
-                                                        "command": "EVENT_SET_TRUE",
-                                                        "args": {
-                                                            "variable": "0"
-                                                        }
-                                                    },
-                                                    {
-                                                        "id": "61e2e52e-2ca7-4e49-87db-8457fa009074",
-                                                        "command": "EVENT_SWITCH_SCENE",
-                                                        "args": {
-                                                            "sceneId": "a542890c-f7c6-49eb-8462-d35c53ae7c84",
-                                                            "x": 0,
-                                                            "y": 0,
-                                                            "direction": "",
-                                                            "fadeSpeed": "2"
-                                                        }
-                                                    },
-                                                    {
-                                                        "id": "b74bd7af-48b3-4e2a-bfb5-8756aed661ab",
-                                                        "command": "EVENT_END"
-                                                    }
-                                                ],
-                                                "false": [
-                                                    {
-                                                        "id": "1e97fe83-9239-4174-8393-bdf353d605b8",
-                                                        "command": "EVENT_END"
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "id": "77180ba9-13a5-436a-8303-f3377ecbfb78",
-                                            "command": "EVENT_END"
-                                        }
-                                    ]
-                                }
-                            },
-                            {
-                                "id": "2ebe0be3-4067-48b8-bccf-26d2c08a2f3d",
-                                "command": "EVENT_END"
-                            }
-                        ]
+                        "time": 1
                     }
                 },
                 {
-                    "id": "63fa9dfc-4718-4e65-821a-efe3c1cb95ae",
-                    "command": "EVENT_IF_TRUE",
-                    "args": {
-                        "variable": "7",
-                        "__collapseElse": false,
-                        "__comment": true,
-                        "__collapse": true
-                    },
-                    "children": {
-                        "true": [
-                            {
-                                "id": "2b0d40ac-e74c-4134-ada7-25223c7825cf",
-                                "command": "EVENT_TEXT",
-                                "args": {
-                                    "text": [
-                                        "You never talked\nto the\nphilosophy man",
-                                        "because if you\nactually\nLISTENED to him",
-                                        "you would have\nprevented your\nmistakes...",
-                                        "Instead you\nheard the\nthings",
-                                        "you wanted to\nhear."
-                                    ],
-                                    "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
-                                }
-                            },
-                            {
-                                "id": "10041aae-0d48-4499-9a2d-8e108018d761",
-                                "command": "EVENT_SWITCH_SCENE",
-                                "args": {
-                                    "sceneId": "a542890c-f7c6-49eb-8462-d35c53ae7c84",
-                                    "x": 0,
-                                    "y": 0,
-                                    "direction": "",
-                                    "fadeSpeed": "2"
-                                }
-                            },
-                            {
-                                "id": "854322ab-1954-49f7-94ed-d8254f7b10ea",
-                                "command": "EVENT_END"
-                            }
-                        ],
-                        "false": [
-                            {
-                                "id": "e3d11e0c-78b5-43aa-9328-65601940cd8d",
-                                "command": "EVENT_END"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "id": "cac14a47-940b-4517-b4ea-84123a9e1ea0",
-                    "command": "EVENT_IF_TRUE",
-                    "args": {
-                        "variable": "5",
-                        "__collapseElse": false,
-                        "__comment": true,
-                        "__collapse": true
-                    },
-                    "children": {
-                        "true": [
-                            {
-                                "id": "d5a4bd58-bb23-41d3-8286-f6d725195f2d",
-                                "command": "EVENT_TEXT",
-                                "args": {
-                                    "text": [
-                                        "You never saw\nthe guy who was\nrunning late",
-                                        "because he ran\naway after you\nwrecked the town"
-                                    ],
-                                    "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
-                                }
-                            },
-                            {
-                                "id": "c35c8b42-e575-42b5-9103-f82694386804",
-                                "command": "EVENT_CAMERA_MOVE_TO",
-                                "args": {
-                                    "x": 1,
-                                    "y": 0,
-                                    "speed": "3"
-                                }
-                            },
-                            {
-                                "id": "1d635bf4-03a6-4cb8-8490-cfb00d8f2099",
-                                "command": "EVENT_SET_TRUE",
-                                "args": {
-                                    "variable": "14"
-                                }
-                            },
-                            {
-                                "id": "39932d20-3f12-422d-baec-8291faa2fd15",
-                                "command": "EVENT_SWITCH_SCENE",
-                                "args": {
-                                    "sceneId": "3599fcc4-b54d-4904-83a7-8b5e30379d2d",
-                                    "x": 9,
-                                    "y": 16,
-                                    "direction": "",
-                                    "fadeSpeed": "2"
-                                }
-                            },
-                            {
-                                "id": "847004b9-6c73-4055-bce6-0c129d3b5ed3",
-                                "command": "EVENT_END"
-                            }
-                        ],
-                        "false": [
-                            {
-                                "id": "6ab0cd61-e9f9-4b1e-bfba-929e6879278e",
-                                "command": "EVENT_END"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "id": "bb52258f-457e-40bc-84a2-77babb72c116",
-                    "command": "EVENT_IF_TRUE",
-                    "args": {
-                        "variable": "6",
-                        "__collapseElse": false,
-                        "__disableElse": false,
-                        "__comment": true,
-                        "__collapse": true
-                    },
-                    "children": {
-                        "true": [
-                            {
-                                "id": "5bc609a4-2169-4af0-a45b-a2714041b9fb",
-                                "command": "EVENT_TEXT",
-                                "args": {
-                                    "text": [
-                                        "You never talked\nto the sleepy\nman because",
-                                        "he DIED during\nyour attack..."
-                                    ],
-                                    "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
-                                }
-                            },
-                            {
-                                "id": "a8c678d7-d38b-481e-a1df-e06d62e77d48",
-                                "command": "EVENT_END"
-                            }
-                        ],
-                        "false": [
-                            {
-                                "id": "aac20f1d-c1a1-4d77-ba68-5c839ea893d3",
-                                "command": "EVENT_END"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "id": "5da9da17-324c-4c54-99cb-9e9afd3e59e6",
-                    "command": "EVENT_IF_TRUE",
-                    "args": {
-                        "variable": "8",
-                        "__collapseElse": false
-                    },
-                    "children": {
-                        "true": [
-                            {
-                                "id": "193a649b-6123-44d3-9afd-96f5c90aac0a",
-                                "command": "EVENT_TEXT",
-                                "args": {
-                                    "text": [
-                                        "You never talked\nto your\nprofessor",
-                                        "because the tall\nbuilding he\nlived in was",
-                                        "destroyed by YOU\nin your\nattack..."
-                                    ],
-                                    "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
-                                }
-                            },
-                            {
-                                "id": "ecee9ee6-5459-462f-9a45-6de36d2d1de4",
-                                "command": "EVENT_END"
-                            }
-                        ],
-                        "false": [
-                            {
-                                "id": "3819b490-6b50-4b0c-ac1a-c05aa36efbc8",
-                                "command": "EVENT_END"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "id": "125b9250-21e5-412b-ae7d-579e5ff12921",
-                    "command": "EVENT_IF_TRUE",
-                    "args": {
-                        "variable": "9",
-                        "__collapseElse": false
-                    },
-                    "children": {
-                        "true": [
-                            {
-                                "id": "b14b2872-ed47-4dee-b94f-030e9e052ca9",
-                                "command": "EVENT_TEXT",
-                                "args": {
-                                    "text": [
-                                        "You didn't talk\nto the girl\nworking at the",
-                                        "restaurant, and\nby the looks of\nthings you ",
-                                        "didn't even care\nabout her\nsituation..."
-                                    ],
-                                    "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
-                                }
-                            },
-                            {
-                                "id": "2cf4a131-d249-4ecd-82af-d2bfcbe070da",
-                                "command": "EVENT_END"
-                            }
-                        ],
-                        "false": [
-                            {
-                                "id": "105110a4-bc10-45aa-8854-b9d3fe4402a0",
-                                "command": "EVENT_END"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "id": "8575cd45-4e68-4256-9cbc-fb5d88cca2a7",
-                    "command": "EVENT_IF_TRUE",
-                    "args": {
-                        "variable": "10",
-                        "__collapseElse": false
-                    },
-                    "children": {
-                        "true": [
-                            {
-                                "id": "54ecd610-0b0d-42fd-9a70-d2386bc6111d",
-                                "command": "EVENT_TEXT",
-                                "args": {
-                                    "text": [
-                                        "You even had the\ngall to walk\ninto the",
-                                        "abandoned police\nstation where\nyou left my",
-                                        "best friend to\nrot because of\nmy mistake",
-                                        "YOU DIDN'T EVEN\nCARE THAT YOU\nLET HIM DIE",
-                                        "MUCH LESS THE\nFACT THAT YOU\nWENT ON AS IF",
-                                        "TODAY WAS\nANOTHER TUESDAY\nFOR YOU"
-                                    ],
-                                    "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
-                                }
-                            },
-                            {
-                                "id": "2a8d8d44-e0fe-4632-af0d-06eb8dbe0a08",
-                                "command": "EVENT_END"
-                            }
-                        ],
-                        "false": [
-                            {
-                                "id": "a61df4cf-e54f-4adf-a0f6-eff2da09d15d",
-                                "command": "EVENT_END"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "id": "b29446c8-31e4-449f-91e4-c8899e8be376",
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
-                            "You've been\ntelling yourself\nthis lie",
-                            "to make yourself\nforget that YOU\nWERE THE ONE",
-                            "THAT CAUSED THIS\nNIGHTMARE."
-                        ],
-                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
-                    }
-                },
-                {
-                    "id": "2b39dba0-471c-4494-a14f-3beff6f807ff",
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
-                            "No... It can't\nbe me...",
-                            "But you're the\nbad guy! You\ncaused this by",
-                            "creating the\nneed for a Hero\nlike me in the",
-                            "first place!"
-                        ],
-                        "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
-                    }
-                },
-                {
-                    "id": "3ca6c9d6-6594-417f-b5cc-e9e7d6342a5f",
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
-                            "Ohoho you think\nI was the main\ncause of this??",
-                            "I won't lie I've\ndone some\nmorally wrong",
-                            "things while\nadorning this\nmask..."
-                        ],
-                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
-                    }
-                },
-                {
-                    "id": "59454b61-8369-45d9-a04a-1f44b71ac498",
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
-                            "Enlisting the\nhelp of my best\nfriend was",
-                            "my biggest and\nlast mistake..."
-                        ],
-                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
-                    }
-                },
-                {
-                    "id": "41d85f0d-c475-461b-adcc-e94d13b7a523",
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
-                            "You locked him\nup in that\njail...",
-                            "And you left him\nto rot in that\nabandoned cell",
-                            "all for the\n\"ultimate crime\nof helping",
-                            "his friend stop\nthe big bad\n'Hero'\""
-                        ],
-                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
-                    }
-                },
-                {
-                    "id": "45f545a0-a9c8-413d-a500-a422292d7f27",
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
-                            "So believe me...\nI'm not\ninnocent, myself",
-                            "But you..."
-                        ],
-                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b",
-                        "__collapse": false
-                    }
-                },
-                {
-                    "id": "1af88bc2-28ff-4b61-9626-8e0ef63fff93",
-                    "command": "EVENT_CAMERA_SHAKE",
-                    "args": {
-                        "time": 0.5,
-                        "shakeDirection": "vertical"
-                    }
-                },
-                {
-                    "id": "9215f9ca-f82a-4e17-bf19-293fcf599607",
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
-                            "You're a monster"
-                        ],
-                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
-                    }
-                },
-                {
-                    "id": "330d5357-7b74-4092-a5fb-5c72b4e12a9a",
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
-                            "I..."
-                        ],
-                        "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
-                    }
-                },
-                {
-                    "id": "c32775e0-0c8d-4ab0-9b79-1f200cfe9c22",
-                    "command": "EVENT_ACTOR_MOVE_RELATIVE",
-                    "args": {
-                        "actorId": "$self$",
-                        "x": -1,
-                        "y": 0,
-                        "moveType": "horizontal",
-                        "useCollisions": false
-                    }
-                },
-                {
-                    "id": "704dcb6d-7d7b-4681-adda-9f4737b7e02e",
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
-                            "Even still, if\nevil is afoot\nthen people need",
-                            "a Hero like me\nto save them...",
-                            "No matter what,\nyou will go\ndown."
-                        ],
-                        "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
-                    }
-                },
-                {
-                    "id": "67f3e689-fc88-45ab-8fa3-72d30c2290b2",
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
-                            "I thought you\nhad changed,\nKen... ",
-                            "I hoped that\nyour little\nmemory wipe",
-                            "would have\nhelped you\nrealize",
-                            "just how insane\nyou are..."
-                        ],
-                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
-                    }
-                },
-                {
-                    "id": "a3dbe07c-cf04-4f73-b2f6-83497fc77976",
-                    "command": "EVENT_ACTOR_MOVE_RELATIVE",
-                    "args": {
-                        "actorId": "91c8d1ba-6a5e-485a-a392-2e1ee3984f2b",
-                        "x": 1,
-                        "y": 0,
-                        "moveType": "horizontal",
-                        "useCollisions": false
-                    }
-                },
-                {
-                    "id": "74ec343c-62bb-42c0-a2ef-b83ad4d6e2fb",
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
-                            "But no..."
-                        ],
-                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
-                    }
-                },
-                {
-                    "id": "4dd5fdcf-b99a-402d-a8b6-ef54e390d180",
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
-                            "Looks like it's\ncome to this..."
-                        ],
-                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
-                    }
-                },
-                {
-                    "id": "65e16049-f9fe-4b3e-b21a-6d688b84662b",
+                    "id": "44a226f0-8f69-4f01-a963-4f59f87dd49a",
                     "command": "EVENT_SWITCH_SCENE",
                     "args": {
-                        "sceneId": "7ea9f1c6-0e31-43e7-8876-c3b5d66111fa",
-                        "x": 0,
-                        "y": 0,
+                        "sceneId": "a0d304f0-982c-4d4d-ab01-7587f31cbe08",
+                        "x": 25,
+                        "y": 6,
                         "direction": "",
                         "fadeSpeed": "2"
                     }
                 },
                 {
-                    "id": "f7bb6e8c-4ab0-406a-a6f6-4df16a8239f1",
+                    "id": "d1d8e0a6-08f4-41cc-a4b5-3bbcf8a5ea3c",
                     "command": "EVENT_END"
                 }
             ],
             "playerHit1Script": [],
             "playerHit2Script": [],
             "playerHit3Script": [],
-            "id": "a0d304f0-982c-4d4d-ab01-7587f31cbe08",
-            "x": 930,
-            "y": 1330,
-            "actors": [
-                {
-                    "name": "",
-                    "frame": 0,
-                    "animate": true,
-                    "spriteSheetId": "200c1589-389c-46a1-8cee-3ad914c4f332",
-                    "spriteType": "actor",
-                    "direction": "left",
-                    "moveSpeed": "1",
-                    "animSpeed": "3",
-                    "script": [],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "91c8d1ba-6a5e-485a-a392-2e1ee3984f2b",
-                    "x": 18,
-                    "y": 6
-                }
-            ],
+            "id": "8166f38c-7301-4b2a-9c06-f59c5c1e3aec",
+            "x": 932,
+            "y": 1126,
+            "actors": [],
             "triggers": [],
             "labelColor": "yellow"
         }
@@ -30298,6 +31200,247 @@
                     "command": "EVENT_END"
                 }
             ]
+        },
+        {
+            "id": "5518e7f8-4929-4a3d-b892-0c027b28e676",
+            "name": "F Samon",
+            "description": "Play during Flashback 4",
+            "variables": {
+                "0": {
+                    "id": "0",
+                    "name": "Variable A"
+                },
+                "8": {
+                    "id": "8",
+                    "name": "Variable I"
+                }
+            },
+            "actors": {},
+            "script": [
+                {
+                    "id": "f613233b-bd32-47fb-b0d2-b27858b145e5",
+                    "command": "EVENT_IF_TRUE",
+                    "args": {
+                        "variable": "8",
+                        "__collapseElse": false
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "id": "0ace00df-fe9f-449b-8cf9-03b6bcc0bda8",
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "You never talked\nto your\nprofessor",
+                                        "because the tall\nbuilding he\nlived in was",
+                                        "destroyed by YOU\nin your\nattack..."
+                                    ],
+                                    "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
+                                }
+                            },
+                            {
+                                "id": "12b7d813-6fd7-467c-965f-cecc9f9fbac4",
+                                "command": "EVENT_SET_TRUE",
+                                "args": {
+                                    "variable": "0"
+                                }
+                            },
+                            {
+                                "id": "059b6dae-efe4-4213-b981-79560754e73e",
+                                "command": "EVENT_SWITCH_SCENE",
+                                "args": {
+                                    "sceneId": "e4e08327-d3ee-49d9-88c8-5f651cd43b17",
+                                    "x": 0,
+                                    "y": 0,
+                                    "direction": "",
+                                    "fadeSpeed": "2"
+                                }
+                            },
+                            {
+                                "id": "d8e2656b-d3ac-44da-a65e-89879d18b2e1",
+                                "command": "EVENT_END"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "id": "7a46dcb4-a314-4fd5-bc68-2a4f216d65eb",
+                                "command": "EVENT_END"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "8e7d1ce2-45aa-413a-8c9f-930f61d2c62c",
+                    "command": "EVENT_END"
+                }
+            ]
+        },
+        {
+            "id": "c7bbcc1e-828f-48f7-8b32-f8d0c62b4462",
+            "name": "Delete After Building",
+            "description": "Sets all \"Talked\" Variables to true",
+            "variables": {
+                "0": {
+                    "id": "0",
+                    "name": "Variable A"
+                },
+                "1": {
+                    "id": "1",
+                    "name": "Variable B"
+                },
+                "2": {
+                    "id": "2",
+                    "name": "Variable C"
+                },
+                "3": {
+                    "id": "3",
+                    "name": "Variable D"
+                },
+                "4": {
+                    "id": "4",
+                    "name": "Variable E"
+                },
+                "5": {
+                    "id": "5",
+                    "name": "Variable F"
+                }
+            },
+            "actors": {},
+            "script": [
+                {
+                    "id": "9021a11b-13ad-4a39-80f6-d5e815ceaa2c",
+                    "command": "EVENT_SET_TRUE",
+                    "args": {
+                        "variable": "0"
+                    }
+                },
+                {
+                    "id": "53df4f4d-98c1-4b37-84d4-2f53a37261f3",
+                    "command": "EVENT_SET_TRUE",
+                    "args": {
+                        "variable": "1"
+                    }
+                },
+                {
+                    "id": "9a07d77d-9c87-48be-9417-1b6996585587",
+                    "command": "EVENT_SET_TRUE",
+                    "args": {
+                        "variable": "2"
+                    }
+                },
+                {
+                    "id": "d3cc15af-8021-42bd-926f-784f8d4ee35e",
+                    "command": "EVENT_SET_TRUE",
+                    "args": {
+                        "variable": "3"
+                    }
+                },
+                {
+                    "id": "6937e084-866f-4815-bc2b-f211964a2592",
+                    "command": "EVENT_SET_TRUE",
+                    "args": {
+                        "variable": "4"
+                    }
+                },
+                {
+                    "id": "43d38a75-d9c6-4a43-823c-98974469bd41",
+                    "command": "EVENT_SET_TRUE",
+                    "args": {
+                        "variable": "5"
+                    }
+                },
+                {
+                    "id": "020c4f15-9a1f-40f7-8a76-bff327cd1a40",
+                    "command": "EVENT_END"
+                }
+            ]
+        },
+        {
+            "id": "8f636104-c7e2-458a-a66f-7ec1e634dc7d",
+            "name": "F Food",
+            "description": "Play during Flashback 5",
+            "variables": {
+                "0": {
+                    "id": "0",
+                    "name": "Variable A"
+                }
+            },
+            "actors": {},
+            "script": [
+                {
+                    "id": "49f248ac-618d-44d3-af9e-d5adbef6b71c",
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "You didn't talk\nto the girl\nworking at the",
+                            "restaurant, and\nby the looks of\nthings you ",
+                            "didn't even care\nabout her\nsituation..."
+                        ],
+                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
+                    }
+                },
+                {
+                    "id": "4cad0770-c958-4ebd-b76d-0cbc477d6a51",
+                    "command": "EVENT_SET_TRUE",
+                    "args": {
+                        "variable": "0"
+                    }
+                },
+                {
+                    "id": "5afcc998-d524-4a57-8c21-4984d0a4af04",
+                    "command": "EVENT_SWITCH_SCENE",
+                    "args": {
+                        "sceneId": "3b7acbcf-824b-436e-992f-3197326bb799",
+                        "x": 0,
+                        "y": 0,
+                        "direction": "",
+                        "fadeSpeed": "2"
+                    }
+                },
+                {
+                    "id": "cb73b6cc-bd42-4a9e-ba2f-0bc753b6f919",
+                    "command": "EVENT_END"
+                }
+            ]
+        },
+        {
+            "id": "00c698f4-8204-443f-94b8-6dc912c59a00",
+            "name": "F Friend",
+            "description": "Play during Flashback 6",
+            "variables": {},
+            "actors": {},
+            "script": [
+                {
+                    "id": "ad365a81-75b8-4d94-a5bc-ba5a493afca9",
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "You even had the\ngall to walk\ninto the",
+                            "abandoned police\nstation where\nyou left my",
+                            "best friend to\nrot because of\nmy mistake",
+                            "YOU DIDN'T EVEN\nCARE THAT YOU\nLET HIM DIE",
+                            "MUCH LESS THE\nFACT THAT YOU\nWENT ON AS IF",
+                            "TODAY WAS\nANOTHER TUESDAY\nFOR YOU"
+                        ],
+                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
+                    }
+                },
+                {
+                    "id": "11771f93-2292-497f-a278-c354bac20cfb",
+                    "command": "EVENT_SWITCH_SCENE",
+                    "args": {
+                        "sceneId": "8166f38c-7301-4b2a-9c06-f59c5c1e3aec",
+                        "x": 0,
+                        "y": 0,
+                        "direction": "",
+                        "fadeSpeed": "2"
+                    }
+                },
+                {
+                    "id": "7418e906-1b7a-437a-86e0-7b05a9fd2fbd",
+                    "command": "EVENT_END"
+                }
+            ]
         }
     ],
     "music": [
@@ -30570,12 +31713,36 @@
         {
             "id": "16",
             "name": "Flashback 3"
+        },
+        {
+            "id": "17",
+            "name": "Flashback 4"
+        },
+        {
+            "id": "20",
+            "name": "Flashback1&2 Done"
+        },
+        {
+            "id": "18",
+            "name": "Flashback 5"
+        },
+        {
+            "id": "21",
+            "name": "Flashback3&4 Done"
+        },
+        {
+            "id": "a0d304f0-982c-4d4d-ab01-7587f31cbe08__L0",
+            "name": "Local 0"
+        },
+        {
+            "id": "22",
+            "name": "Flashback5&6 Done"
         }
     ],
     "settings": {
-        "startSceneId": "ff5df4a3-90c0-468f-bdb8-b2b84a79e40a",
-        "startX": 0,
-        "startY": 0,
+        "startSceneId": "a0d304f0-982c-4d4d-ab01-7587f31cbe08",
+        "startX": 25,
+        "startY": 6,
         "showCollisions": true,
         "showConnections": true,
         "worldScrollX": 350,
