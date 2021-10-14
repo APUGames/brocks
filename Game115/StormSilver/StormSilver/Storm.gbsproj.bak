@@ -29161,7 +29161,8 @@
                                                             "customEventId": "5518e7f8-4929-4a3d-b892-0c027b28e676",
                                                             "__name": "F Samon",
                                                             "$variable[0]$": "17",
-                                                            "$variable[8]$": "8"
+                                                            "$variable[8]$": "8",
+                                                            "__comment": true
                                                         },
                                                         "children": {
                                                             "script": [
@@ -29391,7 +29392,8 @@
                                                             "customEventId": "5518e7f8-4929-4a3d-b892-0c027b28e676",
                                                             "__name": "F Samon",
                                                             "$variable[0]$": "17",
-                                                            "$variable[8]$": "8"
+                                                            "$variable[8]$": "8",
+                                                            "__comment": false
                                                         },
                                                         "children": {
                                                             "script": [
@@ -29477,34 +29479,198 @@
                                             "children": {
                                                 "true": [
                                                     {
-                                                        "id": "2c5689a9-2915-4791-a03e-7acebd85d9e8",
-                                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                                        "id": "a0756a65-aff9-4e74-aa2f-6990c0b7e137",
+                                                        "command": "EVENT_IF_TRUE",
                                                         "args": {
-                                                            "customEventId": "00c698f4-8204-443f-94b8-6dc912c59a00",
-                                                            "__name": "F Friend"
+                                                            "variable": "22",
+                                                            "__collapseElse": false
                                                         },
                                                         "children": {
-                                                            "script": [
+                                                            "true": [
                                                                 {
-                                                                    "id": "ad365a81-75b8-4d94-a5bc-ba5a493afca9",
+                                                                    "id": "b29446c8-31e4-449f-91e4-c8899e8be376",
                                                                     "command": "EVENT_TEXT",
                                                                     "args": {
                                                                         "text": [
-                                                                            "You even had the\ngall to walk\ninto the",
-                                                                            "abandoned police\nstation where\nyou left my",
-                                                                            "best friend to\nrot because of\nmy mistake",
-                                                                            "YOU DIDN'T EVEN\nCARE THAT YOU\nLET HIM DIE",
-                                                                            "MUCH LESS THE\nFACT THAT YOU\nWENT ON AS IF",
-                                                                            "TODAY WAS\nANOTHER TUESDAY\nFOR YOU"
+                                                                            "You've been\ntelling yourself\nthis lie",
+                                                                            "to make yourself\nforget that YOU\nWERE THE ONE",
+                                                                            "THAT CAUSED THIS\nNIGHTMARE."
                                                                         ],
                                                                         "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
                                                                     }
                                                                 },
                                                                 {
-                                                                    "id": "11771f93-2292-497f-a278-c354bac20cfb",
+                                                                    "id": "2b39dba0-471c-4494-a14f-3beff6f807ff",
+                                                                    "command": "EVENT_TEXT",
+                                                                    "args": {
+                                                                        "text": [
+                                                                            "No... It can't\nbe me...",
+                                                                            "But you're the\nbad guy! You\ncaused this by",
+                                                                            "creating the\nneed for a Hero\nlike me in the",
+                                                                            "first place!"
+                                                                        ],
+                                                                        "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "902fc841-3ad6-4406-81dc-abd6fe4dbe8b",
+                                                                    "command": "EVENT_ACTOR_SET_DIRECTION",
+                                                                    "args": {
+                                                                        "actorId": "91c8d1ba-6a5e-485a-a392-2e1ee3984f2b",
+                                                                        "direction": {
+                                                                            "type": "direction",
+                                                                            "value": "right"
+                                                                        }
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "3ca6c9d6-6594-417f-b5cc-e9e7d6342a5f",
+                                                                    "command": "EVENT_TEXT",
+                                                                    "args": {
+                                                                        "text": [
+                                                                            "Ohoho you think\nI was the main\ncause of this??",
+                                                                            "I won't lie I've\ndone some\nmorally wrong",
+                                                                            "things while\nadorning this\nmask..."
+                                                                        ],
+                                                                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "59454b61-8369-45d9-a04a-1f44b71ac498",
+                                                                    "command": "EVENT_TEXT",
+                                                                    "args": {
+                                                                        "text": [
+                                                                            "Enlisting the\nhelp of my best\nfriend was",
+                                                                            "my biggest and\nlast mistake..."
+                                                                        ],
+                                                                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "41d85f0d-c475-461b-adcc-e94d13b7a523",
+                                                                    "command": "EVENT_TEXT",
+                                                                    "args": {
+                                                                        "text": [
+                                                                            "You locked him\nup in that\njail...",
+                                                                            "And you left him\nto rot in that\nabandoned cell",
+                                                                            "all for the\n\"ultimate crime\nof helping",
+                                                                            "his friend stop\nthe big bad\n'Hero'\""
+                                                                        ],
+                                                                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "45f545a0-a9c8-413d-a500-a422292d7f27",
+                                                                    "command": "EVENT_TEXT",
+                                                                    "args": {
+                                                                        "text": [
+                                                                            "So believe me...\nI'm not\ninnocent, myself",
+                                                                            "But you..."
+                                                                        ],
+                                                                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b",
+                                                                        "__collapse": false
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "1af88bc2-28ff-4b61-9626-8e0ef63fff93",
+                                                                    "command": "EVENT_CAMERA_SHAKE",
+                                                                    "args": {
+                                                                        "time": 0.5,
+                                                                        "shakeDirection": "vertical"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "9215f9ca-f82a-4e17-bf19-293fcf599607",
+                                                                    "command": "EVENT_TEXT",
+                                                                    "args": {
+                                                                        "text": [
+                                                                            "You're a monster"
+                                                                        ],
+                                                                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "330d5357-7b74-4092-a5fb-5c72b4e12a9a",
+                                                                    "command": "EVENT_TEXT",
+                                                                    "args": {
+                                                                        "text": [
+                                                                            "I..."
+                                                                        ],
+                                                                        "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "c32775e0-0c8d-4ab0-9b79-1f200cfe9c22",
+                                                                    "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                                                    "args": {
+                                                                        "actorId": "$self$",
+                                                                        "x": -1,
+                                                                        "y": 0,
+                                                                        "moveType": "horizontal",
+                                                                        "useCollisions": false
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "704dcb6d-7d7b-4681-adda-9f4737b7e02e",
+                                                                    "command": "EVENT_TEXT",
+                                                                    "args": {
+                                                                        "text": [
+                                                                            "Even still, if\nevil is afoot\nthen people need",
+                                                                            "a Hero like me\nto save them...",
+                                                                            "No matter what,\nyou will go\ndown."
+                                                                        ],
+                                                                        "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "67f3e689-fc88-45ab-8fa3-72d30c2290b2",
+                                                                    "command": "EVENT_TEXT",
+                                                                    "args": {
+                                                                        "text": [
+                                                                            "I thought you\nhad changed,\nKen... ",
+                                                                            "I hoped that\nyour little\nmemory wipe",
+                                                                            "would have\nhelped you\nrealize",
+                                                                            "just how insane\nyou are..."
+                                                                        ],
+                                                                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "a3dbe07c-cf04-4f73-b2f6-83497fc77976",
+                                                                    "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                                                    "args": {
+                                                                        "actorId": "91c8d1ba-6a5e-485a-a392-2e1ee3984f2b",
+                                                                        "x": 1,
+                                                                        "y": 0,
+                                                                        "moveType": "horizontal",
+                                                                        "useCollisions": false
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "74ec343c-62bb-42c0-a2ef-b83ad4d6e2fb",
+                                                                    "command": "EVENT_TEXT",
+                                                                    "args": {
+                                                                        "text": [
+                                                                            "But no..."
+                                                                        ],
+                                                                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "4dd5fdcf-b99a-402d-a8b6-ef54e390d180",
+                                                                    "command": "EVENT_TEXT",
+                                                                    "args": {
+                                                                        "text": [
+                                                                            "Looks like it's\ncome to this..."
+                                                                        ],
+                                                                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "65e16049-f9fe-4b3e-b21a-6d688b84662b",
                                                                     "command": "EVENT_SWITCH_SCENE",
                                                                     "args": {
-                                                                        "sceneId": "8166f38c-7301-4b2a-9c06-f59c5c1e3aec",
+                                                                        "sceneId": "7ea9f1c6-0e31-43e7-8876-c3b5d66111fa",
                                                                         "x": 0,
                                                                         "y": 0,
                                                                         "direction": "",
@@ -29512,7 +29678,62 @@
                                                                     }
                                                                 },
                                                                 {
-                                                                    "id": "7418e906-1b7a-437a-86e0-7b05a9fd2fbd",
+                                                                    "id": "d9b6c784-ea6d-46b4-8f87-a7218c5fb52a",
+                                                                    "command": "EVENT_END"
+                                                                }
+                                                            ],
+                                                            "false": [
+                                                                {
+                                                                    "id": "8ed1455f-ca34-42fa-9435-eb09c3e1c7a0",
+                                                                    "command": "EVENT_SET_TRUE",
+                                                                    "args": {
+                                                                        "variable": "22"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "2c5689a9-2915-4791-a03e-7acebd85d9e8",
+                                                                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                                                                    "args": {
+                                                                        "customEventId": "00c698f4-8204-443f-94b8-6dc912c59a00",
+                                                                        "__name": "F Friend"
+                                                                    },
+                                                                    "children": {
+                                                                        "script": [
+                                                                            {
+                                                                                "id": "ad365a81-75b8-4d94-a5bc-ba5a493afca9",
+                                                                                "command": "EVENT_TEXT",
+                                                                                "args": {
+                                                                                    "text": [
+                                                                                        "You even had the\ngall to walk\ninto the",
+                                                                                        "abandoned police\nstation where\nyou left my",
+                                                                                        "best friend to\nrot because of\nmy mistake",
+                                                                                        "YOU DIDN'T EVEN\nCARE THAT YOU\nLET HIM DIE",
+                                                                                        "MUCH LESS THE\nFACT THAT YOU\nWENT ON AS IF",
+                                                                                        "TODAY WAS\nANOTHER TUESDAY\nFOR YOU"
+                                                                                    ],
+                                                                                    "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "id": "11771f93-2292-497f-a278-c354bac20cfb",
+                                                                                "command": "EVENT_SWITCH_SCENE",
+                                                                                "args": {
+                                                                                    "sceneId": "8166f38c-7301-4b2a-9c06-f59c5c1e3aec",
+                                                                                    "x": 0,
+                                                                                    "y": 0,
+                                                                                    "direction": "",
+                                                                                    "fadeSpeed": "2"
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "id": "7418e906-1b7a-437a-86e0-7b05a9fd2fbd",
+                                                                                "command": "EVENT_END"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "ca7551cd-0a83-4819-b616-b3d2eedf4b04",
                                                                     "command": "EVENT_END"
                                                                 }
                                                             ]
@@ -29596,185 +29817,6 @@
                                 "command": "EVENT_END"
                             }
                         ]
-                    }
-                },
-                {
-                    "id": "b29446c8-31e4-449f-91e4-c8899e8be376",
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
-                            "You've been\ntelling yourself\nthis lie",
-                            "to make yourself\nforget that YOU\nWERE THE ONE",
-                            "THAT CAUSED THIS\nNIGHTMARE."
-                        ],
-                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
-                    }
-                },
-                {
-                    "id": "2b39dba0-471c-4494-a14f-3beff6f807ff",
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
-                            "No... It can't\nbe me...",
-                            "But you're the\nbad guy! You\ncaused this by",
-                            "creating the\nneed for a Hero\nlike me in the",
-                            "first place!"
-                        ],
-                        "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
-                    }
-                },
-                {
-                    "id": "3ca6c9d6-6594-417f-b5cc-e9e7d6342a5f",
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
-                            "Ohoho you think\nI was the main\ncause of this??",
-                            "I won't lie I've\ndone some\nmorally wrong",
-                            "things while\nadorning this\nmask..."
-                        ],
-                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
-                    }
-                },
-                {
-                    "id": "59454b61-8369-45d9-a04a-1f44b71ac498",
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
-                            "Enlisting the\nhelp of my best\nfriend was",
-                            "my biggest and\nlast mistake..."
-                        ],
-                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
-                    }
-                },
-                {
-                    "id": "41d85f0d-c475-461b-adcc-e94d13b7a523",
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
-                            "You locked him\nup in that\njail...",
-                            "And you left him\nto rot in that\nabandoned cell",
-                            "all for the\n\"ultimate crime\nof helping",
-                            "his friend stop\nthe big bad\n'Hero'\""
-                        ],
-                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
-                    }
-                },
-                {
-                    "id": "45f545a0-a9c8-413d-a500-a422292d7f27",
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
-                            "So believe me...\nI'm not\ninnocent, myself",
-                            "But you..."
-                        ],
-                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b",
-                        "__collapse": false
-                    }
-                },
-                {
-                    "id": "1af88bc2-28ff-4b61-9626-8e0ef63fff93",
-                    "command": "EVENT_CAMERA_SHAKE",
-                    "args": {
-                        "time": 0.5,
-                        "shakeDirection": "vertical"
-                    }
-                },
-                {
-                    "id": "9215f9ca-f82a-4e17-bf19-293fcf599607",
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
-                            "You're a monster"
-                        ],
-                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
-                    }
-                },
-                {
-                    "id": "330d5357-7b74-4092-a5fb-5c72b4e12a9a",
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
-                            "I..."
-                        ],
-                        "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
-                    }
-                },
-                {
-                    "id": "c32775e0-0c8d-4ab0-9b79-1f200cfe9c22",
-                    "command": "EVENT_ACTOR_MOVE_RELATIVE",
-                    "args": {
-                        "actorId": "$self$",
-                        "x": -1,
-                        "y": 0,
-                        "moveType": "horizontal",
-                        "useCollisions": false
-                    }
-                },
-                {
-                    "id": "704dcb6d-7d7b-4681-adda-9f4737b7e02e",
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
-                            "Even still, if\nevil is afoot\nthen people need",
-                            "a Hero like me\nto save them...",
-                            "No matter what,\nyou will go\ndown."
-                        ],
-                        "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
-                    }
-                },
-                {
-                    "id": "67f3e689-fc88-45ab-8fa3-72d30c2290b2",
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
-                            "I thought you\nhad changed,\nKen... ",
-                            "I hoped that\nyour little\nmemory wipe",
-                            "would have\nhelped you\nrealize",
-                            "just how insane\nyou are..."
-                        ],
-                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
-                    }
-                },
-                {
-                    "id": "a3dbe07c-cf04-4f73-b2f6-83497fc77976",
-                    "command": "EVENT_ACTOR_MOVE_RELATIVE",
-                    "args": {
-                        "actorId": "91c8d1ba-6a5e-485a-a392-2e1ee3984f2b",
-                        "x": 1,
-                        "y": 0,
-                        "moveType": "horizontal",
-                        "useCollisions": false
-                    }
-                },
-                {
-                    "id": "74ec343c-62bb-42c0-a2ef-b83ad4d6e2fb",
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
-                            "But no..."
-                        ],
-                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
-                    }
-                },
-                {
-                    "id": "4dd5fdcf-b99a-402d-a8b6-ef54e390d180",
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
-                            "Looks like it's\ncome to this..."
-                        ],
-                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
-                    }
-                },
-                {
-                    "id": "65e16049-f9fe-4b3e-b21a-6d688b84662b",
-                    "command": "EVENT_SWITCH_SCENE",
-                    "args": {
-                        "sceneId": "7ea9f1c6-0e31-43e7-8876-c3b5d66111fa",
-                        "x": 0,
-                        "y": 0,
-                        "direction": "",
-                        "fadeSpeed": "2"
                     }
                 },
                 {
@@ -31691,6 +31733,10 @@
         {
             "id": "a0d304f0-982c-4d4d-ab01-7587f31cbe08__L0",
             "name": "Local 0"
+        },
+        {
+            "id": "22",
+            "name": "Flashback5&6 Done"
         }
     ],
     "settings": {
