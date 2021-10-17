@@ -29334,8 +29334,8 @@
                                                         "command": "EVENT_SET_TRUE",
                                                         "args": {
                                                             "variable": "18",
-                                                            "__comment": true,
-                                                            "__collapse": true
+                                                            "__comment": false,
+                                                            "__collapse": false
                                                         }
                                                     },
                                                     {
@@ -29383,6 +29383,13 @@
                                                                     "command": "EVENT_END"
                                                                 }
                                                             ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "id": "762370d7-b259-4ec5-ab13-e686a6ae7e39",
+                                                        "command": "EVENT_SET_TRUE",
+                                                        "args": {
+                                                            "variable": "21"
                                                         }
                                                     },
                                                     {
@@ -29470,13 +29477,6 @@
                                             }
                                         },
                                         {
-                                            "id": "762370d7-b259-4ec5-ab13-e686a6ae7e39",
-                                            "command": "EVENT_SET_TRUE",
-                                            "args": {
-                                                "variable": "21"
-                                            }
-                                        },
-                                        {
                                             "id": "90c46d7b-1c6b-4047-afd9-a3fe40d7d265",
                                             "command": "EVENT_END"
                                         }
@@ -29491,70 +29491,6 @@
                                             },
                                             "children": {
                                                 "true": [
-                                                    {
-                                                        "id": "a0756a65-aff9-4e74-aa2f-6990c0b7e137",
-                                                        "command": "EVENT_IF_TRUE",
-                                                        "args": {
-                                                            "variable": "22",
-                                                            "__collapseElse": false
-                                                        },
-                                                        "children": {
-                                                            "true": [
-                                                                {
-                                                                    "id": "d9b6c784-ea6d-46b4-8f87-a7218c5fb52a",
-                                                                    "command": "EVENT_END"
-                                                                }
-                                                            ],
-                                                            "false": [
-                                                                {
-                                                                    "id": "2c5689a9-2915-4791-a03e-7acebd85d9e8",
-                                                                    "command": "EVENT_CALL_CUSTOM_EVENT",
-                                                                    "args": {
-                                                                        "customEventId": "00c698f4-8204-443f-94b8-6dc912c59a00",
-                                                                        "__name": "F Friend"
-                                                                    },
-                                                                    "children": {
-                                                                        "script": [
-                                                                            {
-                                                                                "id": "ad365a81-75b8-4d94-a5bc-ba5a493afca9",
-                                                                                "command": "EVENT_TEXT",
-                                                                                "args": {
-                                                                                    "text": [
-                                                                                        "You even had the\ngall to walk\ninto the",
-                                                                                        "abandoned police\nstation where\nyou left my",
-                                                                                        "best friend to\nrot because of\nmy mistake",
-                                                                                        "YOU DIDN'T EVEN\nCARE THAT YOU\nLET HIM DIE",
-                                                                                        "MUCH LESS THE\nFACT THAT YOU\nWENT ON AS IF",
-                                                                                        "TODAY WAS\nANOTHER TUESDAY\nFOR YOU"
-                                                                                    ],
-                                                                                    "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
-                                                                                }
-                                                                            },
-                                                                            {
-                                                                                "id": "11771f93-2292-497f-a278-c354bac20cfb",
-                                                                                "command": "EVENT_SWITCH_SCENE",
-                                                                                "args": {
-                                                                                    "sceneId": "8166f38c-7301-4b2a-9c06-f59c5c1e3aec",
-                                                                                    "x": 0,
-                                                                                    "y": 0,
-                                                                                    "direction": "",
-                                                                                    "fadeSpeed": "2"
-                                                                                }
-                                                                            },
-                                                                            {
-                                                                                "id": "7418e906-1b7a-437a-86e0-7b05a9fd2fbd",
-                                                                                "command": "EVENT_END"
-                                                                            }
-                                                                        ]
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "id": "ca7551cd-0a83-4819-b616-b3d2eedf4b04",
-                                                                    "command": "EVENT_END"
-                                                                }
-                                                            ]
-                                                        }
-                                                    },
                                                     {
                                                         "id": "44b55614-2857-453a-92f5-7df3aa9186dc",
                                                         "command": "EVENT_END"
@@ -29709,6 +29645,48 @@
                     }
                 },
                 {
+                    "id": "0f37fe2f-e1ec-4e53-a0d7-c9c370754542",
+                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                    "args": {
+                        "customEventId": "00c698f4-8204-443f-94b8-6dc912c59a00",
+                        "__name": "F Friend"
+                    },
+                    "children": {
+                        "script": [
+                            {
+                                "id": "ad365a81-75b8-4d94-a5bc-ba5a493afca9",
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "You even had the\ngall to walk\ninto the",
+                                        "abandoned police\nstation where\nyou left my",
+                                        "best friend to\nrot because of\nmy mistake",
+                                        "YOU DIDN'T EVEN\nCARE THAT YOU\nLET HIM DIE",
+                                        "MUCH LESS THE\nFACT THAT YOU\nWENT ON AS IF",
+                                        "TODAY WAS\nANOTHER TUESDAY\nFOR YOU"
+                                    ],
+                                    "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
+                                }
+                            },
+                            {
+                                "id": "11771f93-2292-497f-a278-c354bac20cfb",
+                                "command": "EVENT_SWITCH_SCENE",
+                                "args": {
+                                    "sceneId": "8166f38c-7301-4b2a-9c06-f59c5c1e3aec",
+                                    "x": 0,
+                                    "y": 0,
+                                    "direction": "",
+                                    "fadeSpeed": "2"
+                                }
+                            },
+                            {
+                                "id": "7418e906-1b7a-437a-86e0-7b05a9fd2fbd",
+                                "command": "EVENT_END"
+                            }
+                        ]
+                    }
+                },
+                {
                     "id": "45f545a0-a9c8-413d-a500-a422292d7f27",
                     "command": "EVENT_TEXT",
                     "args": {
@@ -29811,6 +29789,18 @@
                     "args": {
                         "text": [
                             "Looks like it's\ncome to this..."
+                        ],
+                        "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
+                    }
+                },
+                {
+                    "id": "133e59f1-6845-45eb-b5e2-774726ef6639",
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "Your misplaced\ndetermination\n",
+                            "will be your\ndownfall.",
+                            "And this is the\ntest of my\nconviction..."
                         ],
                         "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
                     }
@@ -30276,6 +30266,822 @@
             "actors": [],
             "triggers": [],
             "labelColor": "yellow"
+        },
+        {
+            "name": "Logo",
+            "backgroundId": "bc50419c-a69a-483e-a46b-e671dc6b49ff",
+            "width": 20,
+            "height": 18,
+            "collisions": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "tileColors": [],
+            "script": [
+                {
+                    "id": "19a7960e-bccb-454f-b64a-3dc12a41ea63",
+                    "command": "EVENT_ACTOR_HIDE",
+                    "args": {
+                        "actorId": "$self$"
+                    }
+                },
+                {
+                    "id": "fab971be-7946-4706-a4ec-b50241c20c9a",
+                    "command": "EVENT_WAIT",
+                    "args": {
+                        "time": 1
+                    }
+                },
+                {
+                    "id": "fba19eb8-2b8e-4816-8c65-ea142940b4c7",
+                    "command": "EVENT_SWITCH_SCENE",
+                    "args": {
+                        "sceneId": "933a6420-a8b5-40c8-a797-733755ca3542",
+                        "x": 0,
+                        "y": 0,
+                        "direction": "",
+                        "fadeSpeed": "2"
+                    }
+                },
+                {
+                    "id": "27fcf1da-94a0-4825-a011-8eb8b7ab48da",
+                    "command": "EVENT_END"
+                }
+            ],
+            "playerHit1Script": [],
+            "playerHit2Script": [],
+            "playerHit3Script": [],
+            "id": "84eea938-db0a-4908-b6d7-48d4eb11ea75",
+            "x": 60,
+            "y": 400,
+            "actors": [],
+            "triggers": []
+        },
+        {
+            "name": "Logo2",
+            "backgroundId": "735f591e-1510-4529-9208-0f6eac8014cc",
+            "width": 20,
+            "height": 18,
+            "collisions": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "tileColors": [],
+            "script": [
+                {
+                    "id": "dc383e93-e632-4e12-9e46-e197d842ec30",
+                    "command": "EVENT_ACTOR_HIDE",
+                    "args": {
+                        "actorId": "$self$"
+                    }
+                },
+                {
+                    "id": "17f49424-e3f3-437e-9c0c-bdbb1a473b4e",
+                    "command": "EVENT_WAIT",
+                    "args": {
+                        "time": 1
+                    }
+                },
+                {
+                    "id": "a97be814-c4ee-43ac-a8a2-652c6a850825",
+                    "command": "EVENT_SWITCH_SCENE",
+                    "args": {
+                        "sceneId": "ff5df4a3-90c0-468f-bdb8-b2b84a79e40a",
+                        "x": 0,
+                        "y": 0,
+                        "direction": "",
+                        "fadeSpeed": "2"
+                    }
+                },
+                {
+                    "id": "11a4fcf2-e0ac-4031-b09a-99925b3ddd26",
+                    "command": "EVENT_END"
+                }
+            ],
+            "playerHit1Script": [],
+            "playerHit2Script": [],
+            "playerHit3Script": [],
+            "id": "933a6420-a8b5-40c8-a797-733755ca3542",
+            "x": 60,
+            "y": 220,
+            "actors": [],
+            "triggers": []
         }
     ],
     "backgrounds": [
@@ -30288,7 +31094,7 @@
             "imageHeight": 384,
             "filename": "Campus (Reality).png",
             "inode": "396366432",
-            "_v": 1634249746246
+            "_v": 1634365533288
         },
         {
             "id": "c21399f1-4d57-469a-88af-90c6607e6c55",
@@ -30299,7 +31105,7 @@
             "imageHeight": 384,
             "filename": "Campus.png",
             "inode": "396363424",
-            "_v": 1634249746246
+            "_v": 1634365533288
         },
         {
             "id": "7a903d8d-cdd1-456f-bf7b-7c824b58e249",
@@ -30310,7 +31116,7 @@
             "imageHeight": 160,
             "filename": "City(Battle).png",
             "inode": "396364352",
-            "_v": 1634249746246
+            "_v": 1634365533288
         },
         {
             "id": "b8b61d05-847b-4e9d-94c3-c0c77d5c0442",
@@ -30321,7 +31127,7 @@
             "imageHeight": 160,
             "filename": "City(WIP).png",
             "inode": "396362368",
-            "_v": 1634249746246
+            "_v": 1634365533288
         },
         {
             "id": "ddaa382e-fa84-414a-b4cb-d499de3ac2b3",
@@ -30332,7 +31138,7 @@
             "imageHeight": 160,
             "filename": "City.png",
             "inode": "396363232",
-            "_v": 1634249746246
+            "_v": 1634365533288
         },
         {
             "id": "bc01285b-7981-410a-af02-0e919c8e2509",
@@ -30343,7 +31149,7 @@
             "imageHeight": 160,
             "filename": "Classroom.png",
             "inode": "396363616",
-            "_v": 1634249746246
+            "_v": 1634365533288
         },
         {
             "id": "c20a4e59-ff8e-49a0-ab03-9445f95da6b4",
@@ -30354,7 +31160,7 @@
             "imageHeight": 144,
             "filename": "Damn_.png",
             "inode": "396365440",
-            "_v": 1634249746246
+            "_v": 1634365533288
         },
         {
             "id": "36eb03a3-b1c6-4ade-bc24-8ab5ae7bd5d7",
@@ -30365,7 +31171,7 @@
             "imageHeight": 144,
             "filename": "Final Blow.png",
             "inode": "396365248",
-            "_v": 1634249746246
+            "_v": 1634365533288
         },
         {
             "id": "d0aee8aa-847b-4677-bd88-384eb338feef",
@@ -30376,7 +31182,7 @@
             "imageHeight": 160,
             "filename": "Food Place.png",
             "inode": "396365056",
-            "_v": 1634249746246
+            "_v": 1634365533288
         },
         {
             "id": "14e26ff5-0f36-42f3-947e-aeae795fe92f",
@@ -30387,7 +31193,7 @@
             "imageHeight": 144,
             "filename": "Gay Baby Jail (Reality).png",
             "inode": "396366688",
-            "_v": 1634249746246
+            "_v": 1634365533288
         },
         {
             "id": "efb501a3-f886-4f09-a7a9-11e37debcb00",
@@ -30398,7 +31204,7 @@
             "imageHeight": 144,
             "filename": "Gay Baby Jail.png",
             "inode": "396365920",
-            "_v": 1634249746246
+            "_v": 1634365533288
         },
         {
             "id": "51db7054-93cd-4b24-bfcc-02c3ebfb4d6e",
@@ -30409,7 +31215,7 @@
             "imageHeight": 144,
             "filename": "Jotaro... DIO.png",
             "inode": "396364608",
-            "_v": 1634249746246
+            "_v": 1634365533288
         },
         {
             "id": "ef461300-323d-485f-822f-78d9640a6123",
@@ -30420,7 +31226,7 @@
             "imageHeight": 144,
             "filename": "Ken Transform.png",
             "inode": "396363840",
-            "_v": 1634249746246
+            "_v": 1634365533288
         },
         {
             "id": "93ab0c43-8360-4d66-92ca-bcf634c7df6d",
@@ -30431,7 +31237,7 @@
             "imageHeight": 144,
             "filename": "Ken's Room.png",
             "inode": "396361824",
-            "_v": 1634249746246
+            "_v": 1634365533288
         },
         {
             "id": "4c4684fd-f9ce-4083-bdc4-5de97e5b2c73",
@@ -30442,7 +31248,7 @@
             "imageHeight": 144,
             "filename": "Path to Jail(Reality).png",
             "inode": "396366176",
-            "_v": 1634249746246
+            "_v": 1634365533288
         },
         {
             "id": "6a1f9706-ae6b-4490-8413-9a15859ded3c",
@@ -30453,7 +31259,7 @@
             "imageHeight": 144,
             "filename": "Path to Jail.png",
             "inode": "396365664",
-            "_v": 1634249746246
+            "_v": 1634365533288
         },
         {
             "id": "4c130385-6950-461e-be65-c39d52c8d4f8",
@@ -30464,7 +31270,7 @@
             "imageHeight": 144,
             "filename": "StormSilver Transform.png",
             "inode": "396364096",
-            "_v": 1634249746246
+            "_v": 1634365533288
         },
         {
             "id": "d6dd545b-7d14-4736-be5a-ff9c9b753932",
@@ -30475,7 +31281,7 @@
             "imageHeight": 144,
             "filename": "Tall Building1.png",
             "inode": "396362560",
-            "_v": 1634249746246
+            "_v": 1634365533288
         },
         {
             "id": "2de6e52a-fa98-4a75-81b7-51027c9c7911",
@@ -30486,7 +31292,7 @@
             "imageHeight": 144,
             "filename": "Tall Building2.png",
             "inode": "396364832",
-            "_v": 1634249746246
+            "_v": 1634365533288
         },
         {
             "id": "4429038e-b094-48b6-9a59-b932fc4fbba9",
@@ -30497,7 +31303,7 @@
             "imageHeight": 144,
             "filename": "Tall Building3.png",
             "inode": "396362784",
-            "_v": 1634249746246
+            "_v": 1634365533288
         },
         {
             "id": "f5f7ae31-e9dc-41e8-ba82-74b2452de845",
@@ -30508,7 +31314,7 @@
             "imageHeight": 200,
             "filename": "Test (200x200 px).png",
             "inode": "396362048",
-            "_v": 1634249746246
+            "_v": 1634365533288
         },
         {
             "id": "07c269bf-6322-4d40-a315-d3f54073c93d",
@@ -30519,7 +31325,7 @@
             "imageHeight": 144,
             "filename": "Title Screen.png",
             "inode": "396361920",
-            "_v": 1634249746246
+            "_v": 1634365533288
         },
         {
             "id": "ded35fba-5944-4ab3-a126-f4785fcaead6",
@@ -30530,7 +31336,7 @@
             "imageHeight": 216,
             "filename": "Town (Reality).png",
             "inode": "396366944",
-            "_v": 1634249746246
+            "_v": 1634365533288
         },
         {
             "id": "33801a63-c518-486e-95ba-e03a38606181",
@@ -30541,7 +31347,29 @@
             "imageHeight": 216,
             "filename": "Town.png",
             "inode": "396362176",
-            "_v": 1634249746246
+            "_v": 1634365533288
+        },
+        {
+            "id": "bc50419c-a69a-483e-a46b-e671dc6b49ff",
+            "name": "ca_logo_sm",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "ca_logo_sm.png",
+            "inode": "396367072",
+            "_v": 1634365533288
+        },
+        {
+            "id": "735f591e-1510-4529-9208-0f6eac8014cc",
+            "name": "gim_logo_sm",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "gim_logo_sm.png",
+            "inode": "396367168",
+            "_v": 1634365533288
         },
         {
             "id": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
@@ -30552,7 +31380,7 @@
             "imageHeight": 144,
             "filename": "placeholder.png",
             "inode": "396361728",
-            "_v": 1634249746246
+            "_v": 1634365533288
         }
     ],
     "spriteSheets": [
@@ -30563,7 +31391,7 @@
             "type": "static",
             "filename": "BNPC.png",
             "inode": "400561440",
-            "_v": 1634249746246
+            "_v": 1634365533289
         },
         {
             "id": "766fe949-3b8f-4ae5-b9b8-97106d74838f",
@@ -30572,7 +31400,7 @@
             "type": "static",
             "filename": "CNPC.png",
             "inode": "400561536",
-            "_v": 1634249746246
+            "_v": 1634365533289
         },
         {
             "id": "dc84027f-7ba6-4b32-bd24-fbed979febf8",
@@ -30581,7 +31409,7 @@
             "type": "static",
             "filename": "Chair.png",
             "inode": "400561728",
-            "_v": 1634249746246
+            "_v": 1634365533289
         },
         {
             "id": "60136903-85c2-4153-83e3-77604107ec12",
@@ -30590,7 +31418,7 @@
             "type": "static",
             "filename": "Clean Desk.png",
             "inode": "400557600",
-            "_v": 1634249746246
+            "_v": 1634365533289
         },
         {
             "id": "cb6d303c-81cf-4324-bd69-8856680f0162",
@@ -30599,7 +31427,7 @@
             "type": "static",
             "filename": "Computer (Back).png",
             "inode": "400562112",
-            "_v": 1634249746246
+            "_v": 1634365533289
         },
         {
             "id": "5ec0446c-4389-44e2-83f8-e565ae37d79a",
@@ -30608,7 +31436,7 @@
             "type": "static",
             "filename": "Computer.png",
             "inode": "400561920",
-            "_v": 1634249746246
+            "_v": 1634365533289
         },
         {
             "id": "e5e664b3-4fb3-40cf-9db6-01f576ac18d5",
@@ -30617,7 +31445,7 @@
             "type": "static",
             "filename": "Criminal.png",
             "inode": "400562624",
-            "_v": 1634249746246
+            "_v": 1634365533289
         },
         {
             "id": "fa60a5e7-d12e-42d8-8430-428a97e54ee3",
@@ -30626,7 +31454,7 @@
             "type": "static",
             "filename": "FNPC.png",
             "inode": "400561632",
-            "_v": 1634249746246
+            "_v": 1634365533289
         },
         {
             "id": "3cddcd0a-733b-47af-ae43-179d12e5aa34",
@@ -30635,7 +31463,7 @@
             "type": "animated",
             "filename": "Fireball.png",
             "inode": "400560960",
-            "_v": 1634249746246
+            "_v": 1634365533289
         },
         {
             "id": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b",
@@ -30644,7 +31472,7 @@
             "type": "static",
             "filename": "Flarasite Face.png",
             "inode": "400560480",
-            "_v": 1634249746246
+            "_v": 1634365533289
         },
         {
             "id": "200c1589-389c-46a1-8cee-3ad914c4f332",
@@ -30653,7 +31481,7 @@
             "type": "actor_animated",
             "filename": "Flarasite_animated.png",
             "inode": "400559776",
-            "_v": 1634249746246
+            "_v": 1634365533289
         },
         {
             "id": "0b41bc8e-672d-496d-b979-58f59de35875",
@@ -30662,7 +31490,7 @@
             "type": "animated",
             "filename": "Flarasite_idle_animated.png",
             "inode": "400559520",
-            "_v": 1634249746246
+            "_v": 1634365533289
         },
         {
             "id": "b756e13d-b776-47fe-a569-b9686f627e2c",
@@ -30671,7 +31499,7 @@
             "type": "static",
             "filename": "Food Girl.png",
             "inode": "400563136",
-            "_v": 1634249746246
+            "_v": 1634365533289
         },
         {
             "id": "29faf994-c5e0-4c51-927f-9f0001e48053",
@@ -30680,7 +31508,7 @@
             "type": "static",
             "filename": "GBed (16px).png",
             "inode": "400557024",
-            "_v": 1634249746246
+            "_v": 1634365533289
         },
         {
             "id": "0b56d0ec-4d80-4bb0-bd4d-c72e0f9d27f6",
@@ -30689,7 +31517,7 @@
             "type": "static",
             "filename": "GPixel Police (Front).png",
             "inode": "400557248",
-            "_v": 1634249746246
+            "_v": 1634365533289
         },
         {
             "id": "b6e02866-327e-4431-a37b-d3216e64ca3e",
@@ -30698,7 +31526,7 @@
             "type": "static",
             "filename": "GPixel Police (Left Side).png",
             "inode": "400557376",
-            "_v": 1634249746246
+            "_v": 1634365533289
         },
         {
             "id": "d118914e-86a3-48ed-a0ca-cfe55d086734",
@@ -30707,7 +31535,7 @@
             "type": "static",
             "filename": "GPixel Police (Right Side).png",
             "inode": "400557120",
-            "_v": 1634249746246
+            "_v": 1634365533289
         },
         {
             "id": "4299c214-773b-457c-bbaf-9f5f733c55a3",
@@ -30716,7 +31544,7 @@
             "type": "static",
             "filename": "Ken Face.png",
             "inode": "400560256",
-            "_v": 1634249746246
+            "_v": 1634365533289
         },
         {
             "id": "1a4aa8af-1877-4e58-bb41-05422ec9be52",
@@ -30725,7 +31553,7 @@
             "type": "actor_animated",
             "filename": "Ken_animated.png",
             "inode": "400557888",
-            "_v": 1634249746246
+            "_v": 1634365533289
         },
         {
             "id": "07ef910a-4c68-4abd-974c-d44b253f3cf3",
@@ -30734,7 +31562,7 @@
             "type": "static",
             "filename": "Messy Desk.png",
             "inode": "400557504",
-            "_v": 1634249746247
+            "_v": 1634365533289
         },
         {
             "id": "619b9f21-7923-4cfa-81ae-4b1631aabc74",
@@ -30743,7 +31571,7 @@
             "type": "static",
             "filename": "RWardrobe.png",
             "inode": "400557792",
-            "_v": 1634249746246
+            "_v": 1634365533289
         },
         {
             "id": "8192933d-69f9-45b3-a423-81e4347fcda3",
@@ -30752,7 +31580,7 @@
             "type": "animated",
             "filename": "Screw You (haha get it cuz).png",
             "inode": "400562880",
-            "_v": 1634249746247
+            "_v": 1634365533289
         },
         {
             "id": "dd805fa0-8c3e-44f3-ad08-e6e90b99b903",
@@ -30761,7 +31589,7 @@
             "type": "static",
             "filename": "Sleepy Boi.png",
             "inode": "400559200",
-            "_v": 1634249746247
+            "_v": 1634365533289
         },
         {
             "id": "68fc93b0-70a8-4000-9be8-7dd1b3e52803",
@@ -30770,7 +31598,7 @@
             "type": "static",
             "filename": "StdNPC.png",
             "inode": "400559296",
-            "_v": 1634249746247
+            "_v": 1634365533289
         },
         {
             "id": "7993f9e5-7cd3-4e44-a2ab-6a61315371c3",
@@ -30779,7 +31607,7 @@
             "type": "actor_animated",
             "filename": "StdNPC_animated.png",
             "inode": "400558880",
-            "_v": 1634249746247
+            "_v": 1634365533289
         },
         {
             "id": "df257f63-3645-4412-ac49-51bdb544ac39",
@@ -30788,7 +31616,7 @@
             "type": "static",
             "filename": "StormSilver Face.png",
             "inode": "400560736",
-            "_v": 1634249746247
+            "_v": 1634365533289
         },
         {
             "id": "0998bbe3-d46f-46ba-aa0f-86a3d495c749",
@@ -30797,7 +31625,7 @@
             "type": "actor_animated",
             "filename": "StormSilver_animated.png",
             "inode": "400560032",
-            "_v": 1634249746247
+            "_v": 1634365533289
         },
         {
             "id": "31867a30-ba52-41f7-82f4-3b276b7ca544",
@@ -30806,7 +31634,7 @@
             "type": "static",
             "filename": "Tom Samon.png",
             "inode": "400562528",
-            "_v": 1634249746247
+            "_v": 1634365533289
         },
         {
             "id": "9d1ffa93-9cb2-4c83-88d1-05695147a8b5",
@@ -30815,7 +31643,7 @@
             "type": "static",
             "filename": "Wardrobe.png",
             "inode": "400557696",
-            "_v": 1634249746247
+            "_v": 1634365533289
         },
         {
             "id": "11b5452b-187c-43a3-afb1-a1f4f74ffda2",
@@ -30824,7 +31652,7 @@
             "type": "actor",
             "filename": "actor.png",
             "inode": "400556032",
-            "_v": 1634249746246
+            "_v": 1634365533289
         },
         {
             "id": "581d34d0-9591-4e6e-a609-1d94f203b0cd",
@@ -30833,7 +31661,7 @@
             "type": "actor_animated",
             "filename": "actor_animated.png",
             "inode": "400556128",
-            "_v": 1634249746246
+            "_v": 1634365533288
         },
         {
             "id": "daf95270-e30d-423b-9ee7-990ae29f57f6",
@@ -30842,7 +31670,7 @@
             "type": "static",
             "filename": "static.png",
             "inode": "400556256",
-            "_v": 1634249746247
+            "_v": 1634365533289
         }
     ],
     "palettes": [
@@ -31464,7 +32292,7 @@
             "filename": "Battle Start.mod",
             "settings": {},
             "inode": "398460672",
-            "_v": 1634249746242
+            "_v": 1634365533284
         },
         {
             "id": "991aedfe-00c7-4daf-8eca-689792ed23a5",
@@ -31474,7 +32302,7 @@
                 "disableSpeedConversion": false
             },
             "inode": "398460448",
-            "_v": 1634249746243
+            "_v": 1634365533284
         },
         {
             "id": "7d77c594-e8bc-49ab-9b84-bbddcaf3f603",
@@ -31482,7 +32310,7 @@
             "filename": "Ded.mod",
             "settings": {},
             "inode": "398461536",
-            "_v": 1634249746243
+            "_v": 1634365533285
         },
         {
             "id": "91308b45-aa19-4a49-8c68-52b687e7b493",
@@ -31490,7 +32318,7 @@
             "filename": "Fireball Shoot.mod",
             "settings": {},
             "inode": "398462144",
-            "_v": 1634252680523
+            "_v": 1634365533285
         },
         {
             "id": "6646a461-811f-4c72-8cba-3cb3efa7f80e",
@@ -31498,7 +32326,7 @@
             "filename": "Flarasite Theme.mod",
             "settings": {},
             "inode": "398460928",
-            "_v": 1634249746243
+            "_v": 1634365533285
         },
         {
             "id": "743985f2-60bc-481b-9a31-0d262f79c5fa",
@@ -31506,7 +32334,7 @@
             "filename": "Hit Sound.mod",
             "settings": {},
             "inode": "398461920",
-            "_v": 1634252636034
+            "_v": 1634365533285
         },
         {
             "id": "a3931dfe-0404-426a-957a-c53e57794f18",
@@ -31514,7 +32342,7 @@
             "filename": "Menu.mod",
             "settings": {},
             "inode": "398459072",
-            "_v": 1634249746243
+            "_v": 1634365533285
         },
         {
             "id": "e2c170a5-7001-4220-b287-5da7aa5980cc",
@@ -31522,7 +32350,7 @@
             "filename": "MenuSong.mod",
             "settings": {},
             "inode": "398459168",
-            "_v": 1634249746243
+            "_v": 1634365533285
         },
         {
             "id": "c5222a18-9a3f-45a2-a0f1-2036a4c6f09e",
@@ -31530,7 +32358,7 @@
             "filename": "NeverGonnaGiveYouUp.mod",
             "settings": {},
             "inode": "398459968",
-            "_v": 1634249746243
+            "_v": 1634365533285
         },
         {
             "id": "df17b749-e78d-4a3d-aed2-4e722c86b3d8",
@@ -31538,7 +32366,7 @@
             "filename": "StormSilver Death.mod",
             "settings": {},
             "inode": "398461312",
-            "_v": 1634249746243
+            "_v": 1634365533285
         },
         {
             "id": "89771a65-5874-4b8e-a41e-4a7d1b6071f8",
@@ -31546,7 +32374,7 @@
             "filename": "StormSilver Theme.mod",
             "settings": {},
             "inode": "398461184",
-            "_v": 1634249746243
+            "_v": 1634365533285
         },
         {
             "id": "bf5c158d-bf71-4b72-bb45-f8935a792476",
@@ -31554,7 +32382,7 @@
             "filename": "Title Theme.mod",
             "settings": {},
             "inode": "398461728",
-            "_v": 1634252011554
+            "_v": 1634365533285
         },
         {
             "id": "d6c4ce03-ef01-4764-99b7-4ab148f49e1d",
@@ -31562,7 +32390,7 @@
             "filename": "Untitled.mod",
             "settings": {},
             "inode": "398459360",
-            "_v": 1634249746243
+            "_v": 1634365533285
         },
         {
             "id": "913c560b-7dae-4dc4-ad6f-f4d9cf56c68c",
@@ -31572,7 +32400,7 @@
                 "disableSpeedConversion": false
             },
             "inode": "398458976",
-            "_v": 1634249746243
+            "_v": 1634365533285
         },
         {
             "id": "dad208ac-868c-4c40-aeb3-680a3ebfd1d4",
@@ -31580,7 +32408,7 @@
             "filename": "test1.mod",
             "settings": {},
             "inode": "398459552",
-            "_v": 1634249746243
+            "_v": 1634365533285
         }
     ],
     "variables": [
@@ -31778,13 +32606,13 @@
         }
     ],
     "settings": {
-        "startSceneId": "ff5df4a3-90c0-468f-bdb8-b2b84a79e40a",
-        "startX": 0,
-        "startY": 0,
+        "startSceneId": "034c0d0a-946e-44c6-8bb4-426e0af29f81",
+        "startX": 15,
+        "startY": 12,
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 0,
-        "worldScrollY": 0,
+        "worldScrollX": 350,
+        "worldScrollY": 624,
         "zoom": 100,
         "customColorsEnabled": false,
         "defaultBackgroundPaletteIds": [
