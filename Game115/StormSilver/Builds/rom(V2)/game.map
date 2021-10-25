@@ -188,7 +188,7 @@ AREA .  .ABS.
 		l__BASE	021E
 		l__HOME	0252
 		l__GSINIT	0507
-		l__CODE_14	0602
+		l__CODE_14	062E
 		l__CODE_15	0C22
 		l__DATA	0E1E
 		l__CODE_5	2226
@@ -201,11 +201,12 @@ AREA .  .ABS.
 		l__CODE_1	35B4
 		s__GSINITTAIL	3789
 		s__GSFINAL	378A
-		l__CODE_7	3FF2
-		l__CODE_12	3FF9
+		l__CODE_12	3FED
+		l__CODE_8	3FF6
 		l__CODE_9	3FFD
 		l__CODE_10	3FFE
 		l__CODE_11	3FFE
+		l__CODE_7	3FFE
 		l__CODE_13	3FFF
 		s__CODE_10	4000
 		s__CODE_11	4000
@@ -214,7 +215,6 @@ AREA .  .ABS.
 		s__CODE_14	4000
 		s__CODE_15	4000
 		l__CODE_6	4000
-		l__CODE_8	4000
 		s__CODE_1	4000
 		s__CODE_4	4000
 		s__CODE_5	4000
@@ -1045,7 +1045,7 @@ AREA _CODE_11
 AREA _CODE_12
 	RADIX HEX
 	BASE 4000
-	SIZE 3FF9
+	SIZE 3FED
 	ATTRIB REL CON
 	GLOBALS
 		_bank_12_data	4000
@@ -1059,7 +1059,7 @@ AREA _CODE_13
 AREA _CODE_14
 	RADIX HEX
 	BASE 4000
-	SIZE 0602
+	SIZE 062E
 	ATTRIB REL CON
 	GLOBALS
 		_bank_14_data	4000
@@ -1073,14 +1073,14 @@ AREA _CODE_6
 AREA _CODE_7
 	RADIX HEX
 	BASE 4000
-	SIZE 3FF2
+	SIZE 3FFE
 	ATTRIB REL CON
 	GLOBALS
 		_bank_7_data	4000
 AREA _CODE_8
 	RADIX HEX
 	BASE 4000
-	SIZE 4000
+	SIZE 3FF6
 	ATTRIB REL CON
 	GLOBALS
 		_bank_8_data	4000
@@ -1621,7 +1621,7 @@ MODULES
 	FILE C:/tmp/_gbsbuild/obj/bank_9.o
 		NAME bank_9
 	FILE C:/tmp/_gbsbuild/obj/data_ptrs.o
-		NAME C__tmp_lcc69561
+		NAME C__tmp_lcc173681
 	FILE C:/tmp/_gbsbuild/obj/main.o
 		NAME C__tmp_lcc14881
 	FILE C:/tmp/_gbsbuild/obj/music_bank_15.o

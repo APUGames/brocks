@@ -396,7 +396,7 @@
                                     "text": [
                                         "Alright, time to\nchange.",
                                         "My suit is in my\nbackpack, just\ngotta...",
-                                        "Wait how do I\nopen\nmy backpack"
+                                        "Wait how do I\nopen my backpack"
                                     ],
                                     "avatarId": "4299c214-773b-457c-bbaf-9f5f733c55a3"
                                 }
@@ -7087,6 +7087,23 @@
                             "children": {
                                 "true": [
                                     {
+                                        "id": "7da02a50-7a36-4937-91cd-3a2124b0532e",
+                                        "command": "EVENT_SWITCH_SCENE",
+                                        "args": {
+                                            "sceneId": "e7227b25-d9cf-4a02-9bd4-30daf6f216d0",
+                                            "x": 1,
+                                            "y": 10,
+                                            "direction": "",
+                                            "fadeSpeed": "2"
+                                        }
+                                    },
+                                    {
+                                        "id": "2fcc2e32-80d6-44db-997a-5540ef056b57",
+                                        "command": "EVENT_END"
+                                    }
+                                ],
+                                "false": [
+                                    {
                                         "id": "cff02b86-b2b3-48d2-9e33-38df4f2e3030",
                                         "command": "EVENT_TEXT",
                                         "args": {
@@ -7107,23 +7124,6 @@
                                             "y": 0,
                                             "moveType": "horizontal",
                                             "useCollisions": false
-                                        }
-                                    },
-                                    {
-                                        "id": "2fcc2e32-80d6-44db-997a-5540ef056b57",
-                                        "command": "EVENT_END"
-                                    }
-                                ],
-                                "false": [
-                                    {
-                                        "id": "7da02a50-7a36-4937-91cd-3a2124b0532e",
-                                        "command": "EVENT_SWITCH_SCENE",
-                                        "args": {
-                                            "sceneId": "e7227b25-d9cf-4a02-9bd4-30daf6f216d0",
-                                            "x": 1,
-                                            "y": 10,
-                                            "direction": "",
-                                            "fadeSpeed": "2"
                                         }
                                     },
                                     {
@@ -7696,7 +7696,7 @@
                                 "command": "EVENT_TEXT",
                                 "args": {
                                     "text": [
-                                        "WHO THE HELL\nSAID THAT?"
+                                        "WHO THE HECK\nSAID THAT?"
                                     ],
                                     "avatarId": "4299c214-773b-457c-bbaf-9f5f733c55a3"
                                 }
@@ -7733,7 +7733,7 @@
                                                         "command": "EVENT_CHOICE",
                                                         "args": {
                                                             "variable": "2",
-                                                            "trueText": "Hell yeah",
+                                                            "trueText": "Heck yeah",
                                                             "falseText": "Not yet"
                                                         }
                                                     },
@@ -7858,7 +7858,7 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "I'v never tried\nlaying down in\nbed with my",
+                                    "I've never tried\nlaying down in\nbed with my",
                                     "super suit...\n",
                                     "I wonder what it\nwould feel\nlike...",
                                     "Wait no nows not\nthe time I gotta\nfight crime"
@@ -16112,7 +16112,7 @@
                                 "text": [
                                     "...",
                                     "If it really is\nFlarasite who\nwrote this I'm",
-                                    "gonna kick his\nass later"
+                                    "gonna kick his\nbutt later"
                                 ],
                                 "avatarId": "4299c214-773b-457c-bbaf-9f5f733c55a3"
                             }
@@ -17799,7 +17799,7 @@
                                                 "I get paid minimum\nwage to get yelled\nat by people who",
                                                 "think their meal\nis more important\nthan your manners,",
                                                 "get pushed around\nby a boss making\n$1 to my 73 cents,",
-                                                "and busting my ass\nover things far\nabove my pay grade",
+                                                "and working hard\nover things far\nabove my pay grade",
                                                 "only to get a\npaycheck that\ndoesn't even cover",
                                                 "this month's rent."
                                             ],
@@ -20014,7 +20014,7 @@
                                         "command": "EVENT_TEXT",
                                         "args": {
                                             "text": [
-                                                "The hell are you\ndoing here?",
+                                                "The heck are you\ndoing here?",
                                                 "Jeez, as if that\nStormSilver guy\nwasn't enough of a",
                                                 "pain to deal with\nnow someone else\ncame in to gloat?"
                                             ],
@@ -23751,7 +23751,7 @@
                                 "command": "EVENT_TEXT",
                                 "args": {
                                     "text": [
-                                        "Whatever\nasshole, you\nfound me so",
+                                        "Whatever\ndouchebag, you\nfound me so",
                                         "we gotta fight\nnow."
                                     ],
                                     "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
@@ -23762,7 +23762,7 @@
                                 "command": "EVENT_TEXT",
                                 "args": {
                                     "text": [
-                                        "Will you listen\nto me for a damn\nsecond?"
+                                        "Will you listen\nto me for a dang\nsecond?"
                                     ],
                                     "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
                                 }
@@ -23846,7 +23846,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HELL\nDID I EXPECT??"
+                                    "WHAT THE HECK\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -23872,7 +23872,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HELL\nDID I EXPECT??"
+                                    "WHAT THE HECK\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -23898,7 +23898,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HELL\nDID I EXPECT??"
+                                    "WHAT THE HECK\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -23924,7 +23924,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HELL\nDID I EXPECT??"
+                                    "WHAT THE HECK\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -23950,7 +23950,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HELL\nDID I EXPECT??"
+                                    "WHAT THE HECK\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -23976,7 +23976,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HELL\nDID I EXPECT??"
+                                    "WHAT THE HECK\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -26554,7 +26554,7 @@
                                         "args": {
                                             "text": [
                                                 "Ugh...\n",
-                                                "DAMMIT"
+                                                "DANGIT"
                                             ],
                                             "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
                                         }
@@ -26655,135 +26655,158 @@
                                 ],
                                 "false": [
                                     {
-                                        "id": "f3e29776-4d03-49da-805e-ff133ece3538",
-                                        "command": "EVENT_LAUNCH_PROJECTILE",
+                                        "id": "7edcadb2-12fe-4aa0-b933-a805a3b60a37",
+                                        "command": "EVENT_IF_TRUE",
                                         "args": {
-                                            "spriteSheetId": "3cddcd0a-733b-47af-ae43-179d12e5aa34",
-                                            "actorId": "$self$",
-                                            "direction": {
-                                                "type": "direction",
-                                                "value": "left"
-                                            },
-                                            "speed": "2",
-                                            "collisionGroup": "1",
-                                            "collisionMask": [
-                                                "player"
-                                            ]
-                                        }
-                                    },
-                                    {
-                                        "id": "91fb23b9-1550-44d1-943d-bed6f6107398",
-                                        "command": "EVENT_IF_ACTOR_AT_POSITION",
-                                        "args": {
-                                            "actorId": "12e4a05f-6e35-48d4-89fd-e04b9f245f37",
-                                            "x": 29,
-                                            "y": 35,
+                                            "variable": "12",
                                             "__collapseElse": false,
                                             "__collapse": false
                                         },
                                         "children": {
                                             "true": [
                                                 {
-                                                    "id": "e772db13-b255-4763-9d5b-07b1e2226d30",
-                                                    "command": "EVENT_SET_FALSE",
-                                                    "args": {
-                                                        "variable": "L3"
-                                                    }
-                                                },
-                                                {
-                                                    "id": "909d0bbf-0469-47f5-890b-c1bd894dc2f6",
+                                                    "id": "58aa4831-e635-4124-9148-9a0f6b763935",
                                                     "command": "EVENT_END"
                                                 }
                                             ],
                                             "false": [
                                                 {
-                                                    "id": "04e0b6a3-22a0-4881-9cb6-433a094c3838",
-                                                    "command": "EVENT_END"
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    {
-                                        "id": "432703e8-e765-41f4-bfde-c81be85a3460",
-                                        "command": "EVENT_IF_ACTOR_AT_POSITION",
-                                        "args": {
-                                            "actorId": "$self$",
-                                            "x": 29,
-                                            "y": 3,
-                                            "__collapseElse": false
-                                        },
-                                        "children": {
-                                            "true": [
-                                                {
-                                                    "id": "56122603-f1ae-47d3-a9d5-ed42b3d4d74b",
-                                                    "command": "EVENT_SET_TRUE",
+                                                    "id": "f3e29776-4d03-49da-805e-ff133ece3538",
+                                                    "command": "EVENT_LAUNCH_PROJECTILE",
                                                     "args": {
-                                                        "variable": "L3"
+                                                        "spriteSheetId": "3cddcd0a-733b-47af-ae43-179d12e5aa34",
+                                                        "actorId": "$self$",
+                                                        "direction": {
+                                                            "type": "direction",
+                                                            "value": "left"
+                                                        },
+                                                        "speed": "2",
+                                                        "collisionGroup": "1",
+                                                        "collisionMask": [
+                                                            "player"
+                                                        ]
                                                     }
                                                 },
                                                 {
-                                                    "id": "c8b67c4c-be23-4f95-9439-987e3102367b",
-                                                    "command": "EVENT_END"
-                                                }
-                                            ],
-                                            "false": [
+                                                    "id": "91fb23b9-1550-44d1-943d-bed6f6107398",
+                                                    "command": "EVENT_IF_ACTOR_AT_POSITION",
+                                                    "args": {
+                                                        "actorId": "12e4a05f-6e35-48d4-89fd-e04b9f245f37",
+                                                        "x": 29,
+                                                        "y": 35,
+                                                        "__collapseElse": false,
+                                                        "__collapse": false
+                                                    },
+                                                    "children": {
+                                                        "true": [
+                                                            {
+                                                                "id": "e772db13-b255-4763-9d5b-07b1e2226d30",
+                                                                "command": "EVENT_SET_FALSE",
+                                                                "args": {
+                                                                    "variable": "L3"
+                                                                }
+                                                            },
+                                                            {
+                                                                "id": "909d0bbf-0469-47f5-890b-c1bd894dc2f6",
+                                                                "command": "EVENT_END"
+                                                            }
+                                                        ],
+                                                        "false": [
+                                                            {
+                                                                "id": "04e0b6a3-22a0-4881-9cb6-433a094c3838",
+                                                                "command": "EVENT_END"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
                                                 {
-                                                    "id": "e9608b10-81ae-4c73-8d62-fab18bb79f71",
-                                                    "command": "EVENT_END"
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    {
-                                        "id": "d3b4120c-5c11-407d-9455-3a9c0785d0aa",
-                                        "command": "EVENT_IF_FALSE",
-                                        "args": {
-                                            "variable": "L3",
-                                            "__collapseElse": false
-                                        },
-                                        "children": {
-                                            "true": [
-                                                {
-                                                    "id": "e4d8fb9b-4d06-497d-8c5f-6cd0bd5d0238",
-                                                    "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                                    "id": "432703e8-e765-41f4-bfde-c81be85a3460",
+                                                    "command": "EVENT_IF_ACTOR_AT_POSITION",
                                                     "args": {
                                                         "actorId": "$self$",
-                                                        "x": 0,
-                                                        "y": -1,
-                                                        "moveType": "vertical",
-                                                        "useCollisions": true
+                                                        "x": 29,
+                                                        "y": 3,
+                                                        "__collapseElse": false
+                                                    },
+                                                    "children": {
+                                                        "true": [
+                                                            {
+                                                                "id": "56122603-f1ae-47d3-a9d5-ed42b3d4d74b",
+                                                                "command": "EVENT_SET_TRUE",
+                                                                "args": {
+                                                                    "variable": "L3"
+                                                                }
+                                                            },
+                                                            {
+                                                                "id": "c8b67c4c-be23-4f95-9439-987e3102367b",
+                                                                "command": "EVENT_END"
+                                                            }
+                                                        ],
+                                                        "false": [
+                                                            {
+                                                                "id": "e9608b10-81ae-4c73-8d62-fab18bb79f71",
+                                                                "command": "EVENT_END"
+                                                            }
+                                                        ]
                                                     }
                                                 },
                                                 {
-                                                    "id": "2d2c10b9-db22-4de9-a308-f3d7c007e94a",
-                                                    "command": "EVENT_END"
-                                                }
-                                            ],
-                                            "false": [
-                                                {
-                                                    "id": "63d28344-b78a-46de-ba61-bd7cded44441",
-                                                    "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                                    "id": "d3b4120c-5c11-407d-9455-3a9c0785d0aa",
+                                                    "command": "EVENT_IF_FALSE",
                                                     "args": {
-                                                        "actorId": "$self$",
-                                                        "x": 0,
-                                                        "y": 1,
-                                                        "moveType": "vertical",
-                                                        "useCollisions": true
+                                                        "variable": "L3",
+                                                        "__collapseElse": false
+                                                    },
+                                                    "children": {
+                                                        "true": [
+                                                            {
+                                                                "id": "e4d8fb9b-4d06-497d-8c5f-6cd0bd5d0238",
+                                                                "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                                                "args": {
+                                                                    "actorId": "$self$",
+                                                                    "x": 0,
+                                                                    "y": -1,
+                                                                    "moveType": "vertical",
+                                                                    "useCollisions": true
+                                                                }
+                                                            },
+                                                            {
+                                                                "id": "2d2c10b9-db22-4de9-a308-f3d7c007e94a",
+                                                                "command": "EVENT_END"
+                                                            }
+                                                        ],
+                                                        "false": [
+                                                            {
+                                                                "id": "63d28344-b78a-46de-ba61-bd7cded44441",
+                                                                "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                                                "args": {
+                                                                    "actorId": "$self$",
+                                                                    "x": 0,
+                                                                    "y": 1,
+                                                                    "moveType": "vertical",
+                                                                    "useCollisions": true
+                                                                }
+                                                            },
+                                                            {
+                                                                "id": "6c8ce061-cd13-4ae9-a8de-c4ccf8c1ca5d",
+                                                                "command": "EVENT_END"
+                                                            }
+                                                        ]
                                                     }
                                                 },
                                                 {
-                                                    "id": "6c8ce061-cd13-4ae9-a8de-c4ccf8c1ca5d",
+                                                    "id": "70aedda5-1976-49ad-a2f9-318ba70bce06",
+                                                    "command": "EVENT_WAIT",
+                                                    "args": {
+                                                        "time": 0.75,
+                                                        "__comment": false
+                                                    }
+                                                },
+                                                {
+                                                    "id": "a690f6d7-7863-45f4-83d2-59c5fb161eb9",
                                                     "command": "EVENT_END"
                                                 }
                                             ]
-                                        }
-                                    },
-                                    {
-                                        "id": "70aedda5-1976-49ad-a2f9-318ba70bce06",
-                                        "command": "EVENT_WAIT",
-                                        "args": {
-                                            "time": 0.75,
-                                            "__comment": false
                                         }
                                     },
                                     {
@@ -26934,7 +26957,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HELL\nDID I EXPECT??"
+                                    "WHAT THE HECK\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -26971,7 +26994,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HELL\nDID I EXPECT??"
+                                    "WHAT THE HECK\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27008,7 +27031,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HELL\nDID I EXPECT??"
+                                    "WHAT THE HECK\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27045,7 +27068,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HELL\nDID I EXPECT??"
+                                    "WHAT THE HECK\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27082,7 +27105,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HELL\nDID I EXPECT??"
+                                    "WHAT THE HECK\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27119,7 +27142,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HELL\nDID I EXPECT??"
+                                    "WHAT THE HECK\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27193,7 +27216,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HELL\nDID I EXPECT??"
+                                    "WHAT THE HECK\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27230,7 +27253,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HELL\nDID I EXPECT??"
+                                    "WHAT THE HECK\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27267,7 +27290,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HELL\nDID I EXPECT??"
+                                    "WHAT THE HECK\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27304,7 +27327,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HELL\nDID I EXPECT??"
+                                    "WHAT THE HECK\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27341,7 +27364,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HELL\nDID I EXPECT??"
+                                    "WHAT THE HECK\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27378,7 +27401,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HELL\nDID I EXPECT??"
+                                    "WHAT THE HECK\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27415,7 +27438,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HELL\nDID I EXPECT??"
+                                    "WHAT THE HECK\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27452,7 +27475,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HELL\nDID I EXPECT??"
+                                    "WHAT THE HECK\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27489,7 +27512,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HELL\nDID I EXPECT??"
+                                    "WHAT THE HECK\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27526,7 +27549,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HELL\nDID I EXPECT??"
+                                    "WHAT THE HECK\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27563,7 +27586,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HELL\nDID I EXPECT??"
+                                    "WHAT THE HECK\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27600,7 +27623,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HELL\nDID I EXPECT??"
+                                    "WHAT THE HECK\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27637,7 +27660,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HELL\nDID I EXPECT??"
+                                    "WHAT THE HECK\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27674,7 +27697,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HELL\nDID I EXPECT??"
+                                    "WHAT THE HECK\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27711,7 +27734,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HELL\nDID I EXPECT??"
+                                    "WHAT THE HECK\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27748,7 +27771,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HELL\nDID I EXPECT\nGOING INTO FIRE?"
+                                    "WHAT THE HECK\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -28518,7 +28541,7 @@
                     "command": "EVENT_TEXT",
                     "args": {
                         "text": [
-                            "SHUT UP ABOUT\nYOUR STUPID\nBULLSHIT"
+                            "SHUT UP ABOUT\nYOUR STUPID\nBULLCRAP"
                         ],
                         "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
                     }
@@ -28598,7 +28621,8 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "I'm going to\nshow you the\ntruth."
+                                    "I'm going to\nshow you the\ntruth.",
+                                    "Walk past me and\nsee for\nyourself..."
                                 ],
                                 "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
                             }
@@ -29596,7 +29620,7 @@
                                             "args": {
                                                 "text": [
                                                     "See, Ken? None\nof the things\nyou saw today...",
-                                                    "Hell...",
+                                                    "Well...",
                                                     "Nothing you've\nseen for the\npast couple of",
                                                     "weeks are real!"
                                                 ],
@@ -29841,16 +29865,6 @@
                                                             "variable": "18",
                                                             "__comment": false,
                                                             "__collapse": false
-                                                        }
-                                                    },
-                                                    {
-                                                        "id": "ac41f9f4-b71d-413f-875e-b58062d04d46",
-                                                        "command": "EVENT_TEXT",
-                                                        "args": {
-                                                            "text": [
-                                                                "true"
-                                                            ],
-                                                            "avatarId": ""
                                                         }
                                                     },
                                                     {
@@ -32365,10 +32379,10 @@
             "tileColors": [],
             "script": [
                 {
-                    "id": "dc98daf4-4f1d-43e3-92ed-1b92608562ab",
-                    "command": "EVENT_WAIT",
+                    "id": "488c7e20-3246-4b7b-a899-61f74db3e00f",
+                    "command": "EVENT_ACTOR_HIDE",
                     "args": {
-                        "time": 1
+                        "actorId": "$self$"
                     }
                 },
                 {
@@ -32407,7 +32421,7 @@
             "imageHeight": 384,
             "filename": "Campus (Reality).png",
             "inode": "396366432",
-            "_v": 1634773072087
+            "_v": 1635197052480
         },
         {
             "id": "c21399f1-4d57-469a-88af-90c6607e6c55",
@@ -32418,7 +32432,7 @@
             "imageHeight": 384,
             "filename": "Campus.png",
             "inode": "396363424",
-            "_v": 1634773072087
+            "_v": 1635197052480
         },
         {
             "id": "7a903d8d-cdd1-456f-bf7b-7c824b58e249",
@@ -32429,7 +32443,7 @@
             "imageHeight": 160,
             "filename": "City(Battle).png",
             "inode": "396364352",
-            "_v": 1634773072087
+            "_v": 1635197052480
         },
         {
             "id": "b8b61d05-847b-4e9d-94c3-c0c77d5c0442",
@@ -32440,7 +32454,7 @@
             "imageHeight": 160,
             "filename": "City(WIP).png",
             "inode": "396362368",
-            "_v": 1634773072088
+            "_v": 1635197052480
         },
         {
             "id": "ddaa382e-fa84-414a-b4cb-d499de3ac2b3",
@@ -32451,7 +32465,7 @@
             "imageHeight": 160,
             "filename": "City.png",
             "inode": "396363232",
-            "_v": 1634773072087
+            "_v": 1635197052480
         },
         {
             "id": "bc01285b-7981-410a-af02-0e919c8e2509",
@@ -32462,7 +32476,7 @@
             "imageHeight": 160,
             "filename": "Classroom.png",
             "inode": "396363616",
-            "_v": 1634773072088
+            "_v": 1635197052480
         },
         {
             "id": "c6c709d1-ceac-45a3-884d-ba51fbe261de",
@@ -32473,7 +32487,7 @@
             "imageHeight": 144,
             "filename": "Controls.png",
             "inode": "396367872",
-            "_v": 1634773964265
+            "_v": 1635197052480
         },
         {
             "id": "c20a4e59-ff8e-49a0-ab03-9445f95da6b4",
@@ -32484,7 +32498,7 @@
             "imageHeight": 144,
             "filename": "Damn_.png",
             "inode": "396365440",
-            "_v": 1634773072088
+            "_v": 1635197052480
         },
         {
             "id": "a9a33680-81f5-4bc7-a084-4e429087a1db",
@@ -32495,7 +32509,7 @@
             "imageHeight": 144,
             "filename": "End.png",
             "inode": "396367776",
-            "_v": 1634773072087
+            "_v": 1635197052480
         },
         {
             "id": "36eb03a3-b1c6-4ade-bc24-8ab5ae7bd5d7",
@@ -32506,7 +32520,7 @@
             "imageHeight": 144,
             "filename": "Final Blow.png",
             "inode": "396365248",
-            "_v": 1634773072088
+            "_v": 1635197052480
         },
         {
             "id": "d0aee8aa-847b-4677-bd88-384eb338feef",
@@ -32517,7 +32531,7 @@
             "imageHeight": 160,
             "filename": "Food Place.png",
             "inode": "396365056",
-            "_v": 1634773072088
+            "_v": 1635197052480
         },
         {
             "id": "14e26ff5-0f36-42f3-947e-aeae795fe92f",
@@ -32528,7 +32542,7 @@
             "imageHeight": 144,
             "filename": "Gay Baby Jail (Reality).png",
             "inode": "396366688",
-            "_v": 1634773072088
+            "_v": 1635197052480
         },
         {
             "id": "efb501a3-f886-4f09-a7a9-11e37debcb00",
@@ -32539,7 +32553,7 @@
             "imageHeight": 144,
             "filename": "Gay Baby Jail.png",
             "inode": "396365920",
-            "_v": 1634773072088
+            "_v": 1635197052480
         },
         {
             "id": "51db7054-93cd-4b24-bfcc-02c3ebfb4d6e",
@@ -32550,7 +32564,7 @@
             "imageHeight": 144,
             "filename": "Jotaro... DIO.png",
             "inode": "396364608",
-            "_v": 1634773072088
+            "_v": 1635197052480
         },
         {
             "id": "ef461300-323d-485f-822f-78d9640a6123",
@@ -32561,7 +32575,7 @@
             "imageHeight": 144,
             "filename": "Ken Transform.png",
             "inode": "396363840",
-            "_v": 1634773072088
+            "_v": 1635197052480
         },
         {
             "id": "93ab0c43-8360-4d66-92ca-bcf634c7df6d",
@@ -32572,7 +32586,7 @@
             "imageHeight": 144,
             "filename": "Ken's Room.png",
             "inode": "396361824",
-            "_v": 1634773072088
+            "_v": 1635197052480
         },
         {
             "id": "4c4684fd-f9ce-4083-bdc4-5de97e5b2c73",
@@ -32583,7 +32597,7 @@
             "imageHeight": 144,
             "filename": "Path to Jail(Reality).png",
             "inode": "396366176",
-            "_v": 1634773072088
+            "_v": 1635197052480
         },
         {
             "id": "6a1f9706-ae6b-4490-8413-9a15859ded3c",
@@ -32594,7 +32608,7 @@
             "imageHeight": 144,
             "filename": "Path to Jail.png",
             "inode": "396365664",
-            "_v": 1634773072088
+            "_v": 1635197052480
         },
         {
             "id": "4c130385-6950-461e-be65-c39d52c8d4f8",
@@ -32605,7 +32619,7 @@
             "imageHeight": 144,
             "filename": "StormSilver Transform.png",
             "inode": "396364096",
-            "_v": 1634773072088
+            "_v": 1635197052480
         },
         {
             "id": "d6dd545b-7d14-4736-be5a-ff9c9b753932",
@@ -32616,7 +32630,7 @@
             "imageHeight": 144,
             "filename": "Tall Building1.png",
             "inode": "396362560",
-            "_v": 1634773072088
+            "_v": 1635197052480
         },
         {
             "id": "2de6e52a-fa98-4a75-81b7-51027c9c7911",
@@ -32627,7 +32641,7 @@
             "imageHeight": 144,
             "filename": "Tall Building2.png",
             "inode": "396364832",
-            "_v": 1634773072088
+            "_v": 1635197052480
         },
         {
             "id": "4429038e-b094-48b6-9a59-b932fc4fbba9",
@@ -32638,7 +32652,7 @@
             "imageHeight": 144,
             "filename": "Tall Building3.png",
             "inode": "396362784",
-            "_v": 1634773072088
+            "_v": 1635197052480
         },
         {
             "id": "f5f7ae31-e9dc-41e8-ba82-74b2452de845",
@@ -32649,7 +32663,7 @@
             "imageHeight": 200,
             "filename": "Test (200x200 px).png",
             "inode": "396362048",
-            "_v": 1634773072088
+            "_v": 1635197052480
         },
         {
             "id": "07c269bf-6322-4d40-a315-d3f54073c93d",
@@ -32660,7 +32674,7 @@
             "imageHeight": 152,
             "filename": "Title Screen.png",
             "inode": "396367360",
-            "_v": 1634773072088
+            "_v": 1635197052480
         },
         {
             "id": "ded35fba-5944-4ab3-a126-f4785fcaead6",
@@ -32671,7 +32685,7 @@
             "imageHeight": 216,
             "filename": "Town (Reality).png",
             "inode": "396366944",
-            "_v": 1634773072088
+            "_v": 1635197052480
         },
         {
             "id": "33801a63-c518-486e-95ba-e03a38606181",
@@ -32682,7 +32696,7 @@
             "imageHeight": 216,
             "filename": "Town.png",
             "inode": "396362176",
-            "_v": 1634773072088
+            "_v": 1635197052480
         },
         {
             "id": "bc50419c-a69a-483e-a46b-e671dc6b49ff",
@@ -32693,7 +32707,7 @@
             "imageHeight": 144,
             "filename": "ca_logo_sm.png",
             "inode": "396367072",
-            "_v": 1634773072087
+            "_v": 1635197052480
         },
         {
             "id": "735f591e-1510-4529-9208-0f6eac8014cc",
@@ -32704,7 +32718,7 @@
             "imageHeight": 144,
             "filename": "gim_logo_sm.png",
             "inode": "396367168",
-            "_v": 1634773072088
+            "_v": 1635197052480
         },
         {
             "id": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
@@ -32715,7 +32729,7 @@
             "imageHeight": 144,
             "filename": "placeholder.png",
             "inode": "396361728",
-            "_v": 1634773072088
+            "_v": 1635197052480
         }
     ],
     "spriteSheets": [
@@ -32726,7 +32740,7 @@
             "type": "static",
             "filename": "BNPC.png",
             "inode": "400561440",
-            "_v": 1634773072088
+            "_v": 1635197052481
         },
         {
             "id": "766fe949-3b8f-4ae5-b9b8-97106d74838f",
@@ -32735,7 +32749,7 @@
             "type": "static",
             "filename": "CNPC.png",
             "inode": "400561536",
-            "_v": 1634773072088
+            "_v": 1635197052481
         },
         {
             "id": "dc84027f-7ba6-4b32-bd24-fbed979febf8",
@@ -32744,7 +32758,7 @@
             "type": "static",
             "filename": "Chair.png",
             "inode": "400561728",
-            "_v": 1634773072088
+            "_v": 1635197052481
         },
         {
             "id": "60136903-85c2-4153-83e3-77604107ec12",
@@ -32753,7 +32767,7 @@
             "type": "static",
             "filename": "Clean Desk.png",
             "inode": "400557600",
-            "_v": 1634773072088
+            "_v": 1635197052481
         },
         {
             "id": "cb6d303c-81cf-4324-bd69-8856680f0162",
@@ -32762,7 +32776,7 @@
             "type": "static",
             "filename": "Computer (Back).png",
             "inode": "400562112",
-            "_v": 1634773072088
+            "_v": 1635197052481
         },
         {
             "id": "5ec0446c-4389-44e2-83f8-e565ae37d79a",
@@ -32771,7 +32785,7 @@
             "type": "static",
             "filename": "Computer.png",
             "inode": "400561920",
-            "_v": 1634773072088
+            "_v": 1635197052481
         },
         {
             "id": "e5e664b3-4fb3-40cf-9db6-01f576ac18d5",
@@ -32780,7 +32794,7 @@
             "type": "static",
             "filename": "Criminal.png",
             "inode": "400562624",
-            "_v": 1634773072088
+            "_v": 1635197052481
         },
         {
             "id": "fa60a5e7-d12e-42d8-8430-428a97e54ee3",
@@ -32789,7 +32803,7 @@
             "type": "static",
             "filename": "FNPC.png",
             "inode": "400561632",
-            "_v": 1634773072088
+            "_v": 1635197052481
         },
         {
             "id": "3cddcd0a-733b-47af-ae43-179d12e5aa34",
@@ -32798,7 +32812,7 @@
             "type": "animated",
             "filename": "Fireball.png",
             "inode": "400560960",
-            "_v": 1634773072088
+            "_v": 1635197052481
         },
         {
             "id": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b",
@@ -32807,7 +32821,7 @@
             "type": "static",
             "filename": "Flarasite Face.png",
             "inode": "400560480",
-            "_v": 1634773072088
+            "_v": 1635197052481
         },
         {
             "id": "200c1589-389c-46a1-8cee-3ad914c4f332",
@@ -32816,7 +32830,7 @@
             "type": "actor_animated",
             "filename": "Flarasite_animated.png",
             "inode": "400559776",
-            "_v": 1634773072088
+            "_v": 1635197052481
         },
         {
             "id": "0b41bc8e-672d-496d-b979-58f59de35875",
@@ -32825,7 +32839,7 @@
             "type": "animated",
             "filename": "Flarasite_idle_animated.png",
             "inode": "400559520",
-            "_v": 1634773072088
+            "_v": 1635197052481
         },
         {
             "id": "b756e13d-b776-47fe-a569-b9686f627e2c",
@@ -32834,7 +32848,7 @@
             "type": "static",
             "filename": "Food Girl.png",
             "inode": "400563136",
-            "_v": 1634773072088
+            "_v": 1635197052481
         },
         {
             "id": "29faf994-c5e0-4c51-927f-9f0001e48053",
@@ -32843,7 +32857,7 @@
             "type": "static",
             "filename": "GBed (16px).png",
             "inode": "400557024",
-            "_v": 1634773072088
+            "_v": 1635197052481
         },
         {
             "id": "0b56d0ec-4d80-4bb0-bd4d-c72e0f9d27f6",
@@ -32852,7 +32866,7 @@
             "type": "static",
             "filename": "GPixel Police (Front).png",
             "inode": "400557248",
-            "_v": 1634773072088
+            "_v": 1635197052481
         },
         {
             "id": "b6e02866-327e-4431-a37b-d3216e64ca3e",
@@ -32861,7 +32875,7 @@
             "type": "static",
             "filename": "GPixel Police (Left Side).png",
             "inode": "400557376",
-            "_v": 1634773072088
+            "_v": 1635197052481
         },
         {
             "id": "d118914e-86a3-48ed-a0ca-cfe55d086734",
@@ -32870,7 +32884,7 @@
             "type": "static",
             "filename": "GPixel Police (Right Side).png",
             "inode": "400557120",
-            "_v": 1634773072088
+            "_v": 1635197052481
         },
         {
             "id": "4299c214-773b-457c-bbaf-9f5f733c55a3",
@@ -32879,7 +32893,7 @@
             "type": "static",
             "filename": "Ken Face.png",
             "inode": "400560256",
-            "_v": 1634773072088
+            "_v": 1635197052481
         },
         {
             "id": "1a4aa8af-1877-4e58-bb41-05422ec9be52",
@@ -32888,7 +32902,7 @@
             "type": "actor_animated",
             "filename": "Ken_animated.png",
             "inode": "400557888",
-            "_v": 1634773072088
+            "_v": 1635197052481
         },
         {
             "id": "07ef910a-4c68-4abd-974c-d44b253f3cf3",
@@ -32897,7 +32911,7 @@
             "type": "static",
             "filename": "Messy Desk.png",
             "inode": "400557504",
-            "_v": 1634773072088
+            "_v": 1635197052481
         },
         {
             "id": "619b9f21-7923-4cfa-81ae-4b1631aabc74",
@@ -32906,7 +32920,7 @@
             "type": "static",
             "filename": "RWardrobe.png",
             "inode": "400557792",
-            "_v": 1634773072088
+            "_v": 1635197052481
         },
         {
             "id": "8192933d-69f9-45b3-a423-81e4347fcda3",
@@ -32915,7 +32929,7 @@
             "type": "animated",
             "filename": "Screw You (haha get it cuz).png",
             "inode": "400562880",
-            "_v": 1634773072088
+            "_v": 1635197052481
         },
         {
             "id": "dd805fa0-8c3e-44f3-ad08-e6e90b99b903",
@@ -32924,7 +32938,7 @@
             "type": "static",
             "filename": "Sleepy Boi.png",
             "inode": "400559200",
-            "_v": 1634773072088
+            "_v": 1635197052481
         },
         {
             "id": "68fc93b0-70a8-4000-9be8-7dd1b3e52803",
@@ -32933,7 +32947,7 @@
             "type": "static",
             "filename": "StdNPC.png",
             "inode": "400559296",
-            "_v": 1634773072088
+            "_v": 1635197052481
         },
         {
             "id": "7993f9e5-7cd3-4e44-a2ab-6a61315371c3",
@@ -32942,7 +32956,7 @@
             "type": "actor_animated",
             "filename": "StdNPC_animated.png",
             "inode": "400558880",
-            "_v": 1634773072088
+            "_v": 1635197052481
         },
         {
             "id": "df257f63-3645-4412-ac49-51bdb544ac39",
@@ -32951,7 +32965,7 @@
             "type": "static",
             "filename": "StormSilver Face.png",
             "inode": "400560736",
-            "_v": 1634773072088
+            "_v": 1635197052481
         },
         {
             "id": "0998bbe3-d46f-46ba-aa0f-86a3d495c749",
@@ -32960,7 +32974,7 @@
             "type": "actor_animated",
             "filename": "StormSilver_animated.png",
             "inode": "400560032",
-            "_v": 1634773072088
+            "_v": 1635197052481
         },
         {
             "id": "31867a30-ba52-41f7-82f4-3b276b7ca544",
@@ -32969,7 +32983,7 @@
             "type": "static",
             "filename": "Tom Samon.png",
             "inode": "400562528",
-            "_v": 1634773072088
+            "_v": 1635197052481
         },
         {
             "id": "9d1ffa93-9cb2-4c83-88d1-05695147a8b5",
@@ -32978,7 +32992,7 @@
             "type": "static",
             "filename": "Wardrobe.png",
             "inode": "400557696",
-            "_v": 1634773072088
+            "_v": 1635197052481
         },
         {
             "id": "11b5452b-187c-43a3-afb1-a1f4f74ffda2",
@@ -32987,7 +33001,7 @@
             "type": "actor",
             "filename": "actor.png",
             "inode": "400556032",
-            "_v": 1634773072088
+            "_v": 1635197052480
         },
         {
             "id": "581d34d0-9591-4e6e-a609-1d94f203b0cd",
@@ -32996,7 +33010,7 @@
             "type": "actor_animated",
             "filename": "actor_animated.png",
             "inode": "400556128",
-            "_v": 1634773072088
+            "_v": 1635197052480
         },
         {
             "id": "daf95270-e30d-423b-9ee7-990ae29f57f6",
@@ -33005,7 +33019,7 @@
             "type": "static",
             "filename": "static.png",
             "inode": "400556256",
-            "_v": 1634773072088
+            "_v": 1635197052481
         }
     ],
     "palettes": [
@@ -33847,7 +33861,7 @@
             "filename": "Battle Start.mod",
             "settings": {},
             "inode": "398460672",
-            "_v": 1634773072083
+            "_v": 1635197052473
         },
         {
             "id": "991aedfe-00c7-4daf-8eca-689792ed23a5",
@@ -33857,7 +33871,7 @@
                 "disableSpeedConversion": false
             },
             "inode": "398460448",
-            "_v": 1634773072083
+            "_v": 1635197052474
         },
         {
             "id": "7d77c594-e8bc-49ab-9b84-bbddcaf3f603",
@@ -33865,7 +33879,7 @@
             "filename": "Ded.mod",
             "settings": {},
             "inode": "398461536",
-            "_v": 1634773072083
+            "_v": 1635197052474
         },
         {
             "id": "91308b45-aa19-4a49-8c68-52b687e7b493",
@@ -33873,7 +33887,7 @@
             "filename": "Fireball Shoot.mod",
             "settings": {},
             "inode": "398462144",
-            "_v": 1634773072083
+            "_v": 1635197052474
         },
         {
             "id": "6646a461-811f-4c72-8cba-3cb3efa7f80e",
@@ -33881,7 +33895,7 @@
             "filename": "Flarasite Theme.mod",
             "settings": {},
             "inode": "398460928",
-            "_v": 1634773072083
+            "_v": 1635197052474
         },
         {
             "id": "743985f2-60bc-481b-9a31-0d262f79c5fa",
@@ -33889,7 +33903,7 @@
             "filename": "Hit Sound.mod",
             "settings": {},
             "inode": "398461920",
-            "_v": 1634773072083
+            "_v": 1635197052474
         },
         {
             "id": "13cdb972-be33-42a7-a60c-7192998f266a",
@@ -33897,7 +33911,7 @@
             "filename": "Jingle.mod",
             "settings": {},
             "inode": "398462368",
-            "_v": 1634773072083
+            "_v": 1635197052474
         },
         {
             "id": "a3931dfe-0404-426a-957a-c53e57794f18",
@@ -33905,7 +33919,7 @@
             "filename": "Menu.mod",
             "settings": {},
             "inode": "398459072",
-            "_v": 1634773072083
+            "_v": 1635197052474
         },
         {
             "id": "e2c170a5-7001-4220-b287-5da7aa5980cc",
@@ -33913,7 +33927,7 @@
             "filename": "MenuSong.mod",
             "settings": {},
             "inode": "398459168",
-            "_v": 1634773072083
+            "_v": 1635197052474
         },
         {
             "id": "c5222a18-9a3f-45a2-a0f1-2036a4c6f09e",
@@ -33921,7 +33935,7 @@
             "filename": "NeverGonnaGiveYouUp.mod",
             "settings": {},
             "inode": "398459968",
-            "_v": 1634773072083
+            "_v": 1635197052474
         },
         {
             "id": "df17b749-e78d-4a3d-aed2-4e722c86b3d8",
@@ -33929,7 +33943,7 @@
             "filename": "StormSilver Death.mod",
             "settings": {},
             "inode": "398461312",
-            "_v": 1634773072083
+            "_v": 1635197052475
         },
         {
             "id": "89771a65-5874-4b8e-a41e-4a7d1b6071f8",
@@ -33937,7 +33951,7 @@
             "filename": "StormSilver Theme.mod",
             "settings": {},
             "inode": "398461184",
-            "_v": 1634773072083
+            "_v": 1635197052475
         },
         {
             "id": "bf5c158d-bf71-4b72-bb45-f8935a792476",
@@ -33945,7 +33959,7 @@
             "filename": "Title Theme.mod",
             "settings": {},
             "inode": "398461728",
-            "_v": 1634773072083
+            "_v": 1635197052475
         },
         {
             "id": "d6c4ce03-ef01-4764-99b7-4ab148f49e1d",
@@ -33953,7 +33967,7 @@
             "filename": "Untitled.mod",
             "settings": {},
             "inode": "398459360",
-            "_v": 1634773072083
+            "_v": 1635197052475
         },
         {
             "id": "913c560b-7dae-4dc4-ad6f-f4d9cf56c68c",
@@ -33963,7 +33977,7 @@
                 "disableSpeedConversion": false
             },
             "inode": "398458976",
-            "_v": 1634773072083
+            "_v": 1635197052475
         },
         {
             "id": "dad208ac-868c-4c40-aeb3-680a3ebfd1d4",
@@ -33971,7 +33985,7 @@
             "filename": "test1.mod",
             "settings": {},
             "inode": "398459552",
-            "_v": 1634773072083
+            "_v": 1635197052475
         }
     ],
     "variables": [
@@ -34182,7 +34196,7 @@
         "startY": 0,
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 0,
+        "worldScrollX": 350,
         "worldScrollY": 0,
         "zoom": 100,
         "customColorsEnabled": false,

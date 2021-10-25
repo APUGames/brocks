@@ -7087,6 +7087,23 @@
                             "children": {
                                 "true": [
                                     {
+                                        "id": "7da02a50-7a36-4937-91cd-3a2124b0532e",
+                                        "command": "EVENT_SWITCH_SCENE",
+                                        "args": {
+                                            "sceneId": "e7227b25-d9cf-4a02-9bd4-30daf6f216d0",
+                                            "x": 1,
+                                            "y": 10,
+                                            "direction": "",
+                                            "fadeSpeed": "2"
+                                        }
+                                    },
+                                    {
+                                        "id": "2fcc2e32-80d6-44db-997a-5540ef056b57",
+                                        "command": "EVENT_END"
+                                    }
+                                ],
+                                "false": [
+                                    {
                                         "id": "cff02b86-b2b3-48d2-9e33-38df4f2e3030",
                                         "command": "EVENT_TEXT",
                                         "args": {
@@ -7107,23 +7124,6 @@
                                             "y": 0,
                                             "moveType": "horizontal",
                                             "useCollisions": false
-                                        }
-                                    },
-                                    {
-                                        "id": "2fcc2e32-80d6-44db-997a-5540ef056b57",
-                                        "command": "EVENT_END"
-                                    }
-                                ],
-                                "false": [
-                                    {
-                                        "id": "7da02a50-7a36-4937-91cd-3a2124b0532e",
-                                        "command": "EVENT_SWITCH_SCENE",
-                                        "args": {
-                                            "sceneId": "e7227b25-d9cf-4a02-9bd4-30daf6f216d0",
-                                            "x": 1,
-                                            "y": 10,
-                                            "direction": "",
-                                            "fadeSpeed": "2"
                                         }
                                     },
                                     {
@@ -7696,7 +7696,7 @@
                                 "command": "EVENT_TEXT",
                                 "args": {
                                     "text": [
-                                        "WHO THE HECK\nSAID THAT?"
+                                        "WHO THE HELL\nSAID THAT?"
                                     ],
                                     "avatarId": "4299c214-773b-457c-bbaf-9f5f733c55a3"
                                 }
@@ -7896,7 +7896,7 @@
                             "args": {
                                 "text": [
                                     "If only I can\nshoot bullets at\nthis thing and",
-                                    "clean it up just\nlike that",
+                                    "clean it up just\nlike that.",
                                     "Actually that\nwould just break\nit..."
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
@@ -16112,7 +16112,7 @@
                                 "text": [
                                     "...",
                                     "If it really is\nFlarasite who\nwrote this I'm",
-                                    "gonna kick his\nbutt later"
+                                    "gonna kick his\nass later."
                                 ],
                                 "avatarId": "4299c214-773b-457c-bbaf-9f5f733c55a3"
                             }
@@ -17799,7 +17799,7 @@
                                                 "I get paid minimum\nwage to get yelled\nat by people who",
                                                 "think their meal\nis more important\nthan your manners,",
                                                 "get pushed around\nby a boss making\n$1 to my 73 cents,",
-                                                "and working hard\nover things far\nabove my pay grade",
+                                                "and busting my ass\nover things far\nabove my pay grade",
                                                 "only to get a\npaycheck that\ndoesn't even cover",
                                                 "this month's rent."
                                             ],
@@ -20014,7 +20014,7 @@
                                         "command": "EVENT_TEXT",
                                         "args": {
                                             "text": [
-                                                "The heck are you\ndoing here?",
+                                                "The hell are you\ndoing here?",
                                                 "Jeez, as if that\nStormSilver guy\nwasn't enough of a",
                                                 "pain to deal with\nnow someone else\ncame in to gloat?"
                                             ],
@@ -23751,7 +23751,7 @@
                                 "command": "EVENT_TEXT",
                                 "args": {
                                     "text": [
-                                        "Whatever\ndouchebag, you\nfound me so",
+                                        "Whatever\nasshole, you\nfound me so",
                                         "we gotta fight\nnow."
                                     ],
                                     "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
@@ -23762,7 +23762,7 @@
                                 "command": "EVENT_TEXT",
                                 "args": {
                                     "text": [
-                                        "Will you listen\nto me for a dang\nsecond?"
+                                        "Will you listen\nto me for a damn\nsecond?"
                                     ],
                                     "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
                                 }
@@ -23846,7 +23846,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HECK\nDID I EXPECT??"
+                                    "WHAT THE HELL\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -23872,7 +23872,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HECK\nDID I EXPECT??"
+                                    "WHAT THE HELL\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -23898,7 +23898,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HECK\nDID I EXPECT??"
+                                    "WHAT THE HELL\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -23924,7 +23924,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HECK\nDID I EXPECT??"
+                                    "WHAT THE HELL\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -23950,7 +23950,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HECK\nDID I EXPECT??"
+                                    "WHAT THE HELL\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -23976,7 +23976,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HECK\nDID I EXPECT??"
+                                    "WHAT THE HELL\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -26655,135 +26655,158 @@
                                 ],
                                 "false": [
                                     {
-                                        "id": "f3e29776-4d03-49da-805e-ff133ece3538",
-                                        "command": "EVENT_LAUNCH_PROJECTILE",
+                                        "id": "7edcadb2-12fe-4aa0-b933-a805a3b60a37",
+                                        "command": "EVENT_IF_TRUE",
                                         "args": {
-                                            "spriteSheetId": "3cddcd0a-733b-47af-ae43-179d12e5aa34",
-                                            "actorId": "$self$",
-                                            "direction": {
-                                                "type": "direction",
-                                                "value": "left"
-                                            },
-                                            "speed": "2",
-                                            "collisionGroup": "1",
-                                            "collisionMask": [
-                                                "player"
-                                            ]
-                                        }
-                                    },
-                                    {
-                                        "id": "91fb23b9-1550-44d1-943d-bed6f6107398",
-                                        "command": "EVENT_IF_ACTOR_AT_POSITION",
-                                        "args": {
-                                            "actorId": "12e4a05f-6e35-48d4-89fd-e04b9f245f37",
-                                            "x": 29,
-                                            "y": 35,
+                                            "variable": "12",
                                             "__collapseElse": false,
                                             "__collapse": false
                                         },
                                         "children": {
                                             "true": [
                                                 {
-                                                    "id": "e772db13-b255-4763-9d5b-07b1e2226d30",
-                                                    "command": "EVENT_SET_FALSE",
-                                                    "args": {
-                                                        "variable": "L3"
-                                                    }
-                                                },
-                                                {
-                                                    "id": "909d0bbf-0469-47f5-890b-c1bd894dc2f6",
+                                                    "id": "58aa4831-e635-4124-9148-9a0f6b763935",
                                                     "command": "EVENT_END"
                                                 }
                                             ],
                                             "false": [
                                                 {
-                                                    "id": "04e0b6a3-22a0-4881-9cb6-433a094c3838",
-                                                    "command": "EVENT_END"
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    {
-                                        "id": "432703e8-e765-41f4-bfde-c81be85a3460",
-                                        "command": "EVENT_IF_ACTOR_AT_POSITION",
-                                        "args": {
-                                            "actorId": "$self$",
-                                            "x": 29,
-                                            "y": 3,
-                                            "__collapseElse": false
-                                        },
-                                        "children": {
-                                            "true": [
-                                                {
-                                                    "id": "56122603-f1ae-47d3-a9d5-ed42b3d4d74b",
-                                                    "command": "EVENT_SET_TRUE",
+                                                    "id": "f3e29776-4d03-49da-805e-ff133ece3538",
+                                                    "command": "EVENT_LAUNCH_PROJECTILE",
                                                     "args": {
-                                                        "variable": "L3"
+                                                        "spriteSheetId": "3cddcd0a-733b-47af-ae43-179d12e5aa34",
+                                                        "actorId": "$self$",
+                                                        "direction": {
+                                                            "type": "direction",
+                                                            "value": "left"
+                                                        },
+                                                        "speed": "2",
+                                                        "collisionGroup": "1",
+                                                        "collisionMask": [
+                                                            "player"
+                                                        ]
                                                     }
                                                 },
                                                 {
-                                                    "id": "c8b67c4c-be23-4f95-9439-987e3102367b",
-                                                    "command": "EVENT_END"
-                                                }
-                                            ],
-                                            "false": [
+                                                    "id": "91fb23b9-1550-44d1-943d-bed6f6107398",
+                                                    "command": "EVENT_IF_ACTOR_AT_POSITION",
+                                                    "args": {
+                                                        "actorId": "12e4a05f-6e35-48d4-89fd-e04b9f245f37",
+                                                        "x": 29,
+                                                        "y": 35,
+                                                        "__collapseElse": false,
+                                                        "__collapse": false
+                                                    },
+                                                    "children": {
+                                                        "true": [
+                                                            {
+                                                                "id": "e772db13-b255-4763-9d5b-07b1e2226d30",
+                                                                "command": "EVENT_SET_FALSE",
+                                                                "args": {
+                                                                    "variable": "L3"
+                                                                }
+                                                            },
+                                                            {
+                                                                "id": "909d0bbf-0469-47f5-890b-c1bd894dc2f6",
+                                                                "command": "EVENT_END"
+                                                            }
+                                                        ],
+                                                        "false": [
+                                                            {
+                                                                "id": "04e0b6a3-22a0-4881-9cb6-433a094c3838",
+                                                                "command": "EVENT_END"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
                                                 {
-                                                    "id": "e9608b10-81ae-4c73-8d62-fab18bb79f71",
-                                                    "command": "EVENT_END"
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    {
-                                        "id": "d3b4120c-5c11-407d-9455-3a9c0785d0aa",
-                                        "command": "EVENT_IF_FALSE",
-                                        "args": {
-                                            "variable": "L3",
-                                            "__collapseElse": false
-                                        },
-                                        "children": {
-                                            "true": [
-                                                {
-                                                    "id": "e4d8fb9b-4d06-497d-8c5f-6cd0bd5d0238",
-                                                    "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                                    "id": "432703e8-e765-41f4-bfde-c81be85a3460",
+                                                    "command": "EVENT_IF_ACTOR_AT_POSITION",
                                                     "args": {
                                                         "actorId": "$self$",
-                                                        "x": 0,
-                                                        "y": -1,
-                                                        "moveType": "vertical",
-                                                        "useCollisions": true
+                                                        "x": 29,
+                                                        "y": 3,
+                                                        "__collapseElse": false
+                                                    },
+                                                    "children": {
+                                                        "true": [
+                                                            {
+                                                                "id": "56122603-f1ae-47d3-a9d5-ed42b3d4d74b",
+                                                                "command": "EVENT_SET_TRUE",
+                                                                "args": {
+                                                                    "variable": "L3"
+                                                                }
+                                                            },
+                                                            {
+                                                                "id": "c8b67c4c-be23-4f95-9439-987e3102367b",
+                                                                "command": "EVENT_END"
+                                                            }
+                                                        ],
+                                                        "false": [
+                                                            {
+                                                                "id": "e9608b10-81ae-4c73-8d62-fab18bb79f71",
+                                                                "command": "EVENT_END"
+                                                            }
+                                                        ]
                                                     }
                                                 },
                                                 {
-                                                    "id": "2d2c10b9-db22-4de9-a308-f3d7c007e94a",
-                                                    "command": "EVENT_END"
-                                                }
-                                            ],
-                                            "false": [
-                                                {
-                                                    "id": "63d28344-b78a-46de-ba61-bd7cded44441",
-                                                    "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                                    "id": "d3b4120c-5c11-407d-9455-3a9c0785d0aa",
+                                                    "command": "EVENT_IF_FALSE",
                                                     "args": {
-                                                        "actorId": "$self$",
-                                                        "x": 0,
-                                                        "y": 1,
-                                                        "moveType": "vertical",
-                                                        "useCollisions": true
+                                                        "variable": "L3",
+                                                        "__collapseElse": false
+                                                    },
+                                                    "children": {
+                                                        "true": [
+                                                            {
+                                                                "id": "e4d8fb9b-4d06-497d-8c5f-6cd0bd5d0238",
+                                                                "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                                                "args": {
+                                                                    "actorId": "$self$",
+                                                                    "x": 0,
+                                                                    "y": -1,
+                                                                    "moveType": "vertical",
+                                                                    "useCollisions": true
+                                                                }
+                                                            },
+                                                            {
+                                                                "id": "2d2c10b9-db22-4de9-a308-f3d7c007e94a",
+                                                                "command": "EVENT_END"
+                                                            }
+                                                        ],
+                                                        "false": [
+                                                            {
+                                                                "id": "63d28344-b78a-46de-ba61-bd7cded44441",
+                                                                "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                                                "args": {
+                                                                    "actorId": "$self$",
+                                                                    "x": 0,
+                                                                    "y": 1,
+                                                                    "moveType": "vertical",
+                                                                    "useCollisions": true
+                                                                }
+                                                            },
+                                                            {
+                                                                "id": "6c8ce061-cd13-4ae9-a8de-c4ccf8c1ca5d",
+                                                                "command": "EVENT_END"
+                                                            }
+                                                        ]
                                                     }
                                                 },
                                                 {
-                                                    "id": "6c8ce061-cd13-4ae9-a8de-c4ccf8c1ca5d",
+                                                    "id": "70aedda5-1976-49ad-a2f9-318ba70bce06",
+                                                    "command": "EVENT_WAIT",
+                                                    "args": {
+                                                        "time": 0.75,
+                                                        "__comment": false
+                                                    }
+                                                },
+                                                {
+                                                    "id": "a690f6d7-7863-45f4-83d2-59c5fb161eb9",
                                                     "command": "EVENT_END"
                                                 }
                                             ]
-                                        }
-                                    },
-                                    {
-                                        "id": "70aedda5-1976-49ad-a2f9-318ba70bce06",
-                                        "command": "EVENT_WAIT",
-                                        "args": {
-                                            "time": 0.75,
-                                            "__comment": false
                                         }
                                     },
                                     {
@@ -26934,7 +26957,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HECK\nDID I EXPECT??"
+                                    "WHAT THE HELL\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -26971,7 +26994,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HECK\nDID I EXPECT??"
+                                    "WHAT THE HELL\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27008,7 +27031,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HECK\nDID I EXPECT??"
+                                    "WHAT THE HELL\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27045,7 +27068,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HECK\nDID I EXPECT??"
+                                    "WHAT THE HELL\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27082,7 +27105,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HECK\nDID I EXPECT??"
+                                    "WHAT THE HELL\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27119,7 +27142,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HECK\nDID I EXPECT??"
+                                    "WHAT THE HELL\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27193,7 +27216,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HECK\nDID I EXPECT??"
+                                    "WHAT THE HELL\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27230,7 +27253,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HECK\nDID I EXPECT??"
+                                    "WHAT THE HELL\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27267,7 +27290,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HECK\nDID I EXPECT??"
+                                    "WHAT THE HELL\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27304,7 +27327,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HECK\nDID I EXPECT??"
+                                    "WHAT THE HELL\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27341,7 +27364,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HECK\nDID I EXPECT??"
+                                    "WHAT THE HELL\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27378,7 +27401,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HECK\nDID I EXPECT??"
+                                    "WHAT THE HELL\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27415,7 +27438,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HECK\nDID I EXPECT??"
+                                    "WHAT THE HELL\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27452,7 +27475,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HECK\nDID I EXPECT??"
+                                    "WHAT THE HELL\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27489,7 +27512,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HECK\nDID I EXPECT??"
+                                    "WHAT THE HELL\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27526,7 +27549,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HECK\nDID I EXPECT??"
+                                    "WHAT THE HELL\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27563,7 +27586,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HECK\nDID I EXPECT??"
+                                    "WHAT THE HELL\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27600,7 +27623,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HECK\nDID I EXPECT??"
+                                    "WHAT THE HELL\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27637,7 +27660,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HECK\nDID I EXPECT??"
+                                    "WHAT THE HELL\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27674,7 +27697,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HECK\nDID I EXPECT??"
+                                    "WHAT THE HELL\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27711,7 +27734,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HECK\nDID I EXPECT??"
+                                    "WHAT THE HELL\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -27748,7 +27771,7 @@
                             "args": {
                                 "text": [
                                     "OWOWOWOW HOT",
-                                    "WHAT THE HECK\nDID I EXPECT??"
+                                    "WHAT THE HELL\nDID I EXPECT??"
                                 ],
                                 "avatarId": "df257f63-3645-4412-ac49-51bdb544ac39"
                             }
@@ -28518,7 +28541,7 @@
                     "command": "EVENT_TEXT",
                     "args": {
                         "text": [
-                            "SHUT UP ABOUT\nYOUR STUPID\nBULLCRAP"
+                            "SHUT UP ABOUT\nYOUR STUPID\nBULLSHIT"
                         ],
                         "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
                     }
@@ -28598,7 +28621,8 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "I'm going to\nshow you the\ntruth."
+                                    "I'm going to\nshow you the\ntruth.",
+                                    "Walk past me and\nsee for\nyourself..."
                                 ],
                                 "avatarId": "ee36c66a-5452-4cdb-a9ab-56b98c9dfc4b"
                             }
@@ -29841,16 +29865,6 @@
                                                             "variable": "18",
                                                             "__comment": false,
                                                             "__collapse": false
-                                                        }
-                                                    },
-                                                    {
-                                                        "id": "ac41f9f4-b71d-413f-875e-b58062d04d46",
-                                                        "command": "EVENT_TEXT",
-                                                        "args": {
-                                                            "text": [
-                                                                "true"
-                                                            ],
-                                                            "avatarId": ""
                                                         }
                                                     },
                                                     {
@@ -32365,10 +32379,10 @@
             "tileColors": [],
             "script": [
                 {
-                    "id": "dc98daf4-4f1d-43e3-92ed-1b92608562ab",
-                    "command": "EVENT_WAIT",
+                    "id": "488c7e20-3246-4b7b-a899-61f74db3e00f",
+                    "command": "EVENT_ACTOR_HIDE",
                     "args": {
-                        "time": 1
+                        "actorId": "$self$"
                     }
                 },
                 {
@@ -34182,8 +34196,8 @@
         "startY": 0,
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 0,
-        "worldScrollY": 344,
+        "worldScrollX": 350,
+        "worldScrollY": 0,
         "zoom": 100,
         "customColorsEnabled": false,
         "defaultBackgroundPaletteIds": [
