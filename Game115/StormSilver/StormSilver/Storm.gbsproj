@@ -32397,6 +32397,73 @@
                     }
                 },
                 {
+                    "id": "6ae3a5a0-4df7-4e46-ba95-7b9e3e5cbfeb",
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "Would you like to\nsee it unfold\nagain?"
+                        ],
+                        "avatarId": ""
+                    }
+                },
+                {
+                    "id": "068c9673-8a1e-4167-b3a8-72588baa9c39",
+                    "command": "EVENT_CHOICE",
+                    "args": {
+                        "variable": "23",
+                        "trueText": "Yes",
+                        "falseText": "No"
+                    }
+                },
+                {
+                    "id": "91e8a244-0d20-4d12-8c3a-1cfbc4b1e39e",
+                    "command": "EVENT_IF_TRUE",
+                    "args": {
+                        "variable": "23",
+                        "__collapseElse": false
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "id": "8a192d9d-0ec4-49db-aeea-84c266aa6635",
+                                "command": "EVENT_SWITCH_SCENE",
+                                "args": {
+                                    "sceneId": "84eea938-db0a-4908-b6d7-48d4eb11ea75",
+                                    "x": 0,
+                                    "y": 0,
+                                    "direction": "",
+                                    "fadeSpeed": "2"
+                                }
+                            },
+                            {
+                                "id": "4543c2b7-17f9-468a-8394-cb897e959e3d",
+                                "command": "EVENT_RESET_VARIABLES",
+                                "args": {}
+                            },
+                            {
+                                "id": "d3e5bb89-177e-4d61-b469-c1e6a0d80f23",
+                                "command": "EVENT_END"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "id": "cec40215-f848-4c7b-bfa0-8f0608a4872b",
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "So be it..."
+                                    ],
+                                    "avatarId": ""
+                                }
+                            },
+                            {
+                                "id": "e29395ca-c5d2-491a-b2e4-c65cadd052ef",
+                                "command": "EVENT_END"
+                            }
+                        ]
+                    }
+                },
+                {
                     "id": "bb599b18-849f-4a97-aa81-509459e16327",
                     "command": "EVENT_END"
                 }
@@ -34188,6 +34255,10 @@
         {
             "id": "dd7616ea-3c1d-468a-a1dc-166eec0a04eb__L1",
             "name": "Yes"
+        },
+        {
+            "id": "23",
+            "name": "Restart"
         }
     ],
     "settings": {

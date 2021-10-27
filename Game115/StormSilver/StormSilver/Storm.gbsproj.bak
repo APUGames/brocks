@@ -34191,13 +34191,13 @@
         }
     ],
     "settings": {
-        "startSceneId": "cf76805b-a474-4d6f-a1ed-f369e7b5328b",
-        "startX": 20,
-        "startY": 21,
+        "startSceneId": "84eea938-db0a-4908-b6d7-48d4eb11ea75",
+        "startX": 0,
+        "startY": 0,
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 350,
-        "worldScrollY": 544,
+        "worldScrollX": 0,
+        "worldScrollY": 0,
         "zoom": 100,
         "customColorsEnabled": false,
         "defaultBackgroundPaletteIds": [
