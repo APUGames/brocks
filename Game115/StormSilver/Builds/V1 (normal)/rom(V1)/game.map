@@ -1621,7 +1621,7 @@ MODULES
 	FILE C:/tmp/_gbsbuild/obj/bank_9.o
 		NAME bank_9
 	FILE C:/tmp/_gbsbuild/obj/data_ptrs.o
-		NAME C__tmp_lcc58961
+		NAME C__tmp_lcc157921
 	FILE C:/tmp/_gbsbuild/obj/main.o
 		NAME C__tmp_lcc88321
 	FILE C:/tmp/_gbsbuild/obj/music_bank_15.o
