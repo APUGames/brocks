@@ -48,6 +48,27 @@ public class PlayerCollisions : MonoBehaviour
 
 
         }
+
+        if (hit.gameObject.tag == "fruitObjective" && talkToGirl == 0)
+        {
+
+
+
+        }
+
+        if (hit.gameObject.tag == "bucketObjective" && talkToGirl == 1)
+        {
+
+
+
+        }
+
+        if (hit.gameObject.tag == "flowerObjective" && talkToGirl == 2)
+        {
+
+
+
+        }
         
     }
 
