@@ -9,6 +9,8 @@ TagManager:
   - flowerObjective
   - bucketObjective
   - fruitObjective
+  - test
+  - pondWater
   layers:
   - Default
   - TransparentFX
