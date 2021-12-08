@@ -2415,6 +2415,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: c5fe18f281c2fa548b3124b44d5882d4, type: 3}
   m_PrefabInstance: {fileID: 43998522}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &572828675 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 9485b0c79d11e2e4d0007da98d76c639, type: 3}
+  m_PrefabInstance: {fileID: 2002326275}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &572828676
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572828675}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9999993, y: 0, z: 1.9999988}
+  m_Center: {x: -0.00000032782555, y: 0, z: 0.00000032782555}
 --- !u!1001 &586148904
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2833,6 +2851,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9485b0c79d11e2e4d0007da98d76c639, type: 3}
       propertyPath: m_Name
       value: Pond Water
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9485b0c79d11e2e4d0007da98d76c639, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 9485b0c79d11e2e4d0007da98d76c639, type: 3}
       propertyPath: m_TagString
@@ -6209,6 +6231,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8606203706304470877, guid: c1db7e92280b1e949ac433bf8ee7cf61, type: 3}
   m_PrefabInstance: {fileID: 1484271674}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1628308175 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 9485b0c79d11e2e4d0007da98d76c639, type: 3}
+  m_PrefabInstance: {fileID: 686387602}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1628308176
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628308175}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9999993, y: 0, z: 1.9999988}
+  m_Center: {x: -0.00000032782555, y: 1.01, z: 0.00000032782555}
 --- !u!1 &1643771070 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1541859410316496, guid: 4fe5a7bcbee1651418ea031a87ff53e4, type: 3}
@@ -7756,6 +7796,11 @@ MonoBehaviour:
   Dialogue2Index0: {fileID: 8300000, guid: c6f8baf773cb0204c9c0633b10633f72, type: 3}
   Dialogue2Index2: {fileID: 8300000, guid: fadcb880ffb512148b9450701e3bd31a, type: 3}
   Dialogue2Index4: {fileID: 8300000, guid: 9ecc1685d99302047957362a02c48200, type: 3}
+  TooFewFruits: {fileID: 8300000, guid: 452e4e622de5501498f9fb7d8759b21d, type: 3}
+  UnlockMonologue1: {fileID: 8300000, guid: 13d0ca3806f251c44a4faf45216ae147, type: 3}
+  UnlockMonologue2: {fileID: 8300000, guid: 7ba0204427a31314eb4a3e36725431a1, type: 3}
+  WaterMonologue: {fileID: 8300000, guid: 85c07947e0f58cc4a80256204a5c3815, type: 3}
+  FlowerMonologue: {fileID: 8300000, guid: 43d0653d4d39c2c44be6f7603ea6378a, type: 3}
   fruitCollectSound: {fileID: 8300000, guid: 66640ea0c7a104665b27f562d014d7cf, type: 3}
 --- !u!1001 &1836284006
 PrefabInstance:
@@ -8762,7 +8807,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 2.75508e-40, w: -7.61e-43}
+  m_BoundingSphereOverride: {x: 4.592e-40, y: 2.03125, z: 0, w: 6.8552e-41}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0

@@ -42,12 +42,17 @@ public class PlayerCollisions : MonoBehaviour
     [SerializeField] private AudioClip Dialogue2Index0;
     [SerializeField] private AudioClip Dialogue2Index2;
     [SerializeField] private AudioClip Dialogue2Index4;
+    [SerializeField] private AudioClip TooFewFruits;
+    [SerializeField] private AudioClip UnlockMonologue1;
+    [SerializeField] private AudioClip UnlockMonologue2;
+    [SerializeField] private AudioClip WaterMonologue;
+    [SerializeField] private AudioClip FlowerMonologue;
 
-    //General Timer for this code
-    private float generalTimer = 0.0f;
+    //Starting Spawnpoint for Respawn mechanic
+    private float startingPos;
 
-    //index for computer to keep track of which line it's on for dialogue
-    int index = 0;
+    //to hopefully make sure the dialogue doesn't stack
+    bool dialogueDone = true;
 
     //Fruit Collect Sound
     [SerializeField] private AudioClip fruitCollectSound;
@@ -63,6 +68,8 @@ public class PlayerCollisions : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        startingPos = transform.position;
 
         doorAnimator = door.GetComponent<Animator>();
 
@@ -97,6 +104,9 @@ public class PlayerCollisions : MonoBehaviour
         if (BatteryCollect.fruits == 4)
         {
 
+            //increasing fruits here so the monologue doesn't loop, coded so it doesn't affect UI or door unlocking (I tested it don't worry future me)
+            BatteryCollect.fruits++;
+
             Invoke("UnlockMono1", 0.0f);
 
         }
@@ -106,7 +116,7 @@ public class PlayerCollisions : MonoBehaviour
     void UnlockMono1()
     {
 
-        //play audio here
+        audio.PlayOneShot(UnlockMonologue1);
 
         TextHints.message = "I have all the fruits I need now. I'll go back and give them to her by hand.";
         TextHints.textOn = true;
@@ -119,14 +129,11 @@ public class PlayerCollisions : MonoBehaviour
     void UnlockMono2()
     {
 
-        //play audio here
-
-        TextHints.textOn = true;
+        audio.PlayOneShot(UnlockMonologue2);
+        
         TextHints.message = "Since she's bedridden I'll have to give it to her by touching the bed.";
+        TextHints.textOn = true;
         TextHints.textOnTime = 5.0f;
-
-        //increasing fruits here so the monologue doesn't loop, coded so it doesn't affect UI or door unlocking (I tested it don't worry future me)
-        BatteryCollect.fruits++;
 
     }
 
@@ -147,8 +154,9 @@ public class PlayerCollisions : MonoBehaviour
 
             BatteryCollect.fruitUI.enabled = true;
 
+            audio.PlayOneShot(TooFewFruits);
 
-            TextHints.message = "Can't go back to her yet, I stil have some fruit to find. She told me they'd be in craters on the ground";
+            TextHints.message = "Can't go back to her yet, I stil have some fruit to find. She told me they'd be in craters on the ground, I think.";
             TextHints.textOn = true;
 
         }
@@ -157,28 +165,8 @@ public class PlayerCollisions : MonoBehaviour
 
             GirlDialogue();
 
-            talkToGirl++;
-
         }       
-        else if (hit.gameObject.tag == "Respawn")
-        {
-
-            
-
-        }
-        else if (hit.gameObject.tag == "pondWater" && BatteryCollect.bucket == true)
-        {
-
-            hasWater = true;
-
-            TextHints.message = "Water: acquired, I don't want to make her wait too long so I should get back.";
-            TextHints.textOn = true;
-            TextHints.textOnTime = 3.0f;
-
-
-        }
-
-
+        
     }
 
     void OpenDoor()
@@ -239,6 +227,7 @@ public class PlayerCollisions : MonoBehaviour
         else if (other.gameObject.tag == "bucketObjective" && talkToGirl == 1)
         {
 
+            Debug.Log("bucket");
             BatteryCollect.bucket = true;
 
             Destroy(other.gameObject);
@@ -251,6 +240,30 @@ public class PlayerCollisions : MonoBehaviour
 
             Destroy(other.gameObject);
 
+            audio.PlayOneShot(FlowerMonologue);
+
+            TextHints.message = "Is this what she means? It's the most unique flower up here so I assume so. I need to get back to her ASAP so I can start making medicine out of it!";
+            TextHints.textOn = true;
+            TextHints.textOnTime = 3.0f;
+
+        }
+        else if (other.gameObject.tag == "pondWater" && BatteryCollect.bucket == true)
+        {
+
+            hasWater = true;
+
+            audio.PlayOneShot(WaterMonologue);
+
+            TextHints.message = "Water: acquired, I don't want to make her wait too long so I should get back.";
+            TextHints.textOn = true;
+            TextHints.textOnTime = 3.0f;
+
+        }
+        else if (other.gameObject.tag == "Respawn")
+        {
+
+            //transform.position = startingPos;
+
         }
 
     }
@@ -259,28 +272,35 @@ public class PlayerCollisions : MonoBehaviour
     void GirlDialogue()
     {
 
-        if (talkToGirl == 0)
+        if (talkToGirl == 0 && dialogueDone == true)
         {
+
+            dialogueDone = false;
 
             Invoke("TTG0I0", 0.0f);
 
         }
-        else if (talkToGirl == 1 && hasWater == true)
+        else if (talkToGirl == 1 && hasWater == true && dialogueDone == true)
         {
 
-            //Invoke("TTG1I0", 0.0f);
+            dialogueDone = false;
+
+            Invoke("TTG1I0", 0.0f);
 
         }
-        else if (talkToGirl == 2 && BatteryCollect.flower = true)
+        else if (talkToGirl == 2 && BatteryCollect.flower == true && dialogueDone == true)
         {
 
-            //Invoke("TTG2I0", 0.0f);
+            dialogueDone = false;
+
+            Invoke("TTG2I0", 0.0f);
 
         }
 
     }
 
     //I'm sorry to whoever has been cursed to read this...
+    //Also for whatever reason the subtitles work some tests and don't work on others... It's weird.
     void TTG0I0()
     {
 
@@ -310,449 +330,396 @@ public class PlayerCollisions : MonoBehaviour
     void TTG0I2()
     {
 
+        //audio here
 
+        TextHints.message = "Before you sit down could you go to the pond and get some water?";
+        TextHints.textOn = true;
+        TextHints.textOnTime = 4.0f; //Time voice audio (F)
+
+        Invoke("TTG0I3", 4.0f);
 
     }
 
     void TTG0I3()
     {
 
+        audio.PlayOneShot(Dialogue0Index3);
 
+        TextHints.message = "Why? I'm not thirsty";
+        TextHints.textOn = true;
+        TextHints.textOnTime = 3.0f; //Time voice audio (M)
+
+        Invoke("TTG0I4", 3.0f);
 
     }
 
     void TTG0I4()
     {
 
+        //audio here
 
+        TextHints.message = "Not for you, for me. My throat's sore from (cough) coughing.";
+        TextHints.textOn = true;
+        TextHints.textOnTime =4.0f; //Time voice audio (F)
+
+        Invoke("TTG0I5", 4.0f);
 
     }
 
     void TTG0I5()
     {
 
+        audio.PlayOneShot(Dialogue0Index5);
 
+        TextHints.message = "Oh okay, I'll go grab some.";
+        TextHints.textOn = true;
+        TextHints.textOnTime = 3.0f; //Time voice audio (M)
+
+        Invoke("TTG0I6", 3.0f);
 
     }
 
     void TTG0I6()
     {
 
+        //audio here
 
+        TextHints.message = "Take the bucket in the corner over there. And try not to fall in this time...";
+        TextHints.textOn = true;
+        TextHints.textOnTime = 5.0f; //Time voice audio (F)
+
+        Invoke("TTG0I7", 5.0f);
 
     }
 
     void TTG0I7()
     {
 
+        audio.PlayOneShot(Dialogue0Index7);
 
+        TextHints.message = "Haha, you're funny, I'll be back in a couple.";
+        TextHints.textOn = true;
+        TextHints.textOnTime = 3.0f; //Time voice audio (M)
+
+        talkToGirl++;
+        dialogueDone = true;
 
     }
 
-    void temp()
+    void TTG1I0()
     {
 
-        if (talkToGirl == 0) //number indicates how many times player has talked to sickGirl thus far
-        {
+        //audio here
 
-            if (index == 0)
-            {
+        TextHints.message = "Thanks for the water (cough) (cough)";
+        TextHints.textOn = true;
+        TextHints.textOnTime = 5.0f; //Time voice audio (F)
 
-                //audio here
-
-                
-
-                index++;
-
-            }
-            else if (index == 1)
-            {
-
-                
-
-                index++;
-
-            }
-            else if (index == 2)
-            {
-
-                //audio here
-
-                TextHints.message = "Before you sit down could you go to the pond and get some water?";
-                TextHints.textOn = true;
-                TextHints.textOnTime = 3.0f; //Time voice audio (F)
-
-                index++;
-
-            }
-            else if (index == 3)
-            {
-
-                audio.PlayOneShot(Dialogue0Index3);
-
-                TextHints.message = "Why? I'm not thirsty";
-                TextHints.textOn = true;
-                TextHints.textOnTime = 3.0f; //Time voice audio (M)
-
-                index++;
-
-            }
-            else if (index == 4)
-            {
-
-                //audio here
-
-                TextHints.message = "Not for you, for me. My throat's sore from (cough) coughing.";
-                TextHints.textOn = true;
-                TextHints.textOnTime = 3.0f; //Time voice audio (F)
-
-                index++;
-
-            }
-            else if (index == 5)
-            {
-
-                audio.PlayOneShot(Dialogue0Index5);
-
-                TextHints.message = "Oh okay, I'll go grab some.";
-                TextHints.textOn = true;
-                TextHints.textOnTime = 3.0f; //Time voice audio (M)
-
-                index++;
-
-            }
-            else if (index == 6)
-            {
-
-                //audio here
-
-                TextHints.message = "Take the bucket in the corner over there. And try not to fall in this time...";
-                TextHints.textOn = true;
-                TextHints.textOnTime = 3.0f; //Time voice audio (F)
-
-                index++;
-
-            }
-            else if (index == 7)
-            {
-
-                audio.PlayOneShot(Dialogue0Index7);
-
-                TextHints.message = "Haha, you're funny, I'll be back in a couple.";
-                TextHints.textOn = true;
-                TextHints.textOnTime = 3.0f; //Time voice audio (M)
-
-                //talkToGirl++;
-
-            }
-
-            index = 0;
-
-        }
-        else if (talkToGirl == 1 && hasWater == true)
-        {
-
-            if (index == 0)
-            {
-
-                //audio here
-
-                TextHints.message = "Thanks for the water (cough) (cough)";
-                TextHints.textOn = true;
-                TextHints.textOnTime = 3.0f; //Time voice audio (F)
-
-                index++;
-
-            }
-            else if (index == 1)
-            {
-
-                audio.PlayOneShot(Dialogue1Index1);
-
-                TextHints.message = "No problem...";
-                TextHints.textOn = true;
-                TextHints.textOnTime = 3.0f; //Time voice audio (M)
-
-                index++;
-
-            }
-            else if (index == 2)
-            {
-
-                //audio here
-
-                TextHints.message = "You take some, too, it's hot out there isn't it?";
-                TextHints.textOn = true;
-                TextHints.textOnTime = 3.0f; //Time voice audio (F)
-
-                index++;
-
-            }
-            else if (index == 3)
-            {
-
-                audio.PlayOneShot(Dialogue1Index3);
-
-                TextHints.message = "I'm fine, like I said I'm not thirsty";
-                TextHints.textOn = true;
-                TextHints.textOnTime = 3.0f; //Time voice audio (M)
-
-                index++;
-
-            }
-            else if (index == 4)
-            {
-
-                //audio here
-
-                TextHints.message = "Whatever...";
-                TextHints.textOn = true;
-                TextHints.textOnTime = 3.0f; //Time voice audio (F)
-
-                index++;
-
-            }
-            else if (index == 5)
-            {
-
-                //audio here
-
-                TextHints.message = "Anyway before the sun goes down I want you to try and get me something else.";
-                TextHints.textOn = true;
-                TextHints.textOnTime = 3.0f; //Time voice audio (F)
-
-                index++;
-
-            }
-            else if (index == 6)
-            {
-
-                audio.PlayOneShot(Dialogue1Index6);
-
-                TextHints.message = "What is it now?";
-                TextHints.textOn = true;
-                TextHints.textOnTime = 3.0f; //Time voice audio (M)
-
-                index++;
-
-            }
-            else if (index == 7)
-            {
-
-                //audio here
-
-                TextHints.message = "You ever been to the top of Mount Mons?";
-                TextHints.textOn = true;
-                TextHints.textOnTime = 3.0f; //Time voice audio (F)
-
-                index++;
-
-            }
-            else if (index == 8)
-            {
-
-                audio.PlayOneShot(Dialogue1Index8);
-
-                TextHints.message = "No? I've never tried to climb it... but why?";
-                TextHints.textOn = true;
-                TextHints.textOnTime = 3.0f; //Time voice audio (M)
-
-                index++;
-
-            }
-            else if (index == 9)
-            {
-
-                //audio here
-
-                TextHints.message = "I read in a book that at the top of the mountain on this island there lies a (cough) mystical flower unlike anything we've seen before.";
-                TextHints.textOn = true;
-                TextHints.textOnTime = 3.0f; //Time voice audio (F)
-
-                index++;
-
-            }
-            else if (index == 10)
-            {
-
-                audio.PlayOneShot(Dialogue1Index10);
-
-                TextHints.message = "Where is the book? What does the flower look like?";
-                TextHints.textOn = true;
-                TextHints.textOnTime = 3.0f; //Time voice audio (M)
-
-                index++;
-
-            }
-            else if (index == 11)
-            {
-
-                //audio here
-
-                TextHints.message = "The book is in the cabinet...";
-                TextHints.textOn = true;
-                TextHints.textOnTime = 3.0f; //Time voice audio (F)
-
-                index++;
-
-            }
-            else if (index == 12)
-            {
-
-                audio.PlayOneShot(Dialogue1Index12);
-
-                TextHints.message = "Of course, and the doors are stuck so I can't open it anymore.";
-                TextHints.textOn = true;
-                TextHints.textOnTime = 3.0f; //Time voice audio (M)
-
-                index++;
-
-            }
-            else if (index == 13)
-            {
-
-                //audio here
-
-                TextHints.message = "Sorry about that, but it seems to be pretty distinct, unlike any flower I've seen on the (cough) (cough) island before...";
-                TextHints.textOn = true;
-                TextHints.textOnTime = 3.0f; //Time voice audio (F)
-
-                index++;
-
-            }
-            else if (index == 14)
-            {
-
-                audio.PlayOneShot(Dialogue1Index14);
-
-                TextHints.message = "So you want me to grab it for you because... Wait will it help cure you?";
-                TextHints.textOn = true;
-                TextHints.textOnTime = 3.0f; //Time voice audio (M)
-
-                index++;
-
-            }
-            else if (index == 15)
-            {
-
-                //audio here
-
-                TextHints.message = "Uh...";
-                TextHints.textOn = true;
-                TextHints.textOnTime = 3.0f; //Time voice audio (F)
-
-                index++;
-
-            }
-            else if (index == 16)
-            {
-
-                audio.PlayOneShot(Dialogue1Index16);
-
-                TextHints.message = "I'll get it right away!";
-                TextHints.textOn = true;
-                TextHints.textOnTime = 3.0f; //Time voice audio (M)
-
-                index++;
-
-            }
-            else if (index == 17)
-            {
-
-                //audio here
-
-                TextHints.message = "Wait you didn't let me...";
-                TextHints.textOn = true;
-                TextHints.textOnTime = 3.0f; //Time voice audio (F)
-
-                //talkToGirl++;
-
-            }
-
-            index = 0;
-
-        }
-        else if (talkToGirl == 2 && BatteryCollect.flower == true)
-        {
-
-            if (index == 0)
-            {
-
-                audio.PlayOneShot(Dialogue2Index0);
-
-                TextHints.message = "I got the flower for you! What do I need to do to make it into a cure?";
-                TextHints.textOn = true;
-                TextHints.textOnTime = 3.0f; //Time voice audio (M)
-
-                index++;
-
-            }
-            else if (index == 1)
-            {
-
-                //audio here
-
-                TextHints.message = "You didn't let me finish...";
-                TextHints.textOn = true;
-                TextHints.textOnTime = 3.0f; //Time voice audio (F)
-
-                index++;
-
-            }
-            else if (index == 2)
-            {
-
-                audio.PlayOneShot(Dialogue2Index2);
-
-                TextHints.message = "Oh, carry on...";
-                TextHints.textOn = true;
-                TextHints.textOnTime = 3.0f; //Time voice audio (M)
-
-                index++;
-
-            }
-            else if (index == 3)
-            {
-
-                //audio here
-
-                TextHints.message = "I just wanted to look at it, seen as though I haven't seen anything other than a palm tree out here in forever.";
-                TextHints.textOn = true;
-                TextHints.textOnTime = 3.0f; //Time voice audio (F)
-
-                index++;
-
-            }
-            else if (index == 4)
-            {
-
-                audio.PlayOneShot(Dialogue2Index4);
-
-                TextHints.message = "So you're not gonna be healed then...?";
-                TextHints.textOn = true;
-                TextHints.textOnTime = 3.0f; //Time voice audio (M)
-
-                index++;
-
-            }
-            else if (index == 5)
-            {
-
-                //audio here
-
-                TextHints.message = "Nope, who knows (cough (cough) if I'll get better.";
-                TextHints.textOn = true;
-                TextHints.textOnTime = 3.0f; //Time voice audio (F)
-
-                //talkToGirl++;
-
-            }
-
-            index = 0;
-
-        }
+        Invoke("TTG1I1", 5.0f);
 
     }
+
+    void TTG1I1()
+    {
+
+        audio.PlayOneShot(Dialogue1Index1);
+
+        TextHints.message = "No problem...";
+        TextHints.textOn = true;
+        TextHints.textOnTime = 3.0f; //Time voice audio (M)
+
+        Invoke("TTG1I2", 3.0f);
+
+    }
+
+    void TTG1I2()
+    {
+
+        //audio here
+
+        TextHints.message = "You take some, too, it's hot out there isn't it?";
+        TextHints.textOn = true;
+        TextHints.textOnTime = 4.0f; //Time voice audio (F)
+
+        Invoke("TTG1I3", 4.0f);
+
+    }
+
+    void TTG1I3()
+    {
+
+        audio.PlayOneShot(Dialogue1Index3);
+
+        TextHints.message = "I'm fine, like I said I'm not thirsty";
+        TextHints.textOn = true;
+        TextHints.textOnTime = 3.0f; //Time voice audio (M)
+
+        Invoke("TTG1I4", 3.0f);
+
+    }
+
+    void TTG1I4()
+    {
+
+        //audio here
+
+        TextHints.message = "Whatever...";
+        TextHints.textOn = true;
+        TextHints.textOnTime = 3.0f; //Time voice audio (F)
+
+        Invoke("TTG1I5", 3.0f);
+
+    }
+
+    void TTG1I5()
+    {
+
+        //audio here
+
+        TextHints.message = "Anyway before the sun goes down I want you to try and get me something else.";
+        TextHints.textOn = true;
+        TextHints.textOnTime = 5.0f; //Time voice audio (F)
+
+        Invoke("TTG1I6", 5.0f);
+
+    }
+
+    void TTG1I6()
+    {
+
+        audio.PlayOneShot(Dialogue1Index6);
+
+        TextHints.message = "What is it now?";
+        TextHints.textOn = true;
+        TextHints.textOnTime = 3.0f; //Time voice audio (M)
+
+        Invoke("TTG1I7", 3.0f);
+
+    }
+
+    void TTG1I7()
+    {
+
+        //audio here
+
+        TextHints.message = "Have you ever been to the top of Mount Mons?";
+        TextHints.textOn = true;
+        TextHints.textOnTime = 5.0f; //Time voice audio (F)
+
+        Invoke("TTG1I8", 5.0f);
+
+    }
+
+    void TTG1I8()
+    {
+
+        audio.PlayOneShot(Dialogue1Index8);
+
+        TextHints.message = "No? I've never tried to climb it... but why?";
+        TextHints.textOn = true;
+        TextHints.textOnTime = 3.0f; //Time voice audio (M)
+
+        Invoke("TTG1I9", 3.0f);
+
+    }
+
+    void TTG1I9()
+    {
+
+        //audio here
+
+        TextHints.message = "I read in a book that at the top of the mountain on this island there lies a (cough) mystical flower unlike anything we've seen before.";
+        TextHints.textOn = true;
+        TextHints.textOnTime = 7.0f; //Time voice audio (F)
+
+        Invoke("TTG1I10", 7.0f);
+
+    }
+
+    void TTG1I10()
+    {
+
+        audio.PlayOneShot(Dialogue1Index10);
+
+        TextHints.message = "Where is the book? What does the flower look like?";
+        TextHints.textOn = true;
+        TextHints.textOnTime = 4.0f; //Time voice audio (M)
+
+        Invoke("TTG1I11", 4.0f);
+
+    }
+
+    void TTG1I11()
+    {
+
+        //audio here
+
+        TextHints.message = "The book is in the cabinet...";
+        TextHints.textOn = true;
+        TextHints.textOnTime = 3.0f; //Time voice audio (F)
+
+        Invoke("TTG1I12", 3.0f);
+
+    }
+
+    void TTG1I12()
+    {
+
+        audio.PlayOneShot(Dialogue1Index12);
+
+        TextHints.message = "Of course, and the doors are stuck so I can't open it anymore.";
+        TextHints.textOn = true;
+        TextHints.textOnTime = 4.0f; //Time voice audio (M)
+
+        Invoke("TTG1I13", 4.0f);
+
+    }
+
+    void TTG1I13()
+    {
+
+        //audio here
+
+        TextHints.message = "Sorry about that, but it seems to be pretty distinct, unlike any flower I've seen on the (cough) (cough) island before...";
+        TextHints.textOn = true;
+        TextHints.textOnTime = 5.0f; //Time voice audio (F)
+
+        Invoke("TTG1I14", 5.0f);
+
+    }
+
+    void TTG1I14()
+    {
+
+        audio.PlayOneShot(Dialogue1Index14);
+
+        TextHints.message = "So you want me to grab it for you because... Wait will it help cure you?";
+        TextHints.textOn = true;
+        TextHints.textOnTime = 4.0f; //Time voice audio (M)
+
+        Invoke("TTG1I15", 4.0f);
+
+    }
+
+    void TTG1I15()
+    {
+
+        //audio here
+
+        TextHints.message = "Uh...";
+        TextHints.textOn = true;
+        TextHints.textOnTime = 1.0f; //Time voice audio (F)
+
+        Invoke("TTG1I16", 1.0f);
+
+    }
+
+    void TTG1I16()
+    {
+
+        audio.PlayOneShot(Dialogue1Index16);
+
+        TextHints.message = "I'll get it right away!";
+        TextHints.textOn = true;
+        TextHints.textOnTime = 3.0f; //Time voice audio (M)
+
+        Invoke("TTG1I17", 3.0f);
+
+    }
+
+    void TTG1I17()
+    {
+
+        //audio here
+
+        TextHints.message = "Wait you didn't let me...";
+        TextHints.textOn = true;
+        TextHints.textOnTime = 3.0f; //Time voice audio (F)
+
+        talkToGirl++;
+        dialogueDone = true;
+
+    }
+
+    void TTG2I0()
+    {
+
+        audio.PlayOneShot(Dialogue2Index0);
+
+        TextHints.message = "I got the flower for you! What do I need to do to make it into a cure?";
+        TextHints.textOn = true;
+        TextHints.textOnTime = 3.0f; //Time voice audio (M)
+
+        Invoke("TTG2I1", 3.0f);
+
+    }
+
+    void TTG2I1()
+    {
+
+        //audio here
+
+        TextHints.message = "You didn't let me finish...";
+        TextHints.textOn = true;
+        TextHints.textOnTime = 3.0f; //Time voice audio (F)
+
+        Invoke("TTG2I2", 3.0f);
+
+    }
+
+    void TTG2I2()
+    {
+
+        audio.PlayOneShot(Dialogue2Index2);
+
+        TextHints.message = "Oh, carry on...";
+        TextHints.textOn = true;
+        TextHints.textOnTime = 3.0f; //Time voice audio (M)
+
+        Invoke("TTG2I3", 3.0f);
+
+    }
+
+    void TTG2I3()
+    {
+
+        //audio here
+
+        TextHints.message = "I just wanted to look at it, seen as though I haven't seen anything other than a palm tree out here in forever.";
+        TextHints.textOn = true;
+        TextHints.textOnTime = 5.0f; //Time voice audio (F)
+
+        Invoke("TTG2I4", 5.0f);
+
+    }
+
+    void TTG2I4()
+    {
+
+        audio.PlayOneShot(Dialogue2Index4);
+
+        TextHints.message = "So you're not gonna be healed then...?";
+        TextHints.textOn = true;
+        TextHints.textOnTime = 3.0f; //Time voice audio (M)
+
+        Invoke("TTG2I5", 3.0f);
+
+    }
+
+    void TTG2I5()
+    {
+
+        //audio here
+
+        TextHints.message = "Nope, who knows (cough (cough) if I'll get better.";
+        TextHints.textOn = true;
+        TextHints.textOnTime = 5.0f; //Time voice audio (F)
+
+        talkToGirl++;
+        dialogueDone = true;
+
+    }
+    //It's over... well kinda...
 
     void BeginningMonologue1()
     {
@@ -764,37 +731,6 @@ public class PlayerCollisions : MonoBehaviour
         TextHints.textOnTime = 4.0f; //Time voice audio (M)
 
         Invoke("BeginningMonologue2", 4.0f);
-
-        /*if (index == 0)
-        {
-
-            audio.PlayOneShot(Monologue1);
-
-            TextHints.message = "Okay... She told me to get fruits, right?";
-            TextHints.textOn = true;
-            TextHints.textOnTime = 4.0f; //Time voice audio (M)
-            
-            //if (generalTimer > 3.0f)
-            //{
-
-                //generalTimer += Time.deltaTime;
-
-            //}
-
-            index++;
-
-        }
-        
-        else if (index == 1)
-        {
-
-            audio.PlayOneShot(Monologue2);
-
-            TextHints.message = "I'm sure they'll be in convenient places on the ground. I'll just have to look for them.";
-            TextHints.textOn = true;
-            TextHints.textOnTime = 5.0f; //Time voice audio (M)
-
-        }*/
 
     }
 
