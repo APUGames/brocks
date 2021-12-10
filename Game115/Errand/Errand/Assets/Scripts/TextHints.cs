@@ -10,6 +10,7 @@ public class TextHints : MonoBehaviour
     public static string message; //message content
 
     static Text textHint; //Holds the string (message variable)
+    public static bool textOff = false;
 
     //Timer
     public static bool textOn = false;
@@ -43,7 +44,7 @@ public class TextHints : MonoBehaviour
 
             textHint.text = message;
 
-            timer += Time.deltaTime;
+            //timer += Time.deltaTime;
 
         }
 
@@ -55,6 +56,13 @@ public class TextHints : MonoBehaviour
             textHint.enabled = false;
 
             timer = 0.0f;
+
+        }
+
+        if (textOff)
+        {
+
+            textHint.enabled = false;
 
         }
 

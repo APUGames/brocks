@@ -11,6 +11,10 @@ TagManager:
   - fruitObjective
   - test
   - pondWater
+  - peachObjective
+  - melonObjective
+  - pearObjective
+  - appleObjective
   layers:
   - Default
   - TransparentFX

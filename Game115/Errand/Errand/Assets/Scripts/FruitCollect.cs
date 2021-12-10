@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BatteryCollect : MonoBehaviour
+public class FruitCollect : MonoBehaviour
 {
 
     //Fruit Collect Logic
@@ -16,17 +16,17 @@ public class BatteryCollect : MonoBehaviour
     [SerializeField] public static bool flower = false;
 
     //Holds the images
-    public static Image appleUI;
+    /*public static Image appleUI;
     public static Image pearUI;
     public static Image peachUI;
-    public static Image melonUI;
+    public static Image melonUI;*/
 
-    //Fruit Sprites
-    [SerializeField] Sprite apple;
-    [SerializeField] Sprite pear;
-    [SerializeField] Sprite peach;
-    [SerializeField] Sprite melon;
-    [SerializeField] Sprite fruit0;
+    //Fruit Images
+    [SerializeField] Image apple;
+    [SerializeField] Image pear;
+    [SerializeField] Image peach;
+    [SerializeField] Image melon;
+    //[SerializeField] Image fruit0;
 
     //Fruit UI Booleans
     public static bool hasApple = false;
@@ -39,16 +39,21 @@ public class BatteryCollect : MonoBehaviour
     {
 
         //Find Fruit UI GameObject
-        appleUI = gameObject.GetComponent<Image>();
+        /*appleUI = gameObject.GetComponent<Image>();
         pearUI = gameObject.GetComponent<Image>();
         peachUI = gameObject.GetComponent<Image>();
-        melonUI = gameObject.GetComponent<Image>();
+        melonUI = gameObject.GetComponent<Image>();*/
 
         //Hide Images on Start
-        appleUI.enabled = false;
+        /*appleUI.enabled = false;
         pearUI.enabled = false;
         peachUI.enabled = false;
-        melonUI.enabled = false;
+        melonUI.enabled = false;*/
+
+        apple.enabled = false;
+        pear.enabled = false;
+        peach.enabled = false;
+        melon.enabled = false;
 
         //Set initial fruit value
         fruits = 0;
@@ -59,44 +64,39 @@ public class BatteryCollect : MonoBehaviour
     void Update()
     {
 
-        if (fruits == 1)
+        if (hasApple == true)
         {
 
-            //fruitUI.sprite = fruit1;
+            apple.enabled = true;
 
-            CheckFruit();
-
-            //fruitUI.enabled = true;
+            hasApple = false;
 
         }
-        else if (fruits == 2)
+        
+        if (hasPear == true)
         {
 
-            //fruitUI.sprite = fruit2;
+            pear.enabled = true;
 
-            CheckFruit();
+            hasPear = false;
 
         }
-        else if (fruits == 3)
+        
+        if (hasPeach == true)
         {
 
-            //fruitUI.sprite = fruit3;
+            peach.enabled = true;
 
-            CheckFruit();
+            hasPeach = false;
 
         }
-        else if (fruits >= 4)
+        
+        if (hasMelon == true)
         {
 
-            //fruitUI.sprite = fruit4;
+            melon.enabled = true;
 
-            CheckFruit();
-
-        }
-        else
-        {
-
-            //fruitUI.sprite = fruit0;
+            hasMelon = false;
 
         }
 
@@ -105,28 +105,28 @@ public class BatteryCollect : MonoBehaviour
     void CheckFruit()
     {
 
-        if (apple == true)
+        if (hasApple == true)
         {
 
-            appleUI.sprite = apple;
+            apple.enabled = true;
 
         }
-        else if (pear == true)
+        else if (hasPear == true)
         {
 
-            pearUI.sprite = pear;
+            pear.enabled = true;
 
         }
-        else if (peach == true)
+        else if (hasPeach == true)
         {
 
-            peachUI.sprite = peach;
+            peach.enabled = true;
 
         }
-        else if (melon == true)
+        else if (hasMelon == true)
         {
 
-            melonUI.sprite = melon;
+            melon.enabled = true;
 
         }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCollisions : MonoBehaviour
 {
@@ -23,25 +24,47 @@ public class PlayerCollisions : MonoBehaviour
     [SerializeField] private AudioClip doorOpenSound;
     [SerializeField] private AudioClip doorShutSound;
 
+    //Objective SFX
+    [SerializeField] private AudioClip woodenBucket;
+    [SerializeField] private AudioClip waterSloosh;
+    [SerializeField] private AudioClip flowerPick;
+
     //Voice Acting
     //I definitely did this the long way, especially since each line has its own method called by the Invoke() function... but it works soooooo...
     [SerializeField] private AudioClip Monologue1;
     [SerializeField] private AudioClip Monologue2;
+    [SerializeField] private AudioClip Dialogue0Index0;
     [SerializeField] private AudioClip Dialogue0Index1;
+    [SerializeField] private AudioClip Dialogue0Index2;
     [SerializeField] private AudioClip Dialogue0Index3;
+    [SerializeField] private AudioClip Dialogue0Index4;
     [SerializeField] private AudioClip Dialogue0Index5;
+    [SerializeField] private AudioClip Dialogue0Index6;
     [SerializeField] private AudioClip Dialogue0Index7;
+    [SerializeField] private AudioClip Dialogue1Index0;
     [SerializeField] private AudioClip Dialogue1Index1;
+    [SerializeField] private AudioClip Dialogue1Index2;
     [SerializeField] private AudioClip Dialogue1Index3;
+    [SerializeField] private AudioClip Dialogue1Index4;
+    [SerializeField] private AudioClip Dialogue1Index5;
     [SerializeField] private AudioClip Dialogue1Index6;
+    [SerializeField] private AudioClip Dialogue1Index7;
     [SerializeField] private AudioClip Dialogue1Index8;
+    [SerializeField] private AudioClip Dialogue1Index9;
     [SerializeField] private AudioClip Dialogue1Index10;
+    [SerializeField] private AudioClip Dialogue1Index11;
     [SerializeField] private AudioClip Dialogue1Index12;
+    [SerializeField] private AudioClip Dialogue1Index13;
     [SerializeField] private AudioClip Dialogue1Index14;
+    [SerializeField] private AudioClip Dialogue1Index15;
     [SerializeField] private AudioClip Dialogue1Index16;
+    [SerializeField] private AudioClip Dialogue1Index17;
     [SerializeField] private AudioClip Dialogue2Index0;
+    [SerializeField] private AudioClip Dialogue2Index1;
     [SerializeField] private AudioClip Dialogue2Index2;
+    [SerializeField] private AudioClip Dialogue2Index3;
     [SerializeField] private AudioClip Dialogue2Index4;
+    [SerializeField] private AudioClip Dialogue2Index5;
     [SerializeField] private AudioClip TooFewFruits;
     [SerializeField] private AudioClip UnlockMonologue1;
     [SerializeField] private AudioClip UnlockMonologue2;
@@ -49,7 +72,7 @@ public class PlayerCollisions : MonoBehaviour
     [SerializeField] private AudioClip FlowerMonologue;
 
     //Starting Spawnpoint for Respawn mechanic
-    private float startingPos;
+    //private static new Vector3 startingPos;
 
     //to hopefully make sure the dialogue doesn't stack
     bool dialogueDone = true;
@@ -69,7 +92,7 @@ public class PlayerCollisions : MonoBehaviour
     void Start()
     {
 
-        startingPos = transform.position;
+        //Debug.Log(FruitCollect.pearUI.enabled);
 
         doorAnimator = door.GetComponent<Animator>();
 
@@ -101,11 +124,11 @@ public class PlayerCollisions : MonoBehaviour
 
         }
 
-        if (BatteryCollect.fruits == 4)
+        if (FruitCollect.fruits == 4)
         {
 
             //increasing fruits here so the monologue doesn't loop, coded so it doesn't affect UI or door unlocking (I tested it don't worry future me)
-            BatteryCollect.fruits++;
+            FruitCollect.fruits++;
 
             Invoke("UnlockMono1", 0.0f);
 
@@ -120,7 +143,7 @@ public class PlayerCollisions : MonoBehaviour
 
         TextHints.message = "I have all the fruits I need now. I'll go back and give them to her by hand.";
         TextHints.textOn = true;
-        TextHints.textOnTime = 5.0f;
+        //TextHints.textOnTime = 5.0f;
 
         Invoke("UnlockMono2", 5.0f);
 
@@ -133,7 +156,8 @@ public class PlayerCollisions : MonoBehaviour
         
         TextHints.message = "Since she's bedridden I'll have to give it to her by touching the bed.";
         TextHints.textOn = true;
-        TextHints.textOnTime = 5.0f;
+
+        Invoke("EndText", 5.0f);
 
     }
 
@@ -141,18 +165,21 @@ public class PlayerCollisions : MonoBehaviour
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
 
-        if (hit.gameObject.tag == "shackDoor" && BatteryCollect.fruits >= 4)
+        if (hit.gameObject.tag == "shackDoor" && FruitCollect.fruits >= 4)
         {
 
             OpenDoor();
 
-            BatteryCollect.fruitUI.enabled = false;
+            /*FruitCollect.appleUI.enabled = false;
+            FruitCollect.pearUI.enabled = false;
+            FruitCollect.peachUI.enabled = false;
+            FruitCollect.melonUI.enabled = false;*/
 
         }
-        else if (hit.gameObject.tag == "shackDoor" && BatteryCollect.fruits < 4)
+        else if (hit.gameObject.tag == "shackDoor" && FruitCollect.fruits < 4)
         {
 
-            BatteryCollect.fruitUI.enabled = true;
+            //FruitCollect.fruitUI.enabled = true;
 
             audio.PlayOneShot(TooFewFruits);
 
@@ -165,8 +192,14 @@ public class PlayerCollisions : MonoBehaviour
 
             GirlDialogue();
 
-        }       
-        
+        }
+        if (hit.gameObject.tag == "Respawn")
+        {
+
+            SceneManager.LoadScene("3DAG");
+
+        }
+
     }
 
     void OpenDoor()
@@ -214,10 +247,48 @@ public class PlayerCollisions : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.gameObject.tag == "fruitObjective")
+        if (other.gameObject.tag == "appleObjective")
         {
 
-            BatteryCollect.fruits++;
+            //FruitCollect.fruits++;
+
+            FruitCollect.hasApple = true;
+
+            audio.PlayOneShot(fruitCollectSound);
+
+            Destroy(other.gameObject);
+
+        }
+        else if (other.gameObject.tag == "pearObjective")
+        {
+
+            //FruitCollect.fruits++;
+
+            FruitCollect.hasPear = true;
+
+            audio.PlayOneShot(fruitCollectSound);
+
+            Destroy(other.gameObject);
+
+        }
+        else if (other.gameObject.tag == "melonObjective")
+        {
+
+            //FruitCollect.fruits++;
+
+            FruitCollect.hasMelon = true;
+
+            audio.PlayOneShot(fruitCollectSound);
+
+            Destroy(other.gameObject);
+
+        }
+        else if (other.gameObject.tag == "peachObjective")
+        {
+
+            //FruitCollect.fruits++;
+
+            FruitCollect.hasPeach = true;
 
             audio.PlayOneShot(fruitCollectSound);
 
@@ -227,8 +298,9 @@ public class PlayerCollisions : MonoBehaviour
         else if (other.gameObject.tag == "bucketObjective" && talkToGirl == 1)
         {
 
-            Debug.Log("bucket");
-            BatteryCollect.bucket = true;
+            audio.PlayOneShot(woodenBucket);
+
+            FruitCollect.bucket = true;
 
             Destroy(other.gameObject);
 
@@ -236,7 +308,7 @@ public class PlayerCollisions : MonoBehaviour
         else if (other.gameObject.tag == "flowerObjective" && talkToGirl == 2)
         {
 
-            BatteryCollect.flower = true;
+            FruitCollect.flower = true;
 
             Destroy(other.gameObject);
 
@@ -247,10 +319,12 @@ public class PlayerCollisions : MonoBehaviour
             TextHints.textOnTime = 3.0f;
 
         }
-        else if (other.gameObject.tag == "pondWater" && BatteryCollect.bucket == true)
+        else if (other.gameObject.tag == "pondWater" && FruitCollect.bucket == true)
         {
 
             hasWater = true;
+
+            audio.PlayOneShot(waterSloosh);
 
             audio.PlayOneShot(WaterMonologue);
 
@@ -259,12 +333,7 @@ public class PlayerCollisions : MonoBehaviour
             TextHints.textOnTime = 3.0f;
 
         }
-        else if (other.gameObject.tag == "Respawn")
-        {
-
-            //transform.position = startingPos;
-
-        }
+        
 
     }
 
@@ -288,7 +357,7 @@ public class PlayerCollisions : MonoBehaviour
             Invoke("TTG1I0", 0.0f);
 
         }
-        else if (talkToGirl == 2 && BatteryCollect.flower == true && dialogueDone == true)
+        else if (talkToGirl == 2 && FruitCollect.flower == true && dialogueDone == true)
         {
 
             dialogueDone = false;
@@ -399,7 +468,8 @@ public class PlayerCollisions : MonoBehaviour
 
         TextHints.message = "Haha, you're funny, I'll be back in a couple.";
         TextHints.textOn = true;
-        TextHints.textOnTime = 3.0f; //Time voice audio (M)
+        
+        Invoke("EndText", 3.0f);
 
         talkToGirl++;
         dialogueDone = true;
@@ -517,9 +587,9 @@ public class PlayerCollisions : MonoBehaviour
 
         TextHints.message = "No? I've never tried to climb it... but why?";
         TextHints.textOn = true;
-        TextHints.textOnTime = 3.0f; //Time voice audio (M)
+        TextHints.textOnTime = 5.0f; //Time voice audio (M)
 
-        Invoke("TTG1I9", 3.0f);
+        Invoke("TTG1I9", 5.0f);
 
     }
 
@@ -634,7 +704,8 @@ public class PlayerCollisions : MonoBehaviour
 
         TextHints.message = "Wait you didn't let me...";
         TextHints.textOn = true;
-        TextHints.textOnTime = 3.0f; //Time voice audio (F)
+        
+        Invoke("EndText", 3.0f);
 
         talkToGirl++;
         dialogueDone = true;
@@ -648,9 +719,9 @@ public class PlayerCollisions : MonoBehaviour
 
         TextHints.message = "I got the flower for you! What do I need to do to make it into a cure?";
         TextHints.textOn = true;
-        TextHints.textOnTime = 3.0f; //Time voice audio (M)
+        TextHints.textOnTime = 4.0f; //Time voice audio (M)
 
-        Invoke("TTG2I1", 3.0f);
+        Invoke("TTG2I1", 4.0f);
 
     }
 
@@ -711,12 +782,13 @@ public class PlayerCollisions : MonoBehaviour
 
         //audio here
 
-        TextHints.message = "Nope, who knows (cough (cough) if I'll get better.";
+        TextHints.message = "Nope, who knows (cough) (cough) if I'll get better.";
         TextHints.textOn = true;
-        TextHints.textOnTime = 5.0f; //Time voice audio (F)
 
         talkToGirl++;
         dialogueDone = true;
+
+        Invoke("EndText", 5.0f);
 
     }
     //It's over... well kinda...
@@ -728,7 +800,7 @@ public class PlayerCollisions : MonoBehaviour
 
         TextHints.message = "Okay... She told me to get fruits, right?";
         TextHints.textOn = true;
-        TextHints.textOnTime = 4.0f; //Time voice audio (M)
+        //TextHints.textOnTime = 4.0f; //Time voice audio (M)
 
         Invoke("BeginningMonologue2", 4.0f);
 
@@ -736,12 +808,20 @@ public class PlayerCollisions : MonoBehaviour
 
     void BeginningMonologue2()
     {
-
+        
         audio.PlayOneShot(Monologue2);
 
-        TextHints.message = "I'm sure they'll be in convenient places on the ground. I'll just have to look for them.";
+        TextHints.message = "I'm sure they'll be in convenient places on the ground./n I'll just have to look for them.";
         TextHints.textOn = true;
-        TextHints.textOnTime = 5.0f; //Time voice audio (M)
+        
+        Invoke("EndText", 5.0f);
+
+    }
+
+    void EndText()
+    {
+
+        TextHints.textOff = true;
 
     }
 

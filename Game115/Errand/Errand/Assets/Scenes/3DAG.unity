@@ -1378,7 +1378,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1125202155953082, guid: 573bb482e4baeec4386587db7cc07515, type: 3}
       propertyPath: m_TagString
-      value: fruitObjective
+      value: melonObjective
       objectReference: {fileID: 0}
     - target: {fileID: 4265479714197036, guid: 573bb482e4baeec4386587db7cc07515, type: 3}
       propertyPath: m_RootOrder
@@ -1789,7 +1789,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1829371231341652, guid: 426b44a7575f71e479fab4f4e8431989, type: 3}
       propertyPath: m_TagString
-      value: fruitObjective
+      value: appleObjective
       objectReference: {fileID: 0}
     - target: {fileID: 4411128782263238, guid: 426b44a7575f71e479fab4f4e8431989, type: 3}
       propertyPath: m_RootOrder
@@ -1854,6 +1854,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: c5fe18f281c2fa548b3124b44d5882d4, type: 3}
   m_PrefabInstance: {fileID: 1196437248}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &415538906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 415538907}
+  - component: {fileID: 415538909}
+  - component: {fileID: 415538908}
+  m_Layer: 5
+  m_Name: PeachUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &415538907
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415538906}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1440810239}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 167.4, y: 105.7}
+  m_SizeDelta: {x: 52.140015, y: 54.92279}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &415538908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415538906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ce74a646602662f4da5cfa15fd6d7eae, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &415538909
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415538906}
+  m_CullTransparentMesh: 1
 --- !u!4 &425169990 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: a10d1f3307879f24fa4403887422c73f, type: 3}
@@ -1870,9 +1945,8 @@ GameObject:
   - component: {fileID: 438875090}
   - component: {fileID: 438875092}
   - component: {fileID: 438875091}
-  - component: {fileID: 438875093}
   m_Layer: 5
-  m_Name: FruitUI
+  m_Name: AppleUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1894,8 +1968,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 57, y: 120}
-  m_SizeDelta: {x: 80, y: 200}
+  m_AnchoredPosition: {x: 139.5, y: 46.077}
+  m_SizeDelta: {x: 52.14, y: 54.9228}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &438875091
 MonoBehaviour:
@@ -1917,7 +1991,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ba7851f276e57489f835fbb62d09e2f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 77d8afc9120062e46a87b71ac583713d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1935,23 +2009,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 438875089}
   m_CullTransparentMesh: 1
---- !u!114 &438875093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 438875089}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43ad37b29d3efe34d8fd3ea002b67889, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fruit1: {fileID: 21300000, guid: 1722f7b7a1427446c82c18ca8eea179b, type: 3}
-  fruit2: {fileID: 21300000, guid: 2b935da67c4214640be7bb935073c6e1, type: 3}
-  fruit3: {fileID: 21300000, guid: 5dafa6a4ad3a142e0b20f6a25d69aaad, type: 3}
-  fruit4: {fileID: 21300000, guid: fb837420ad314429c9fd7e00cd0f3b29, type: 3}
-  fruit0: {fileID: 21300000, guid: ba7851f276e57489f835fbb62d09e2f8, type: 3}
 --- !u!4 &443347804 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 20987309ee214664180a77414b9ca8de, type: 3}
@@ -2428,7 +2485,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 572828675}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.9999993, y: 0, z: 1.9999988}
@@ -3635,7 +3692,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1763817136346132, guid: 0f3575c567ebe8241a4a6ad511fd7017, type: 3}
       propertyPath: m_TagString
-      value: fruitObjective
+      value: pearObjective
       objectReference: {fileID: 0}
     - target: {fileID: 4228012861393828, guid: 0f3575c567ebe8241a4a6ad511fd7017, type: 3}
       propertyPath: m_RootOrder
@@ -4123,6 +4180,81 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a10d1f3307879f24fa4403887422c73f, type: 3}
+--- !u!1 &1053632452
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1053632453}
+  - component: {fileID: 1053632455}
+  - component: {fileID: 1053632454}
+  m_Layer: 5
+  m_Name: MelonUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1053632453
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053632452}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1440810239}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 68.265, y: 105.7}
+  m_SizeDelta: {x: 101.6469, y: 54.92279}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1053632454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053632452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 61796965395a72c47aa54105424f0b18, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1053632455
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053632452}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1058504405
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5500,6 +5632,10 @@ RectTransform:
   m_Children:
   - {fileID: 438875090}
   - {fileID: 946478041}
+  - {fileID: 415538907}
+  - {fileID: 1977187524}
+  - {fileID: 1053632453}
+  - {fileID: 1719013423}
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6618,7 +6754,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1541859410316496, guid: 4fe5a7bcbee1651418ea031a87ff53e4, type: 3}
       propertyPath: m_TagString
-      value: fruitObjective
+      value: peachObjective
       objectReference: {fileID: 0}
     - target: {fileID: 4635515559360632, guid: 4fe5a7bcbee1651418ea031a87ff53e4, type: 3}
       propertyPath: m_RootOrder
@@ -6759,6 +6895,98 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 4b68bd4cbd118bca11002b7b44295342, type: 3}
   m_PrefabInstance: {fileID: 1711885112}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1719013422
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1719013423}
+  - component: {fileID: 1719013426}
+  - component: {fileID: 1719013425}
+  - component: {fileID: 1719013424}
+  m_Layer: 5
+  m_Name: FruitUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1719013423
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719013422}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1440810239}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1719013424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719013422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cf1c8ac5c5574c4a89d49ea40d15863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  apple: {fileID: 438875091}
+  pear: {fileID: 1977187525}
+  peach: {fileID: 415538908}
+  melon: {fileID: 1053632454}
+--- !u!114 &1719013425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719013422}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1719013426
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719013422}
+  m_CullTransparentMesh: 1
 --- !u!1 &1724367877
 GameObject:
   m_ObjectHideFlags: 0
@@ -7779,23 +8007,43 @@ MonoBehaviour:
   doorOpenTime: 3
   doorOpenSound: {fileID: 8300000, guid: 2baec0710b6dd48248f84c27fc03b004, type: 3}
   doorShutSound: {fileID: 8300000, guid: 03b2022bd8648413fb02987a056ded48, type: 3}
+  woodenBucket: {fileID: 8300000, guid: b37f3d99ed8a9254280b8f6de3ec0635, type: 3}
+  waterSloosh: {fileID: 8300000, guid: 1db8e107bc637b5409c3713b2a688480, type: 3}
+  flowerPick: {fileID: 8300000, guid: d4083b8ebb7409c48b8ff0346ace4112, type: 3}
   Monologue1: {fileID: 8300000, guid: a2e0d79dab2c9aa448e72e3ab0112291, type: 3}
   Monologue2: {fileID: 8300000, guid: 04932c8417931944a92246422902d7e0, type: 3}
+  Dialogue0Index0: {fileID: 8300000, guid: 66640ea0c7a104665b27f562d014d7cf, type: 3}
   Dialogue0Index1: {fileID: 8300000, guid: 9a6761bd8976a4f46bb20249eba63d35, type: 3}
+  Dialogue0Index2: {fileID: 8300000, guid: 66640ea0c7a104665b27f562d014d7cf, type: 3}
   Dialogue0Index3: {fileID: 8300000, guid: b50b6f14207e00e419614bee66f0c2d1, type: 3}
+  Dialogue0Index4: {fileID: 8300000, guid: 66640ea0c7a104665b27f562d014d7cf, type: 3}
   Dialogue0Index5: {fileID: 8300000, guid: 334e12529a85afc4ead4e258e6b6221e, type: 3}
+  Dialogue0Index6: {fileID: 8300000, guid: 66640ea0c7a104665b27f562d014d7cf, type: 3}
   Dialogue0Index7: {fileID: 8300000, guid: 8b798310f70e5be4f800f091943d9fc0, type: 3}
+  Dialogue1Index0: {fileID: 8300000, guid: 66640ea0c7a104665b27f562d014d7cf, type: 3}
   Dialogue1Index1: {fileID: 8300000, guid: ecc894e8d98ddbe48b3d604fcaf38bb0, type: 3}
+  Dialogue1Index2: {fileID: 8300000, guid: 66640ea0c7a104665b27f562d014d7cf, type: 3}
   Dialogue1Index3: {fileID: 8300000, guid: b1b39ac0af8fdab408dd5e03ddf94925, type: 3}
+  Dialogue1Index4: {fileID: 8300000, guid: 66640ea0c7a104665b27f562d014d7cf, type: 3}
+  Dialogue1Index5: {fileID: 8300000, guid: 66640ea0c7a104665b27f562d014d7cf, type: 3}
   Dialogue1Index6: {fileID: 8300000, guid: 5f2b738993c9e224baa1395d46a924ef, type: 3}
+  Dialogue1Index7: {fileID: 8300000, guid: 66640ea0c7a104665b27f562d014d7cf, type: 3}
   Dialogue1Index8: {fileID: 8300000, guid: ede78ba68eac46040aadbc101ee7d902, type: 3}
+  Dialogue1Index9: {fileID: 8300000, guid: 66640ea0c7a104665b27f562d014d7cf, type: 3}
   Dialogue1Index10: {fileID: 8300000, guid: e9d784866449e5e43b0f5866ecfb49a4, type: 3}
+  Dialogue1Index11: {fileID: 8300000, guid: 66640ea0c7a104665b27f562d014d7cf, type: 3}
   Dialogue1Index12: {fileID: 8300000, guid: 6547338988fe5424d89b501803a60ca5, type: 3}
+  Dialogue1Index13: {fileID: 8300000, guid: 66640ea0c7a104665b27f562d014d7cf, type: 3}
   Dialogue1Index14: {fileID: 8300000, guid: 5db7a533d033f644cb0deb7cbc83c50d, type: 3}
+  Dialogue1Index15: {fileID: 8300000, guid: 66640ea0c7a104665b27f562d014d7cf, type: 3}
   Dialogue1Index16: {fileID: 8300000, guid: 9845bd241ab37774ba05faf54c2ec6b4, type: 3}
+  Dialogue1Index17: {fileID: 8300000, guid: 66640ea0c7a104665b27f562d014d7cf, type: 3}
   Dialogue2Index0: {fileID: 8300000, guid: c6f8baf773cb0204c9c0633b10633f72, type: 3}
+  Dialogue2Index1: {fileID: 8300000, guid: 66640ea0c7a104665b27f562d014d7cf, type: 3}
   Dialogue2Index2: {fileID: 8300000, guid: fadcb880ffb512148b9450701e3bd31a, type: 3}
+  Dialogue2Index3: {fileID: 8300000, guid: 66640ea0c7a104665b27f562d014d7cf, type: 3}
   Dialogue2Index4: {fileID: 8300000, guid: 9ecc1685d99302047957362a02c48200, type: 3}
+  Dialogue2Index5: {fileID: 8300000, guid: 66640ea0c7a104665b27f562d014d7cf, type: 3}
   TooFewFruits: {fileID: 8300000, guid: 452e4e622de5501498f9fb7d8759b21d, type: 3}
   UnlockMonologue1: {fileID: 8300000, guid: 13d0ca3806f251c44a4faf45216ae147, type: 3}
   UnlockMonologue2: {fileID: 8300000, guid: 7ba0204427a31314eb4a3e36725431a1, type: 3}
@@ -8115,6 +8363,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2558054600030327142, guid: 373c801832331b940b850df986853f40, type: 3}
   m_PrefabInstance: {fileID: 1950071404}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1977187523
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1977187524}
+  - component: {fileID: 1977187526}
+  - component: {fileID: 1977187525}
+  m_Layer: 5
+  m_Name: PearUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1977187524
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977187523}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1440810239}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 68.265, y: 46.077}
+  m_SizeDelta: {x: 52.140015, y: 54.92279}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1977187525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977187523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ef061ae56512a61448e547045ab9f58d, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1977187526
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977187523}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1986134791
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8807,7 +9130,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.592e-40, y: 2.03125, z: 0, w: 6.8552e-41}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 1.83672e-40, w: -3.11e-43}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
