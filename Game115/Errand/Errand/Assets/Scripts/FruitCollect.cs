@@ -15,12 +15,6 @@ public class FruitCollect : MonoBehaviour
     //Flower Logic
     [SerializeField] public static bool flower = false;
 
-    //Holds the images
-    /*public static Image appleUI;
-    public static Image pearUI;
-    public static Image peachUI;
-    public static Image melonUI;*/
-
     //Fruit Images
     [SerializeField] Image apple;
     [SerializeField] Image pear;
@@ -37,18 +31,6 @@ public class FruitCollect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        //Find Fruit UI GameObject
-        /*appleUI = gameObject.GetComponent<Image>();
-        pearUI = gameObject.GetComponent<Image>();
-        peachUI = gameObject.GetComponent<Image>();
-        melonUI = gameObject.GetComponent<Image>();*/
-
-        //Hide Images on Start
-        /*appleUI.enabled = false;
-        pearUI.enabled = false;
-        peachUI.enabled = false;
-        melonUI.enabled = false;*/
 
         apple.enabled = false;
         pear.enabled = false;
@@ -69,6 +51,8 @@ public class FruitCollect : MonoBehaviour
 
             apple.enabled = true;
 
+            fruits++;
+
             hasApple = false;
 
         }
@@ -77,6 +61,8 @@ public class FruitCollect : MonoBehaviour
         {
 
             pear.enabled = true;
+
+            fruits++;
 
             hasPear = false;
 
@@ -87,6 +73,8 @@ public class FruitCollect : MonoBehaviour
 
             peach.enabled = true;
 
+            fruits++;
+
             hasPeach = false;
 
         }
@@ -96,37 +84,19 @@ public class FruitCollect : MonoBehaviour
 
             melon.enabled = true;
 
+            fruits++;
+
             hasMelon = false;
 
         }
 
-    }
-
-    void CheckFruit()
-    {
-
-        if (hasApple == true)
+        if (PlayerCollisions.talkToGirl >= 1)
         {
 
-            apple.enabled = true;
-
-        }
-        else if (hasPear == true)
-        {
-
-            pear.enabled = true;
-
-        }
-        else if (hasPeach == true)
-        {
-
-            peach.enabled = true;
-
-        }
-        else if (hasMelon == true)
-        {
-
-            melon.enabled = true;
+            apple.enabled = false;
+            pear.enabled = false;
+            melon.enabled = false;
+            peach.enabled = false;
 
         }
 

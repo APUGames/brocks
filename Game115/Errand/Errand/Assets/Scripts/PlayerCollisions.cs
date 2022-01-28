@@ -71,9 +71,6 @@ public class PlayerCollisions : MonoBehaviour
     [SerializeField] private AudioClip WaterMonologue;
     [SerializeField] private AudioClip FlowerMonologue;
 
-    //Starting Spawnpoint for Respawn mechanic
-    //private static new Vector3 startingPos;
-
     //to hopefully make sure the dialogue doesn't stack
     bool dialogueDone = true;
 
@@ -83,7 +80,7 @@ public class PlayerCollisions : MonoBehaviour
     private new AudioSource audio;
 
     //To keep sickGirl dialogue in correct succession
-    private int talkToGirl = 0;
+    public static int talkToGirl = 0;
 
     //Water boolean
     private bool hasWater = false;
@@ -99,7 +96,7 @@ public class PlayerCollisions : MonoBehaviour
         audio = GetComponent<AudioSource>();
 
         //Call for beginning text, might as well make it a method :/
-        Invoke("BeginningMonologue1", 2.0f);
+        Invoke("BeginningMonologue1", 6.0f);
 
     }
 
@@ -141,7 +138,8 @@ public class PlayerCollisions : MonoBehaviour
 
         audio.PlayOneShot(UnlockMonologue1);
 
-        TextHints.message = "I have all the fruits I need now. I'll go back and give them to her by hand.";
+        TextHints.message = "I have all the fruits I need now.\n I'll go back and give them to her by hand.";
+        TextHints.textOff = false;
         TextHints.textOn = true;
         //TextHints.textOnTime = 5.0f;
 
@@ -154,7 +152,7 @@ public class PlayerCollisions : MonoBehaviour
 
         audio.PlayOneShot(UnlockMonologue2);
         
-        TextHints.message = "Since she's bedridden I'll have to give it to her by touching the bed.";
+        TextHints.message = "Since she's bedridden,\n I'll have to give it to her by touching the bed.";
         TextHints.textOn = true;
 
         Invoke("EndText", 5.0f);
@@ -165,26 +163,26 @@ public class PlayerCollisions : MonoBehaviour
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
 
-        if (hit.gameObject.tag == "shackDoor" && FruitCollect.fruits >= 4)
+        if (hit.gameObject.tag == "shackDoor" && FruitCollect.fruits >= 4 || hit.gameObject.tag == "shackDoor" && talkToGirl >= 1)
         {
 
             OpenDoor();
 
-            /*FruitCollect.appleUI.enabled = false;
-            FruitCollect.pearUI.enabled = false;
-            FruitCollect.peachUI.enabled = false;
-            FruitCollect.melonUI.enabled = false;*/
-
         }
-        else if (hit.gameObject.tag == "shackDoor" && FruitCollect.fruits < 4)
+        else if (hit.gameObject.tag == "shackDoor" && FruitCollect.fruits < 4 && dialogueDone == true)
         {
 
             //FruitCollect.fruitUI.enabled = true;
 
+            dialogueDone = false;
+
             audio.PlayOneShot(TooFewFruits);
 
-            TextHints.message = "Can't go back to her yet, I stil have some fruit to find. She told me they'd be in craters on the ground, I think.";
+            TextHints.message = "Can't go back to her yet, I stil have some fruit to find.\n She told me they'd be in craters on the ground, I think.";
+            TextHints.textOff = false;
             TextHints.textOn = true;
+
+            Invoke("EndText", 6.0f);
 
         }
         else if (hit.gameObject.tag == "sickGirl")
@@ -196,7 +194,9 @@ public class PlayerCollisions : MonoBehaviour
         if (hit.gameObject.tag == "Respawn")
         {
 
-            SceneManager.LoadScene("3DAG");
+            audio.PlayOneShot(waterSloosh);
+
+            SceneManager.LoadScene("Errand");
 
         }
 
@@ -310,16 +310,20 @@ public class PlayerCollisions : MonoBehaviour
 
             FruitCollect.flower = true;
 
+            audio.PlayOneShot(flowerPick);
+
             Destroy(other.gameObject);
 
             audio.PlayOneShot(FlowerMonologue);
 
             TextHints.message = "Is this what she means? It's the most unique flower up here so I assume so. I need to get back to her ASAP so I can start making medicine out of it!";
+            TextHints.textOff = false;
             TextHints.textOn = true;
-            TextHints.textOnTime = 3.0f;
+            //TextHints.textOnTime = 3.0f;
+            Invoke("EndText", 8.0f);
 
         }
-        else if (other.gameObject.tag == "pondWater" && FruitCollect.bucket == true)
+        else if (other.gameObject.tag == "pondWater" && FruitCollect.bucket == true && hasWater == false)
         {
 
             hasWater = true;
@@ -329,8 +333,10 @@ public class PlayerCollisions : MonoBehaviour
             audio.PlayOneShot(WaterMonologue);
 
             TextHints.message = "Water: acquired, I don't want to make her wait too long so I should get back.";
+            TextHints.textOff = false;
             TextHints.textOn = true;
-            TextHints.textOnTime = 3.0f;
+            
+            Invoke("EndText", 3.0f);
 
         }
         
@@ -369,17 +375,21 @@ public class PlayerCollisions : MonoBehaviour
     }
 
     //I'm sorry to whoever has been cursed to read this...
-    //Also for whatever reason the subtitles work some tests and don't work on others... It's weird.
+    //Also for whatever reason the subtitles work some tests and don't work on others... It's weird. never mind it fixed
+    //Nevermind the subtitles don't work at all and I have no idea why... kinda wanna abandon them but that with the beginning monologue is inconsistent
     void TTG0I0()
     {
 
-        //audio here
+        audio.PlayOneShot(Dialogue0Index0);
+
+        talkToGirl++;
 
         TextHints.message = "Oh hey, thanks for the (cough cough) fruits.";
+        TextHints.textOff = false;
         TextHints.textOn = true;
-        TextHints.textOnTime = 3.0f; //Time voice audio (F)
+        //TextHints.textOnTime = 4.0f; //Time voice audio (F)
 
-        Invoke("TTG0I1", 3.0f);
+        Invoke("TTG0I1", 4.0f);
 
     }
 
@@ -389,21 +399,23 @@ public class PlayerCollisions : MonoBehaviour
         audio.PlayOneShot(Dialogue0Index1);
 
         TextHints.message = "Mhm no problem.";
+        TextHints.textOff = false;
         TextHints.textOn = true;
-        TextHints.textOnTime = 3.0f; //Time voice audio (M)
+        //TextHints.textOnTime = 2.0f; //Time voice audio (M)
 
-        Invoke("TTG0I2", 3.0f);
+        Invoke("TTG0I2", 2.0f);
 
     }
 
     void TTG0I2()
     {
 
-        //audio here
+        audio.PlayOneShot(Dialogue0Index2);
 
-        TextHints.message = "Before you sit down could you go to the pond and get some water?";
+        TextHints.message = "Before you sit down,\n could you go to the pond and get some water?";
+        TextHints.textOff = false;
         TextHints.textOn = true;
-        TextHints.textOnTime = 4.0f; //Time voice audio (F)
+        //TextHints.textOnTime = 4.0f; //Time voice audio (F)
 
         Invoke("TTG0I3", 4.0f);
 
@@ -415,8 +427,9 @@ public class PlayerCollisions : MonoBehaviour
         audio.PlayOneShot(Dialogue0Index3);
 
         TextHints.message = "Why? I'm not thirsty";
+        TextHints.textOff = false;
         TextHints.textOn = true;
-        TextHints.textOnTime = 3.0f; //Time voice audio (M)
+        //TextHints.textOnTime = 3.0f; //Time voice audio (M)
 
         Invoke("TTG0I4", 3.0f);
 
@@ -425,13 +438,14 @@ public class PlayerCollisions : MonoBehaviour
     void TTG0I4()
     {
 
-        //audio here
+        audio.PlayOneShot(Dialogue0Index4);
 
         TextHints.message = "Not for you, for me. My throat's sore from (cough) coughing.";
+        TextHints.textOff = false;
         TextHints.textOn = true;
-        TextHints.textOnTime =4.0f; //Time voice audio (F)
+        //TextHints.textOnTime = 5.5f; //Time voice audio (F)
 
-        Invoke("TTG0I5", 4.0f);
+        Invoke("TTG0I5", 5.5f);
 
     }
 
@@ -441,8 +455,9 @@ public class PlayerCollisions : MonoBehaviour
         audio.PlayOneShot(Dialogue0Index5);
 
         TextHints.message = "Oh okay, I'll go grab some.";
+        TextHints.textOff = false;
         TextHints.textOn = true;
-        TextHints.textOnTime = 3.0f; //Time voice audio (M)
+        //TextHints.textOnTime = 3.0f; //Time voice audio (M)
 
         Invoke("TTG0I6", 3.0f);
 
@@ -451,13 +466,14 @@ public class PlayerCollisions : MonoBehaviour
     void TTG0I6()
     {
 
-        //audio here
+        audio.PlayOneShot(Dialogue0Index6);
 
-        TextHints.message = "Take the bucket in the corner over there. And try not to fall in this time...";
+        TextHints.message = "Take the bucket in the corner over there.\n And try not to fall in this time...";
+        TextHints.textOff = false;
         TextHints.textOn = true;
-        TextHints.textOnTime = 5.0f; //Time voice audio (F)
+        //TextHints.textOnTime = 4.5f; //Time voice audio (F)
 
-        Invoke("TTG0I7", 5.0f);
+        Invoke("TTG0I7", 4.5f);
 
     }
 
@@ -467,11 +483,11 @@ public class PlayerCollisions : MonoBehaviour
         audio.PlayOneShot(Dialogue0Index7);
 
         TextHints.message = "Haha, you're funny, I'll be back in a couple.";
+        TextHints.textOff = false;
         TextHints.textOn = true;
         
         Invoke("EndText", 3.0f);
 
-        talkToGirl++;
         dialogueDone = true;
 
     }
@@ -479,13 +495,14 @@ public class PlayerCollisions : MonoBehaviour
     void TTG1I0()
     {
 
-        //audio here
+        audio.PlayOneShot(Dialogue1Index0);
 
         TextHints.message = "Thanks for the water (cough) (cough)";
+        TextHints.textOff = false;
         TextHints.textOn = true;
-        TextHints.textOnTime = 5.0f; //Time voice audio (F)
+        //TextHints.textOnTime = 2.0f; //Time voice audio (F)
 
-        Invoke("TTG1I1", 5.0f);
+        Invoke("TTG1I1", 2.0f);
 
     }
 
@@ -495,21 +512,23 @@ public class PlayerCollisions : MonoBehaviour
         audio.PlayOneShot(Dialogue1Index1);
 
         TextHints.message = "No problem...";
+        TextHints.textOff = false;
         TextHints.textOn = true;
-        TextHints.textOnTime = 3.0f; //Time voice audio (M)
+        //TextHints.textOnTime = 3.0f; //Time voice audio (M)
 
-        Invoke("TTG1I2", 3.0f);
+        Invoke("TTG1I2", 1.5f);
 
     }
 
     void TTG1I2()
     {
 
-        //audio here
+        audio.PlayOneShot(Dialogue1Index2);
 
         TextHints.message = "You take some, too, it's hot out there isn't it?";
+        TextHints.textOff = false;
         TextHints.textOn = true;
-        TextHints.textOnTime = 4.0f; //Time voice audio (F)
+        //TextHints.textOnTime = 4.0f; //Time voice audio (F)
 
         Invoke("TTG1I3", 4.0f);
 
@@ -521,34 +540,37 @@ public class PlayerCollisions : MonoBehaviour
         audio.PlayOneShot(Dialogue1Index3);
 
         TextHints.message = "I'm fine, like I said I'm not thirsty";
+        TextHints.textOff = false;
         TextHints.textOn = true;
-        TextHints.textOnTime = 3.0f; //Time voice audio (M)
+        //TextHints.textOnTime = 2.5f; //Time voice audio (M)
 
-        Invoke("TTG1I4", 3.0f);
+        Invoke("TTG1I4", 2.5f);
 
     }
 
     void TTG1I4()
     {
 
-        //audio here
+        audio.PlayOneShot(Dialogue1Index4);
 
         TextHints.message = "Whatever...";
+        TextHints.textOff = false;
         TextHints.textOn = true;
-        TextHints.textOnTime = 3.0f; //Time voice audio (F)
+        //TextHints.textOnTime = 2.0f; //Time voice audio (F)
 
-        Invoke("TTG1I5", 3.0f);
+        Invoke("TTG1I5", 2.0f);
 
     }
 
     void TTG1I5()
     {
 
-        //audio here
+        audio.PlayOneShot(Dialogue1Index5);
 
-        TextHints.message = "Anyway before the sun goes down I want you to try and get me something else.";
+        TextHints.message = "Anyway before the sun goes down \nI want you to try and get me something else.";
+        TextHints.textOff = false;
         TextHints.textOn = true;
-        TextHints.textOnTime = 5.0f; //Time voice audio (F)
+        //TextHints.textOnTime = 5.0f; //Time voice audio (F)
 
         Invoke("TTG1I6", 5.0f);
 
@@ -560,8 +582,9 @@ public class PlayerCollisions : MonoBehaviour
         audio.PlayOneShot(Dialogue1Index6);
 
         TextHints.message = "What is it now?";
+        TextHints.textOff = false;
         TextHints.textOn = true;
-        TextHints.textOnTime = 3.0f; //Time voice audio (M)
+        //TextHints.textOnTime = 3.0f; //Time voice audio (M)
 
         Invoke("TTG1I7", 3.0f);
 
@@ -570,13 +593,14 @@ public class PlayerCollisions : MonoBehaviour
     void TTG1I7()
     {
 
-        //audio here
+        audio.PlayOneShot(Dialogue1Index7);
 
         TextHints.message = "Have you ever been to the top of Mount Mons?";
+        TextHints.textOff = false;
         TextHints.textOn = true;
-        TextHints.textOnTime = 5.0f; //Time voice audio (F)
+        //TextHints.textOnTime = 3.5f; //Time voice audio (F)
 
-        Invoke("TTG1I8", 5.0f);
+        Invoke("TTG1I8", 3.5f);
 
     }
 
@@ -586,23 +610,25 @@ public class PlayerCollisions : MonoBehaviour
         audio.PlayOneShot(Dialogue1Index8);
 
         TextHints.message = "No? I've never tried to climb it... but why?";
+        TextHints.textOff = false;
         TextHints.textOn = true;
-        TextHints.textOnTime = 5.0f; //Time voice audio (M)
+        //TextHints.textOnTime = 4.0f; //Time voice audio (M)
 
-        Invoke("TTG1I9", 5.0f);
+        Invoke("TTG1I9", 4.0f);
 
     }
 
     void TTG1I9()
     {
 
-        //audio here
+        audio.PlayOneShot(Dialogue1Index9);
 
-        TextHints.message = "I read in a book that at the top of the mountain on this island there lies a (cough) mystical flower unlike anything we've seen before.";
+        TextHints.message = "I read in a book before that at the top of the mountain on this\n island, there lies a (cough) mystical flower unlike anything we've seen before.";
+        TextHints.textOff = false;
         TextHints.textOn = true;
-        TextHints.textOnTime = 7.0f; //Time voice audio (F)
+        //TextHints.textOnTime = 8.5f; //Time voice audio (F)
 
-        Invoke("TTG1I10", 7.0f);
+        Invoke("TTG1I10", 9.5f);
 
     }
 
@@ -612,8 +638,9 @@ public class PlayerCollisions : MonoBehaviour
         audio.PlayOneShot(Dialogue1Index10);
 
         TextHints.message = "Where is the book? What does the flower look like?";
+        TextHints.textOff = false;
         TextHints.textOn = true;
-        TextHints.textOnTime = 4.0f; //Time voice audio (M)
+        //TextHints.textOnTime = 4.0f; //Time voice audio (M)
 
         Invoke("TTG1I11", 4.0f);
 
@@ -622,13 +649,14 @@ public class PlayerCollisions : MonoBehaviour
     void TTG1I11()
     {
 
-        //audio here
+        audio.PlayOneShot(Dialogue1Index11);
 
         TextHints.message = "The book is in the cabinet...";
+        TextHints.textOff = false;
         TextHints.textOn = true;
-        TextHints.textOnTime = 3.0f; //Time voice audio (F)
+        //TextHints.textOnTime = 2.0f; //Time voice audio (F)
 
-        Invoke("TTG1I12", 3.0f);
+        Invoke("TTG1I12", 2.0f);
 
     }
 
@@ -638,23 +666,25 @@ public class PlayerCollisions : MonoBehaviour
         audio.PlayOneShot(Dialogue1Index12);
 
         TextHints.message = "Of course, and the doors are stuck so I can't open it anymore.";
+        TextHints.textOff = false;
         TextHints.textOn = true;
-        TextHints.textOnTime = 4.0f; //Time voice audio (M)
+        //TextHints.textOnTime = 3.5f; //Time voice audio (M)
 
-        Invoke("TTG1I13", 4.0f);
+        Invoke("TTG1I13", 3.5f);
 
     }
 
     void TTG1I13()
     {
 
-        //audio here
+        audio.PlayOneShot(Dialogue1Index13);
 
-        TextHints.message = "Sorry about that, but it seems to be pretty distinct, unlike any flower I've seen on the (cough) (cough) island before...";
+        TextHints.message = "Sorry about that, but it seems to be pretty distinct,\n unlike any flower I've seen on the (cough) (cough) island before...";
+        TextHints.textOff = false;
         TextHints.textOn = true;
-        TextHints.textOnTime = 5.0f; //Time voice audio (F)
+        //TextHints.textOnTime = 6.0f; //Time voice audio (F)
 
-        Invoke("TTG1I14", 5.0f);
+        Invoke("TTG1I14", 7.0f);
 
     }
 
@@ -663,24 +693,26 @@ public class PlayerCollisions : MonoBehaviour
 
         audio.PlayOneShot(Dialogue1Index14);
 
-        TextHints.message = "So you want me to grab it for you because... Wait will it help cure you?";
+        TextHints.message = "So you want me to grab it for you because...\n Wait will it help cure you?";
+        TextHints.textOff = false;
         TextHints.textOn = true;
-        TextHints.textOnTime = 4.0f; //Time voice audio (M)
+        //TextHints.textOnTime = 6.0f; //Time voice audio (M)
 
-        Invoke("TTG1I15", 4.0f);
+        Invoke("TTG1I15", 6.0f);
 
     }
 
     void TTG1I15()
     {
 
-        //audio here
+        audio.PlayOneShot(Dialogue1Index15);
 
         TextHints.message = "Uh...";
+        TextHints.textOff = false;
         TextHints.textOn = true;
-        TextHints.textOnTime = 1.0f; //Time voice audio (F)
+        //TextHints.textOnTime = 1.5f; //Time voice audio (F)
 
-        Invoke("TTG1I16", 1.0f);
+        Invoke("TTG1I16", 1.5f);
 
     }
 
@@ -690,8 +722,9 @@ public class PlayerCollisions : MonoBehaviour
         audio.PlayOneShot(Dialogue1Index16);
 
         TextHints.message = "I'll get it right away!";
+        TextHints.textOff = false;
         TextHints.textOn = true;
-        TextHints.textOnTime = 3.0f; //Time voice audio (M)
+        //TextHints.textOnTime = 3.0f; //Time voice audio (M)
 
         Invoke("TTG1I17", 3.0f);
 
@@ -700,9 +733,10 @@ public class PlayerCollisions : MonoBehaviour
     void TTG1I17()
     {
 
-        //audio here
+        audio.PlayOneShot(Dialogue1Index17);
 
         TextHints.message = "Wait you didn't let me...";
+        TextHints.textOff = false;
         TextHints.textOn = true;
         
         Invoke("EndText", 3.0f);
@@ -717,7 +751,8 @@ public class PlayerCollisions : MonoBehaviour
 
         audio.PlayOneShot(Dialogue2Index0);
 
-        TextHints.message = "I got the flower for you! What do I need to do to make it into a cure?";
+        TextHints.message = "I got the flower for you!\n What do I need to do to make it into a cure?";
+        TextHints.textOff = false;
         TextHints.textOn = true;
         TextHints.textOnTime = 4.0f; //Time voice audio (M)
 
@@ -728,7 +763,7 @@ public class PlayerCollisions : MonoBehaviour
     void TTG2I1()
     {
 
-        //audio here
+        audio.PlayOneShot(Dialogue2Index1);
 
         TextHints.message = "You didn't let me finish...";
         TextHints.textOn = true;
@@ -754,9 +789,9 @@ public class PlayerCollisions : MonoBehaviour
     void TTG2I3()
     {
 
-        //audio here
+        audio.PlayOneShot(Dialogue2Index3);
 
-        TextHints.message = "I just wanted to look at it, seen as though I haven't seen anything other than a palm tree out here in forever.";
+        TextHints.message = "I just wanted to look at it, seen as though I haven't seen \n anything other than a palm tree out here in forever.";
         TextHints.textOn = true;
         TextHints.textOnTime = 5.0f; //Time voice audio (F)
 
@@ -780,7 +815,7 @@ public class PlayerCollisions : MonoBehaviour
     void TTG2I5()
     {
 
-        //audio here
+        audio.PlayOneShot(Dialogue2Index5);
 
         TextHints.message = "Nope, who knows (cough) (cough) if I'll get better.";
         TextHints.textOn = true;
@@ -788,7 +823,7 @@ public class PlayerCollisions : MonoBehaviour
         talkToGirl++;
         dialogueDone = true;
 
-        Invoke("EndText", 5.0f);
+        Invoke("FinalText", 5.0f);
 
     }
     //It's over... well kinda...
@@ -799,8 +834,9 @@ public class PlayerCollisions : MonoBehaviour
         audio.PlayOneShot(Monologue1);
 
         TextHints.message = "Okay... She told me to get fruits, right?";
-        TextHints.textOn = true;
-        //TextHints.textOnTime = 4.0f; //Time voice audio (M)
+        TextHints.textOn = true; //So for some reason these subtitles show themselves but not literally all the other ones...
+        //What makes these lines so special??? nvm found it
+        TextHints.textOff = false;
 
         Invoke("BeginningMonologue2", 4.0f);
 
@@ -811,7 +847,7 @@ public class PlayerCollisions : MonoBehaviour
         
         audio.PlayOneShot(Monologue2);
 
-        TextHints.message = "I'm sure they'll be in convenient places on the ground./n I'll just have to look for them.";
+        TextHints.message = "I'm sure they'll be in convenient places on the ground.\n I'll just have to look for them.";
         TextHints.textOn = true;
         
         Invoke("EndText", 5.0f);
@@ -821,7 +857,18 @@ public class PlayerCollisions : MonoBehaviour
     void EndText()
     {
 
+        TextHints.textOn = false;
+
         TextHints.textOff = true;
+
+        dialogueDone = true;
+
+    }
+
+    void FinalText()
+    {
+
+        SceneManager.LoadScene("EndScene");
 
     }
 
